@@ -1,0 +1,661 @@
+{
+  "global": {
+    "n_rows_explained": 40000,
+    "base_value_log_odds": -2.297394,
+    "mean_abs_shap": {
+      "antibiotic_is_oral": 0.52967445,
+      "antibiotic": 0.33770822,
+      "antibiotic_subclass": 0.2982717,
+      "prior_same_abx_nonsusc_rate": 0.26677113,
+      "organism_clean": 0.25742681,
+      "order_year": 0.22188414,
+      "antibiotic_class": 0.217258,
+      "prior_res_same_org_abx_days_since": 0.15343892,
+      "antibiotic_aware": 0.13709723,
+      "prior_same_org_nonsusc_rate": 0.1167494,
+      "prior_res_n_events_1095d": 0.09542778,
+      "organism_group": 0.08542477,
+      "gender_code": 0.07913669,
+      "prior_same_org_days_since": 0.07727455,
+      "prior_med_n_drugdays_180d": 0.06140284,
+      "prior_med_n_drugdays_30d": 0.0576515,
+      "prior_med_same_class_exposed_365d": 0.05451192,
+      "organism_genus": 0.05239814,
+      "prior_same_abx_n_nonsusc": 0.05034242,
+      "culture_description": 0.04376638,
+      "antibiotic_is_urinary_only": 0.04268945,
+      "prior_same_org_n_tests": 0.04067379,
+      "prior_med_class__Fluoroquinolone__90d": 0.03700322,
+      "prior_res_same_org_abx_n": 0.02553162,
+      "prior_med_n_broadspectrum_drugdays_90d": 0.02349379,
+      "prior_med_class__Folate_pathway_inhibitor__90d": 0.02183227,
+      "prior_res_same_abx_n": 0.01786791,
+      "has_prior_med_history": 0.01684486,
+      "is_species_level": 0.01278363,
+      "organism_morphotype": 0.0078427
+    },
+    "top_15": [
+      "antibiotic_is_oral",
+      "antibiotic",
+      "antibiotic_subclass",
+      "prior_same_abx_nonsusc_rate",
+      "organism_clean",
+      "order_year",
+      "antibiotic_class",
+      "prior_res_same_org_abx_days_since",
+      "antibiotic_aware",
+      "prior_same_org_nonsusc_rate",
+      "prior_res_n_events_1095d",
+      "organism_group",
+      "gender_code",
+      "prior_same_org_days_since",
+      "prior_med_n_drugdays_180d"
+    ]
+  },
+  "local_explanations": {
+    "confident_resistant_correct": {
+      "base_value_log_odds": -2.2973937577547163,
+      "sum_of_contributions": 5.683426736176241,
+      "prediction_log_odds": 3.3860329784215244,
+      "top_contributions": [
+        {
+          "feature": "prior_same_abx_nonsusc_rate",
+          "value": 0.7777777910232544,
+          "shap": 1.7121308205272745,
+          "direction": "increases predicted resistance"
+        },
+        {
+          "feature": "antibiotic_class",
+          "value": 22.0,
+          "shap": 0.9001542816665211,
+          "direction": "increases predicted resistance"
+        },
+        {
+          "feature": "organism_clean",
+          "value": 162.0,
+          "shap": 0.7967982850387656,
+          "direction": "increases predicted resistance"
+        },
+        {
+          "feature": "antibiotic",
+          "value": 47.0,
+          "shap": 0.6697158556240785,
+          "direction": "increases predicted resistance"
+        },
+        {
+          "feature": "antibiotic_is_oral",
+          "value": 1.0,
+          "shap": 0.4656664724949371,
+          "direction": "increases predicted resistance"
+        },
+        {
+          "feature": "antibiotic_aware",
+          "value": 0.0,
+          "shap": 0.24076849672722336,
+          "direction": "increases predicted resistance"
+        },
+        {
+          "feature": "prior_same_abx_n_nonsusc",
+          "value": 7.0,
+          "shap": 0.21145815788795488,
+          "direction": "increases predicted resistance"
+        },
+        {
+          "feature": "organism_genus",
+          "value": 67.0,
+          "shap": 0.20839411520251194,
+          "direction": "increases predicted resistance"
+        },
+        {
+          "feature": "prior_res_n_events_1095d",
+          "value": 33.0,
+          "shap": 0.20374613144766782,
+          "direction": "increases predicted resistance"
+        },
+        {
+          "feature": "prior_res_same_abx_n",
+          "value": 0.0,
+          "shap": 0.20123506025241986,
+          "direction": "increases predicted resistance"
+        }
+      ],
+      "n_features": 30,
+      "additivity_note": "base value + all contributions = the model's log-odds output for this row; the top 10 are shown.",
+      "case_type": "confident_resistant_correct",
+      "p_nonsusceptible": 0.99339,
+      "actual_nonsusceptible": 1,
+      "organism": "PROTEUS MIRABILIS",
+      "antibiotic": "Tetracycline",
+      "specimen": "URINE"
+    },
+    "confident_susceptible_correct": {
+      "base_value_log_odds": -2.2973937577547163,
+      "sum_of_contributions": -0.9193977087243463,
+      "prediction_log_odds": -3.2167914664790627,
+      "top_contributions": [
+        {
+          "feature": "antibiotic_is_oral",
+          "value": 0.0,
+          "shap": -0.6152135838876929,
+          "direction": "increases predicted susceptibility"
+        },
+        {
+          "feature": "antibiotic",
+          "value": 44.0,
+          "shap": 0.31423142464094894,
+          "direction": "increases predicted resistance"
+        },
+        {
+          "feature": "antibiotic_subclass",
+          "value": 37.0,
+          "shap": -0.25549318338857085,
+          "direction": "increases predicted susceptibility"
+        },
+        {
+          "feature": "gender_code",
+          "value": 1.0,
+          "shap": 0.18700991635175856,
+          "direction": "increases predicted resistance"
+        },
+        {
+          "feature": "antibiotic_aware",
+          "value": 2.0,
+          "shap": -0.12142176773844991,
+          "direction": "increases predicted susceptibility"
+        },
+        {
+          "feature": "antibiotic_class",
+          "value": 1.0,
+          "shap": -0.11105775922945242,
+          "direction": "increases predicted susceptibility"
+        },
+        {
+          "feature": "organism_clean",
+          "value": 94.0,
+          "shap": 0.09754872881430691,
+          "direction": "increases predicted resistance"
+        },
+        {
+          "feature": "prior_res_n_events_1095d",
+          "value": 0.0,
+          "shap": -0.0962955333177574,
+          "direction": "increases predicted susceptibility"
+        },
+        {
+          "feature": "order_year",
+          "value": 2023.0,
+          "shap": -0.08011004113974982,
+          "direction": "increases predicted susceptibility"
+        },
+        {
+          "feature": "prior_res_same_org_abx_days_since",
+          "value": null,
+          "shap": -0.0746297715790275,
+          "direction": "increases predicted susceptibility"
+        }
+      ],
+      "n_features": 30,
+      "additivity_note": "base value + all contributions = the model's log-odds output for this row; the top 10 are shown.",
+      "case_type": "confident_susceptible_correct",
+      "p_nonsusceptible": 0.03612,
+      "actual_nonsusceptible": 0,
+      "organism": "ESCHERICHIA COLI",
+      "antibiotic": "Piperacillin/Tazobactam",
+      "specimen": "URINE"
+    },
+    "false_negative_missed_resistance": {
+      "base_value_log_odds": -2.2973937577547163,
+      "sum_of_contributions": 0.11477097286471846,
+      "prediction_log_odds": -2.1826227848899977,
+      "top_contributions": [
+        {
+          "feature": "antibiotic_is_oral",
+          "value": 0.0,
+          "shap": -0.42935682419923044,
+          "direction": "increases predicted susceptibility"
+        },
+        {
+          "feature": "antibiotic_subclass",
+          "value": 9.0,
+          "shap": 0.2562626823572011,
+          "direction": "increases predicted resistance"
+        },
+        {
+          "feature": "antibiotic_aware",
+          "value": 0.0,
+          "shap": 0.24195325000273873,
+          "direction": "increases predicted resistance"
+        },
+        {
+          "feature": "organism_clean",
+          "value": 94.0,
+          "shap": 0.1688532256318564,
+          "direction": "increases predicted resistance"
+        },
+        {
+          "feature": "gender_code",
+          "value": 1.0,
+          "shap": 0.15897536236314405,
+          "direction": "increases predicted resistance"
+        },
+        {
+          "feature": "antibiotic_class",
+          "value": 0.0,
+          "shap": -0.12852742281393692,
+          "direction": "increases predicted susceptibility"
+        },
+        {
+          "feature": "order_year",
+          "value": 2017.0,
+          "shap": -0.11461814977056692,
+          "direction": "increases predicted susceptibility"
+        },
+        {
+          "feature": "prior_med_n_broadspectrum_drugdays_90d",
+          "value": 1.0,
+          "shap": 0.09108483036300014,
+          "direction": "increases predicted resistance"
+        },
+        {
+          "feature": "prior_res_n_events_1095d",
+          "value": 0.0,
+          "shap": -0.07837585830190787,
+          "direction": "increases predicted susceptibility"
+        },
+        {
+          "feature": "prior_res_same_org_abx_days_since",
+          "value": null,
+          "shap": -0.07524126904311929,
+          "direction": "increases predicted susceptibility"
+        }
+      ],
+      "n_features": 30,
+      "additivity_note": "base value + all contributions = the model's log-odds output for this row; the top 10 are shown.",
+      "case_type": "false_negative_missed_resistance",
+      "p_nonsusceptible": 0.10057,
+      "actual_nonsusceptible": 1,
+      "organism": "ESCHERICHIA COLI",
+      "antibiotic": "Gentamicin",
+      "specimen": "URINE"
+    },
+    "false_positive": {
+      "base_value_log_odds": -2.2973937577547163,
+      "sum_of_contributions": 3.633981050767721,
+      "prediction_log_odds": 1.3365872930130047,
+      "top_contributions": [
+        {
+          "feature": "antibiotic_class",
+          "value": 22.0,
+          "shap": 1.0309559194327318,
+          "direction": "increases predicted resistance"
+        },
+        {
+          "feature": "antibiotic",
+          "value": 47.0,
+          "shap": 0.5597959828921537,
+          "direction": "increases predicted resistance"
+        },
+        {
+          "feature": "order_year",
+          "value": 2011.0,
+          "shap": 0.559401904253036,
+          "direction": "increases predicted resistance"
+        },
+        {
+          "feature": "antibiotic_subclass",
+          "value": 35.0,
+          "shap": 0.4787674765383854,
+          "direction": "increases predicted resistance"
+        },
+        {
+          "feature": "antibiotic_is_oral",
+          "value": 1.0,
+          "shap": 0.4463847109383304,
+          "direction": "increases predicted resistance"
+        },
+        {
+          "feature": "organism_clean",
+          "value": 93.0,
+          "shap": 0.27204343675164966,
+          "direction": "increases predicted resistance"
+        },
+        {
+          "feature": "prior_same_abx_nonsusc_rate",
+          "value": null,
+          "shap": 0.09436172468467596,
+          "direction": "increases predicted resistance"
+        },
+        {
+          "feature": "gender_code",
+          "value": 1.0,
+          "shap": 0.08969249792445817,
+          "direction": "increases predicted resistance"
+        },
+        {
+          "feature": "prior_same_org_days_since",
+          "value": null,
+          "shap": 0.07097910989735355,
+          "direction": "increases predicted resistance"
+        },
+        {
+          "feature": "antibiotic_aware",
+          "value": 0.0,
+          "shap": 0.060134001097165685,
+          "direction": "increases predicted resistance"
+        }
+      ],
+      "n_features": 30,
+      "additivity_note": "base value + all contributions = the model's log-odds output for this row; the top 10 are shown.",
+      "case_type": "false_positive",
+      "p_nonsusceptible": 0.80479,
+      "actual_nonsusceptible": 0,
+      "organism": "ENTEROCOCCUS SPECIES",
+      "antibiotic": "Tetracycline",
+      "specimen": "URINE"
+    },
+    "borderline": {
+      "base_value_log_odds": -2.2973937577547163,
+      "sum_of_contributions": 2.2418210983095586,
+      "prediction_log_odds": -0.05557265944515777,
+      "top_contributions": [
+        {
+          "feature": "prior_same_abx_nonsusc_rate",
+          "value": 1.0,
+          "shap": 1.3726677537342016,
+          "direction": "increases predicted resistance"
+        },
+        {
+          "feature": "prior_same_org_nonsusc_rate",
+          "value": 0.692307710647583,
+          "shap": 0.44371048398437013,
+          "direction": "increases predicted resistance"
+        },
+        {
+          "feature": "antibiotic_is_oral",
+          "value": 0.0,
+          "shap": -0.4338684790519489,
+          "direction": "increases predicted susceptibility"
+        },
+        {
+          "feature": "prior_res_same_org_abx_days_since",
+          "value": 706.0,
+          "shap": 0.3451600322017345,
+          "direction": "increases predicted resistance"
+        },
+        {
+          "feature": "gender_code",
+          "value": 1.0,
+          "shap": 0.28176800151932746,
+          "direction": "increases predicted resistance"
+        },
+        {
+          "feature": "prior_res_n_events_1095d",
+          "value": 8.0,
+          "shap": 0.2598601935312643,
+          "direction": "increases predicted resistance"
+        },
+        {
+          "feature": "prior_same_org_days_since",
+          "value": 706.8909912109375,
+          "shap": -0.16865917066274677,
+          "direction": "increases predicted susceptibility"
+        },
+        {
+          "feature": "antibiotic_subclass",
+          "value": 5.0,
+          "shap": 0.15676310710002583,
+          "direction": "increases predicted resistance"
+        },
+        {
+          "feature": "order_year",
+          "value": 2021.0,
+          "shap": -0.14833932479123121,
+          "direction": "increases predicted susceptibility"
+        },
+        {
+          "feature": "antibiotic",
+          "value": 13.0,
+          "shap": 0.11946840499561275,
+          "direction": "increases predicted resistance"
+        }
+      ],
+      "n_features": 30,
+      "additivity_note": "base value + all contributions = the model's log-odds output for this row; the top 10 are shown.",
+      "case_type": "borderline",
+      "p_nonsusceptible": 0.51203,
+      "actual_nonsusceptible": 0,
+      "organism": "ESCHERICHIA COLI",
+      "antibiotic": "Ceftazidime",
+      "specimen": "BLOOD"
+    }
+  },
+  "by_antibiotic_class": {
+    "Aminoglycoside": {
+      "n_rows": 5845,
+      "top_5": {
+        "antibiotic": 0.706168,
+        "antibiotic_is_oral": 0.477376,
+        "prior_same_abx_nonsusc_rate": 0.250291,
+        "order_year": 0.249477,
+        "organism_clean": 0.190343
+      }
+    },
+    "Beta-lactam/inhibitor": {
+      "n_rows": 4218,
+      "top_5": {
+        "antibiotic_is_oral": 0.533883,
+        "antibiotic": 0.363151,
+        "antibiotic_subclass": 0.29257,
+        "prior_same_abx_nonsusc_rate": 0.242718,
+        "organism_clean": 0.239597
+      }
+    },
+    "Carbapenem": {
+      "n_rows": 3429,
+      "top_5": {
+        "antibiotic_subclass": 0.988173,
+        "antibiotic_is_oral": 0.689438,
+        "antibiotic": 0.3178,
+        "antibiotic_class": 0.309348,
+        "prior_same_abx_nonsusc_rate": 0.248214
+      }
+    },
+    "Cephalosporin": {
+      "n_rows": 7941,
+      "top_5": {
+        "antibiotic_is_oral": 0.504971,
+        "antibiotic_subclass": 0.364053,
+        "antibiotic": 0.322001,
+        "organism_clean": 0.252496,
+        "order_year": 0.241896
+      }
+    },
+    "Fluoroquinolone": {
+      "n_rows": 5644,
+      "top_5": {
+        "antibiotic_is_oral": 0.456221,
+        "prior_same_abx_nonsusc_rate": 0.245792,
+        "prior_res_same_org_abx_days_since": 0.229878,
+        "organism_clean": 0.218964,
+        "antibiotic_subclass": 0.186058
+      }
+    },
+    "Folate pathway inhibitor": {
+      "n_rows": 2615,
+      "top_5": {
+        "antibiotic_is_oral": 0.495211,
+        "prior_same_abx_nonsusc_rate": 0.304196,
+        "organism_clean": 0.297257,
+        "antibiotic": 0.290947,
+        "order_year": 0.200916
+      }
+    },
+    "Glycopeptide": {
+      "n_rows": 577,
+      "top_5": {
+        "antibiotic": 0.967952,
+        "organism_clean": 0.667553,
+        "antibiotic_subclass": 0.622845,
+        "antibiotic_is_oral": 0.564895,
+        "order_year": 0.294102
+      }
+    },
+    "Lincosamide": {
+      "n_rows": 477,
+      "top_5": {
+        "antibiotic_is_oral": 0.727933,
+        "prior_same_abx_nonsusc_rate": 0.450022,
+        "antibiotic": 0.19954,
+        "order_year": 0.156046,
+        "organism_clean": 0.146943
+      }
+    },
+    "Macrolide": {
+      "n_rows": 518,
+      "top_5": {
+        "antibiotic_is_oral": 0.585386,
+        "antibiotic_subclass": 0.5757,
+        "prior_same_abx_nonsusc_rate": 0.404256,
+        "prior_res_same_org_abx_days_since": 0.341205,
+        "organism_clean": 0.198986
+      }
+    },
+    "Monobactam": {
+      "n_rows": 608,
+      "top_5": {
+        "antibiotic": 0.571506,
+        "antibiotic_is_oral": 0.469382,
+        "prior_same_abx_nonsusc_rate": 0.264729,
+        "order_year": 0.253322,
+        "organism_clean": 0.219695
+      }
+    },
+    "Nitrofuran": {
+      "n_rows": 2203,
+      "top_5": {
+        "antibiotic_is_oral": 0.511339,
+        "organism_clean": 0.46569,
+        "antibiotic_is_urinary_only": 0.301846,
+        "prior_same_abx_nonsusc_rate": 0.244114,
+        "order_year": 0.198589
+      }
+    },
+    "Oxazolidinone": {
+      "n_rows": 406,
+      "top_5": {
+        "antibiotic_class": 0.947587,
+        "antibiotic_aware": 0.573578,
+        "antibiotic_subclass": 0.434647,
+        "organism_clean": 0.280756,
+        "prior_same_abx_nonsusc_rate": 0.251107
+      }
+    },
+    "Penicillin": {
+      "n_rows": 3454,
+      "top_5": {
+        "antibiotic_is_oral": 0.703507,
+        "antibiotic_class": 0.681034,
+        "organism_clean": 0.381136,
+        "prior_same_abx_nonsusc_rate": 0.359028,
+        "antibiotic": 0.303266
+      }
+    },
+    "Tetracycline": {
+      "n_rows": 1715,
+      "top_5": {
+        "antibiotic_class": 0.797667,
+        "antibiotic_is_oral": 0.480665,
+        "prior_same_abx_nonsusc_rate": 0.402005,
+        "order_year": 0.345692,
+        "antibiotic": 0.273569
+      }
+    }
+  },
+  "direction_checks": {
+    "correlations": {
+      "prior_same_abx_nonsusc_rate": {
+        "corr_value_vs_shap": 0.9596,
+        "expected_sign": "positive",
+        "shap_sign_as_expected": true,
+        "n": 15425,
+        "raw_marginal_association": {
+          "outcome_rate_when_feature_gt_0": 0.50945,
+          "outcome_rate_when_feature_eq_0": 0.07978,
+          "mean_value_when_nonsusceptible": 0.59371,
+          "mean_value_when_susceptible": 0.11321
+        },
+        "correlated_selected_features_abs_gt_0.5": {}
+      },
+      "prior_res_same_abx_n": {
+        "corr_value_vs_shap": -0.5929,
+        "expected_sign": "positive",
+        "shap_sign_as_expected": false,
+        "n": 40000,
+        "raw_marginal_association": {
+          "outcome_rate_when_feature_gt_0": 0.51329,
+          "outcome_rate_when_feature_eq_0": 0.16587,
+          "mean_value_when_nonsusceptible": 1.09535,
+          "mean_value_when_susceptible": 0.16309
+        },
+        "correlated_selected_features_abs_gt_0.5": {
+          "prior_res_same_org_abx_n": 0.8457,
+          "prior_same_abx_n_nonsusc": 0.717
+        }
+      },
+      "prior_res_same_org_abx_n": {
+        "corr_value_vs_shap": 0.8556,
+        "expected_sign": "positive",
+        "shap_sign_as_expected": true,
+        "n": 40000,
+        "raw_marginal_association": {
+          "outcome_rate_when_feature_gt_0": 0.69912,
+          "outcome_rate_when_feature_eq_0": 0.16813,
+          "mean_value_when_nonsusceptible": 0.79634,
+          "mean_value_when_susceptible": 0.06048
+        },
+        "correlated_selected_features_abs_gt_0.5": {
+          "prior_res_same_abx_n": 0.8457,
+          "prior_same_abx_n_nonsusc": 0.6456
+        }
+      },
+      "prior_res_same_org_abx_days_since": {
+        "corr_value_vs_shap": -0.7604,
+        "expected_sign": "negative",
+        "shap_sign_as_expected": true,
+        "n": 2167,
+        "raw_marginal_association": null,
+        "correlated_selected_features_abs_gt_0.5": {
+          "prior_same_org_days_since": 0.6756
+        }
+      },
+      "prior_res_n_events_1095d": {
+        "corr_value_vs_shap": 0.5346,
+        "expected_sign": "positive",
+        "shap_sign_as_expected": true,
+        "n": 40000,
+        "raw_marginal_association": {
+          "outcome_rate_when_feature_gt_0": 0.25627,
+          "outcome_rate_when_feature_eq_0": 0.16512,
+          "mean_value_when_nonsusceptible": 6.97016,
+          "mean_value_when_susceptible": 3.12299
+        },
+        "correlated_selected_features_abs_gt_0.5": {}
+      },
+      "prior_same_org_nonsusc_rate": {
+        "corr_value_vs_shap": 0.9073,
+        "expected_sign": "positive",
+        "shap_sign_as_expected": true,
+        "n": 12842,
+        "raw_marginal_association": {
+          "outcome_rate_when_feature_gt_0": 0.2646,
+          "outcome_rate_when_feature_eq_0": 0.06921,
+          "mean_value_when_nonsusceptible": 0.37113,
+          "mean_value_when_susceptible": 0.18542
+        },
+        "correlated_selected_features_abs_gt_0.5": {}
+      }
+    },
+    "interpretation": "A positive correlation between a prior-resistance feature's value and its SHAP contribution means the model raises predicted resistance as that history grows - the clinically expected direction. `days_since` features should correlate NEGATIVELY: the longer ago the prior event, the less it should push towards resistance.",
+    "how_to_read_a_contradiction": "A contradicting SHAP sign is a prompt to investigate, not a verdict. Two causes look identical in the SHAP column and are distinguished by the extra fields recorded here. (1) The model learned a shortcut - in which case the feature's RAW marginal association with the outcome will also be inverted or absent, and the finding is serious. (2) A strongly correlated partner feature already carries the signal and this one is absorbing a compensating correction - in which case the raw association is still in the clinically expected direction and the correlated partner is listed. SHAP splits credit between collinear features arbitrarily, so this is expected behaviour rather than a defect, but it does mean an individual attribution for one member of a correlated group should not be read in isolation."
+  }
+}

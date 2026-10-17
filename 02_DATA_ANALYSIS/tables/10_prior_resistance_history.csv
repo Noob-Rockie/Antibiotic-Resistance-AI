@@ -1,0 +1,7 @@
+feature,description,pct_rows_present,n_rows_present_train,nonsusc_rate_absent,nonsusc_rate_present,relative_risk
+has_prior_resistance_history,Any prior resistance record exists,40.327,453240,0.1595,0.24671,1.5468
+prior_res_n_events_1095d,Any resistant result in the last 3 years,35.37,397611,0.15862,0.26049,1.6422
+prior_res_same_abx_n,Prior resistance to THIS antibiotic,9.195,104300,0.16181,0.51615,3.1898
+prior_res_same_org_abx_n,Prior resistance to THIS organism+antibiotic,5.76,65894,0.16397,0.68835,4.198
+prior_same_abx_n_nonsusc,Prior non-susceptible result for THIS agent,13.636,154992,0.14513,0.50321,3.4672
+prior_same_org_nonsusc_rate,Prior non-susceptibility for THIS organism,26.529,300003,0.16968,0.26371,1.5542

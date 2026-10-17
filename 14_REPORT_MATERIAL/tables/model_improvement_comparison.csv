@@ -1,0 +1,8 @@
+Model/Experiment,Accuracy,PR-AUC,Recall,Specificity,F1,Temporal PR-AUC,Temporal Recall
+BASELINE — production LightGBM (t=0.50),0.88583,0.76166,0.54543,0.96856,0.65134,0.68597,0.40234
+Threshold 0.35 (max_f1),0.87787,0.76166,0.65426,0.93222,0.67688,0.68597,0.53518
+Threshold 0.30 (recall_oriented),0.86932,0.76166,0.69333,0.91209,0.67476,0.68597,0.56725
+Class weight 0.75,0.88603,0.76132,0.53353,0.9717,0.64671,0.68595,0.37997
+Hyperparameter search winner,0.88561,0.75889,0.53889,0.96987,0.64815,0.68361,0.40005
+Calibration: uncalibrated,0.8859,0.76701,0.52646,0.97325,0.64339,0.68597,0.40234
+Calibration: platt / sigmoid,0.88591,0.76701,0.5433,0.96917,0.6506,0.68597,0.40234

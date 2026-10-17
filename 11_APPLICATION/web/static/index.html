@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Antimicrobial Resistance — Clinical Decision Support</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div id="shell">
+  <aside id="sidebar">
+    <div class="brand-title">Antimicrobial Resistance</div>
+    <div class="brand-sub">Clinical Decision Support</div>
+    <nav id="nav">
+      <a class="nav-item" data-view="dashboard"><span class="nav-icon">&#9633;</span>Dashboard</a>
+      <a class="nav-item" data-view="new-analysis"><span class="nav-icon">&#43;</span>New Clinical Analysis</a>
+      <a class="nav-item" data-view="results"><span class="nav-icon">&#8801;</span>Results</a>
+      <a class="nav-item" data-view="model-insights"><span class="nav-icon">&#8776;</span>Model Insights</a>
+      <a class="nav-item" data-view="how-it-works"><span class="nav-icon">&#63;</span>How It Works</a>
+    </nav>
+    <div class="status" id="model-status"><span class="dot"></span><span id="model-status-text">Checking model status&hellip;</span></div>
+  </aside>
+  <main id="main">
+    <div id="view-root"><div class="loading-inline"><span class="spinner"></span> Loading&hellip;</div></div>
+  </main>
+</div>
+<script src="/app.js"></script>
+</body>
+</html>

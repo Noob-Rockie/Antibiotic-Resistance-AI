@@ -1,0 +1,19 @@
+property,value
+n_records,1578196
+n_patients,67008
+n_culture_orders,118749
+n_organisms,245
+n_organism_groups,9
+n_antibiotics,54
+n_antibiotic_classes,23
+n_specimen_types,3
+date_min,2007-10-09
+date_max,2024-01-31
+n_columns_analytic_table,194
+n_candidate_features,185
+target_variable,y_nonsusceptible
+target_definition,"1 = non-susceptible (Resistant or Intermediate), 0 = Susceptible"
+mean_rows_per_order,13.29
+mean_orders_per_patient,1.772
+raw_rows_before_cleaning,2241050
+raw_culture_orders_including_negative,751075

@@ -1,0 +1,75 @@
+{
+  "target_distribution": {
+    "Susceptible": 1289258,
+    "nan": 634468,
+    "Resistant": 265071,
+    "Intermediate": 47651,
+    "Inconclusive": 2670,
+    "Synergism": 1932
+  },
+  "was_positive_vs_target": {
+    "0": {
+      "<NA>": 630798,
+      "Inconclusive": 0,
+      "Intermediate": 0,
+      "Resistant": 0,
+      "Susceptible": 0,
+      "Synergism": 0
+    },
+    "1": {
+      "<NA>": 3670,
+      "Inconclusive": 2670,
+      "Intermediate": 47651,
+      "Resistant": 265071,
+      "Susceptible": 1289258,
+      "Synergism": 1932
+    }
+  },
+  "organism_missing_when_was_positive_0": 630798,
+  "n_rows_was_positive_0": 630798,
+  "resistance_time_to_culture": {
+    "min": 1.0,
+    "max": 5773.0,
+    "median": 758.0,
+    "n_le_zero": 0,
+    "n_missing": 0,
+    "quantiles": {
+      "0.01": 18.0,
+      "0.25": 265.0,
+      "0.5": 758.0,
+      "0.75": 1616.0,
+      "0.99": 4440.0
+    }
+  },
+  "prior_med_time_to_culture": {
+    "min": 0.0,
+    "max": 5748.0
+  },
+  "labs_period_day_values": {
+    "14": 1408677
+  },
+  "cohort_rows_matching_resistance_same_order_org_abx": {
+    "n_matched": 92459,
+    "n_total": 2241050,
+    "pct": 4.1257,
+    "target_breakdown_of_matched": {
+      "Resistant": 58891,
+      "Susceptible": 29179,
+      "Intermediate": 4352,
+      "nan": 21,
+      "Inconclusive": 16
+    },
+    "target_breakdown_of_unmatched": {
+      "Susceptible": 1260079,
+      "nan": 634447,
+      "Resistant": 206180,
+      "Intermediate": 43299,
+      "Inconclusive": 2654,
+      "Synergism": 1932
+    }
+  },
+  "order_time_matches_between_cohort_and_resistance": {
+    "n_compared": 166537,
+    "n_identical": 166537
+  }
+}

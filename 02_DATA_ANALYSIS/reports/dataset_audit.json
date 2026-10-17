@@ -1,0 +1,3570 @@
+{
+  "generated_by": "scripts/01_dataset_audit.py",
+  "datasets": [
+    {
+      "key": "cohort",
+      "file_name": "microbiology_cultures_cohort.csv",
+      "file_path": "C:\\Users\\alanf\\OneDrive\\Desktop\\Antibiotic Resistance Prediction and Clinical Decision Support\\microbiology_cultures_cohort.csv",
+      "file_size_bytes": 257013798,
+      "file_size_mb": 245.11,
+      "md5": "9b3708c272aa4a098c68a18b9e00efb2",
+      "n_rows": 2241050,
+      "n_columns": 10,
+      "columns": [
+        "anon_id",
+        "pat_enc_csn_id_coded",
+        "order_proc_id_coded",
+        "order_time_jittered_utc",
+        "ordering_mode",
+        "culture_description",
+        "was_positive",
+        "organism",
+        "antibiotic",
+        "susceptibility"
+      ],
+      "n_exact_duplicate_rows": 0,
+      "pct_exact_duplicate_rows": 0.0,
+      "column_profiles": [
+        {
+          "column": "anon_id",
+          "n_rows": 2241050,
+          "n_missing": 0,
+          "pct_missing": 0.0,
+          "n_unique": ">20000",
+          "unique_exact": false,
+          "sample_values": [
+            "JC2744063",
+            "JC1713666",
+            "JC1669304",
+            "JC1697441",
+            "JC600786"
+          ],
+          "is_numeric": false,
+          "top_values": {
+            "JC542882": 341,
+            "JC654450": 273,
+            "JC577908": 260,
+            "JC685309": 256,
+            "JC2459177": 245,
+            "JC1107638": 242,
+            "JC533377": 240,
+            "JC539666": 235,
+            "JC1330966": 222,
+            "JC829698": 218,
+            "JC838284": 214,
+            "JC698398": 213,
+            "JC2500224": 212,
+            "JC629724": 209,
+            "JC631948": 202
+          },
+          "dominant_value_share": 0.0002
+        },
+        {
+          "column": "pat_enc_csn_id_coded",
+          "n_rows": 2241050,
+          "n_missing": 0,
+          "pct_missing": 0.0,
+          "n_unique": ">20000",
+          "unique_exact": false,
+          "sample_values": [
+            "131368600230",
+            "131300064625",
+            "131272997044",
+            "131208305006",
+            "131344486993"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 4468214.0,
+            "max": 131368830179.0,
+            "mean": 125611126477.5502,
+            "std": 26555037957.779
+          },
+          "top_values": {
+            "131323183663": 45,
+            "131326244262": 29,
+            "131347852119": 26,
+            "131082876335": 24,
+            "131299206725": 24,
+            "131302148495": 24,
+            "131238611527": 23,
+            "131343037101": 23,
+            "131269207468": 23,
+            "131334642317": 22,
+            "131244595161": 22,
+            "131252466191": 22,
+            "131029384062": 22,
+            "131225071972": 21,
+            "131259800423": 21
+          },
+          "dominant_value_share": 0.0
+        },
+        {
+          "column": "order_proc_id_coded",
+          "n_rows": 2241050,
+          "n_missing": 0,
+          "pct_missing": 0.0,
+          "n_unique": ">20000",
+          "unique_exact": false,
+          "sample_values": [
+            "928257722",
+            "697566032",
+            "620809641",
+            "510635146",
+            "834128837"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 300630080.0,
+            "max": 929296110.0,
+            "mean": 602348264.6017,
+            "std": 167243033.5512
+          },
+          "top_values": {
+            "640123219": 20,
+            "583729473": 20,
+            "898697907": 20,
+            "730630144": 20,
+            "613750580": 20,
+            "517471565": 19,
+            "552373292": 19,
+            "552763676": 19,
+            "559212655": 19,
+            "724973070": 19,
+            "823635863": 18,
+            "638309711": 18,
+            "573617455": 18,
+            "730626488": 18,
+            "724209264": 18
+          },
+          "dominant_value_share": 0.0
+        },
+        {
+          "column": "order_time_jittered_utc",
+          "n_rows": 2241050,
+          "n_missing": 0,
+          "pct_missing": 0.0,
+          "n_unique": ">20000",
+          "unique_exact": false,
+          "sample_values": [
+            "2023-12-23 22:29:00+00:00",
+            "2020-12-27 00:40:00+00:00",
+            "2019-07-02 19:54:00+00:00",
+            "2016-12-01 13:59:00+00:00",
+            "2022-11-18 19:35:00+00:00"
+          ],
+          "is_numeric": false,
+          "top_values": {
+            "2017-09-03 20:33:00+00:00": 32,
+            "2018-08-10 20:54:00+00:00": 26,
+            "2019-06-24 20:53:00+00:00": 23,
+            "2018-02-01 18:30:00+00:00": 22,
+            "2017-04-01 03:12:00+00:00": 21,
+            "2020-02-29 00:07:00+00:00": 21,
+            "2018-10-18 22:18:00+00:00": 21,
+            "2017-05-13 02:11:00+00:00": 21,
+            "2019-11-10 04:51:00+00:00": 20,
+            "2023-08-03 20:58:00+00:00": 20,
+            "2021-07-08 23:58:00+00:00": 20,
+            "2016-04-26 04:24:00+00:00": 20,
+            "2017-01-31 14:51:00+00:00": 19,
+            "2018-02-01 19:16:00+00:00": 19,
+            "2017-09-21 07:56:00+00:00": 19
+          },
+          "dominant_value_share": 0.0
+        },
+        {
+          "column": "ordering_mode",
+          "n_rows": 2241050,
+          "n_missing": 73042,
+          "pct_missing": 3.2593,
+          "n_unique": 2,
+          "unique_exact": true,
+          "sample_values": [
+            "Inpatient",
+            "Inpatient",
+            "Inpatient",
+            "Inpatient",
+            "Outpatient"
+          ],
+          "is_numeric": false,
+          "value_counts": {
+            "Inpatient": 1238720,
+            "Outpatient": 929288
+          },
+          "dominant_value_share": 0.5714
+        },
+        {
+          "column": "culture_description",
+          "n_rows": 2241050,
+          "n_missing": 0,
+          "pct_missing": 0.0,
+          "n_unique": 3,
+          "unique_exact": true,
+          "sample_values": [
+            "URINE",
+            "URINE",
+            "BLOOD",
+            "URINE",
+            "URINE"
+          ],
+          "is_numeric": false,
+          "value_counts": {
+            "URINE": 1516950,
+            "BLOOD": 435774,
+            "RESPIRATORY": 288326
+          },
+          "dominant_value_share": 0.6769
+        },
+        {
+          "column": "was_positive",
+          "n_rows": 2241050,
+          "n_missing": 0,
+          "pct_missing": 0.0,
+          "n_unique": 2,
+          "unique_exact": true,
+          "sample_values": [
+            "1",
+            "1",
+            "1",
+            "1",
+            "1"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 0.0,
+            "max": 1.0,
+            "mean": 0.7185,
+            "std": 0.4497
+          },
+          "value_counts": {
+            "1": 1610252,
+            "0": 630798
+          },
+          "dominant_value_share": 0.7185
+        },
+        {
+          "column": "organism",
+          "n_rows": 2241050,
+          "n_missing": 632308,
+          "pct_missing": 28.2148,
+          "n_unique": 314,
+          "unique_exact": true,
+          "sample_values": [
+            "KLEBSIELLA PNEUMONIAE",
+            "KLEBSIELLA PNEUMONIAE",
+            "KLEBSIELLA PNEUMONIAE",
+            "KLEBSIELLA PNEUMONIAE",
+            "KLEBSIELLA PNEUMONIAE"
+          ],
+          "is_numeric": false,
+          "top_values": {
+            "ESCHERICHIA COLI": 874897,
+            "KLEBSIELLA PNEUMONIAE": 151964,
+            "STAPHYLOCOCCUS AUREUS": 82519,
+            "PROTEUS MIRABILIS": 67938,
+            "ENTEROCOCCUS SPECIES": 64511,
+            "PSEUDOMONAS AERUGINOSA": 48959,
+            "MUCOID PSEUDOMONAS AERUGINOSA": 33037,
+            "KLEBSIELLA OXYTOCA": 25066,
+            "ENTEROBACTER CLOACAE COMPLEX": 24042,
+            "COAG NEGATIVE STAPHYLOCOCCUS": 20866,
+            "STAPH AUREUS {MRSA}": 16674,
+            "PSEUDOMONAS AERUGINOSA (NON-MUCOID CF)": 16327,
+            "CITROBACTER KOSERI": 16315,
+            "SERRATIA MARCESCENS": 15075,
+            "STREPTOCOCCUS AGALACTIAE (GROUP B)": 12718
+          },
+          "dominant_value_share": 0.5438
+        },
+        {
+          "column": "antibiotic",
+          "n_rows": 2241050,
+          "n_missing": 632308,
+          "pct_missing": 28.2148,
+          "n_unique": 54,
+          "unique_exact": true,
+          "sample_values": [
+            "Ertapenem",
+            "Ertapenem",
+            "Ertapenem",
+            "Ertapenem",
+            "Ertapenem"
+          ],
+          "is_numeric": false,
+          "top_values": {
+            "Ciprofloxacin": 111321,
+            "Gentamicin": 105570,
+            "Levofloxacin": 104465,
+            "Trimethoprim/Sulfamethoxazole": 103276,
+            "Ampicillin": 93613,
+            "Nitrofurantoin": 90589,
+            "Piperacillin/Tazobactam": 86436,
+            "Cefazolin": 83221,
+            "Ceftriaxone": 71520,
+            "Meropenem": 70396,
+            "Ceftazidime": 68910,
+            "Amikacin": 68418,
+            "Tetracycline": 66885,
+            "Tobramycin": 58678,
+            "Amoxicillin/Clavulanic Acid": 57897
+          },
+          "dominant_value_share": 0.0692
+        },
+        {
+          "column": "susceptibility",
+          "n_rows": 2241050,
+          "n_missing": 634468,
+          "pct_missing": 28.3112,
+          "n_unique": 5,
+          "unique_exact": true,
+          "sample_values": [
+            "Susceptible",
+            "Susceptible",
+            "Susceptible",
+            "Susceptible",
+            "Susceptible"
+          ],
+          "is_numeric": false,
+          "value_counts": {
+            "Susceptible": 1289258,
+            "Resistant": 265071,
+            "Intermediate": 47651,
+            "Inconclusive": 2670,
+            "Synergism": 1932
+          },
+          "dominant_value_share": 0.8025
+        }
+      ],
+      "identifier_triple": {
+        "columns": [
+          "anon_id",
+          "pat_enc_csn_id_coded",
+          "order_proc_id_coded"
+        ],
+        "n_unique_combinations": 751075,
+        "rows_per_combination_mean": 2.9838,
+        "is_primary_key": false,
+        "max_rows_for_one_combination": 75
+      }
+    },
+    {
+      "key": "demographics",
+      "file_name": "microbiology_cultures_demographics.csv",
+      "file_path": "C:\\Users\\alanf\\OneDrive\\Desktop\\Antibiotic Resistance Prediction and Clinical Decision Support\\microbiology_cultures_demographics.csv",
+      "file_size_bytes": 34784218,
+      "file_size_mb": 33.17,
+      "md5": "c3f688d58ed714784319f3844fe313fe",
+      "n_rows": 751075,
+      "n_columns": 5,
+      "columns": [
+        "anon_id",
+        "pat_enc_csn_id_coded",
+        "order_proc_id_coded",
+        "age",
+        "gender"
+      ],
+      "n_exact_duplicate_rows": 0,
+      "pct_exact_duplicate_rows": 0.0,
+      "column_profiles": [
+        {
+          "column": "anon_id",
+          "n_rows": 751075,
+          "n_missing": 0,
+          "pct_missing": 0.0,
+          "n_unique": ">20000",
+          "unique_exact": false,
+          "sample_values": [
+            "JC1212710",
+            "JC1218441",
+            "JC1261412",
+            "JC1224853",
+            "JC1242725"
+          ],
+          "is_numeric": false,
+          "top_values": {
+            "JC1093600": 162,
+            "JC654450": 131,
+            "JC1107638": 127,
+            "JC542882": 125,
+            "JC2222321": 118,
+            "JC1330966": 115,
+            "JC902851": 113,
+            "JC1537052": 112,
+            "JC768213": 112,
+            "JC533377": 112,
+            "JC647589": 112,
+            "JC753079": 111,
+            "JC698398": 111,
+            "JC1490847": 109,
+            "JC689001": 107
+          },
+          "dominant_value_share": 0.0002
+        },
+        {
+          "column": "pat_enc_csn_id_coded",
+          "n_rows": 751075,
+          "n_missing": 0,
+          "pct_missing": 0.0,
+          "n_unique": ">20000",
+          "unique_exact": false,
+          "sample_values": [
+            "131008781669",
+            "33052060",
+            "131004002288",
+            "19532426",
+            "32587123"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 4468214.0,
+            "max": 131368830179.0,
+            "mean": 122670077566.8918,
+            "std": 32374303066.0963
+          },
+          "top_values": {
+            "6667049": 36,
+            "6701212": 31,
+            "6631570": 29,
+            "6674995": 25,
+            "131074538384": 19,
+            "131308048543": 19,
+            "131007647029": 18,
+            "14509273": 18,
+            "6707795": 18,
+            "14477132": 17,
+            "131324298395": 16,
+            "6687545": 16,
+            "6665480": 16,
+            "131275082652": 14,
+            "131031761318": 14
+          },
+          "dominant_value_share": 0.0
+        },
+        {
+          "column": "order_proc_id_coded",
+          "n_rows": 751075,
+          "n_missing": 0,
+          "pct_missing": 0.0,
+          "n_unique": ">20000",
+          "unique_exact": false,
+          "sample_values": [
+            "364609652",
+            "351667304",
+            "355531114",
+            "335118697",
+            "349578403"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 300630080.0,
+            "max": 929296110.0,
+            "mean": 587221537.0604,
+            "std": 174358300.148
+          },
+          "top_values": {
+            "364609652": 1,
+            "351667304": 1,
+            "355531114": 1,
+            "335118697": 1,
+            "349578403": 1,
+            "369993038": 1,
+            "830478384": 1,
+            "819348359": 1,
+            "557242173": 1,
+            "433305220": 1,
+            "328185626": 1,
+            "517862497": 1,
+            "513673418": 1,
+            "441174467": 1,
+            "325980068": 1
+          },
+          "dominant_value_share": 0.0
+        },
+        {
+          "column": "age",
+          "n_rows": 751075,
+          "n_missing": 0,
+          "pct_missing": 0.0,
+          "n_unique": 9,
+          "unique_exact": true,
+          "sample_values": [
+            "25-34 years",
+            "25-34 years",
+            "25-34 years",
+            "25-34 years",
+            "25-34 years"
+          ],
+          "is_numeric": false,
+          "value_counts": {
+            "65-74 years": 130764,
+            "55-64 years": 122486,
+            "75-84 years": 100915,
+            "25-34 years": 99023,
+            "35-44 years": 93245,
+            "45-54 years": 93033,
+            "18-24 years": 47509,
+            "85-89 years": 34458,
+            "above 90": 29642
+          },
+          "dominant_value_share": 0.1741
+        },
+        {
+          "column": "gender",
+          "n_rows": 751075,
+          "n_missing": 120,
+          "pct_missing": 0.016,
+          "n_unique": 2,
+          "unique_exact": true,
+          "sample_values": [
+            "1",
+            "1",
+            "1",
+            "1",
+            "1"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 0.0,
+            "max": 1.0,
+            "mean": 0.3624,
+            "std": 0.4807
+          },
+          "value_counts": {
+            "0": 478814,
+            "1": 272141
+          },
+          "dominant_value_share": 0.6376
+        }
+      ],
+      "identifier_triple": {
+        "columns": [
+          "anon_id",
+          "pat_enc_csn_id_coded",
+          "order_proc_id_coded"
+        ],
+        "n_unique_combinations": 751075,
+        "rows_per_combination_mean": 1.0,
+        "is_primary_key": true,
+        "max_rows_for_one_combination": 1
+      }
+    },
+    {
+      "key": "labs",
+      "file_name": "microbiology_cultures_labs.csv",
+      "file_path": "C:\\Users\\alanf\\OneDrive\\Desktop\\Antibiotic Resistance Prediction and Clinical Decision Support\\microbiology_cultures_labs.csv",
+      "file_size_bytes": 448776067,
+      "file_size_mb": 427.99,
+      "md5": "c33abf42595ade84597a7b6d05bdeaa3",
+      "n_rows": 1408677,
+      "n_columns": 59,
+      "columns": [
+        "anon_id",
+        "pat_enc_csn_id_coded",
+        "order_proc_id_coded",
+        "Period_Day",
+        "Q75_wbc",
+        "Q25_wbc",
+        "median_wbc",
+        "Q25_neutrophils",
+        "Q75_neutrophils",
+        "median_neutrophils",
+        "Q25_lymphocytes",
+        "Q75_lymphocytes",
+        "median_lymphocytes",
+        "Q25_hgb",
+        "Q75_hgb",
+        "median_hgb",
+        "Q25_plt",
+        "Q75_plt",
+        "median_plt",
+        "Q75_na",
+        "Q25_na",
+        "median_na",
+        "Q75_hco3",
+        "Q25_hco3",
+        "median_hco3",
+        "Q75_bun",
+        "Q25_bun",
+        "median_bun",
+        "Q75_cr",
+        "Q25_cr",
+        "median_cr",
+        "Q75_lactate",
+        "Q25_lactate",
+        "median_lactate",
+        "Q75_procalcitonin",
+        "Q25_procalcitonin",
+        "median_procalcitonin",
+        "first_procalcitonin",
+        "last_procalcitonin",
+        "last_lactate",
+        "first_lactate",
+        "last_cr",
+        "first_cr",
+        "last_bun",
+        "first_bun",
+        "last_hco3",
+        "first_hco3",
+        "last_na",
+        "first_na",
+        "last_plt",
+        "first_plt",
+        "last_hgb",
+        "first_hgb",
+        "last_lymphocytes",
+        "first_lymphocytes",
+        "last_neutrophils",
+        "first_neutrophils",
+        "last_wbc",
+        "first_wbc"
+      ],
+      "n_exact_duplicate_rows": 0,
+      "pct_exact_duplicate_rows": 0.0,
+      "column_profiles": [
+        {
+          "column": "anon_id",
+          "n_rows": 1408677,
+          "n_missing": 0,
+          "pct_missing": 0.0,
+          "n_unique": ">20000",
+          "unique_exact": false,
+          "sample_values": [
+            "JC3080045",
+            "JC2891328",
+            "JC2761705",
+            "JC1464815",
+            "JC2004854"
+          ],
+          "is_numeric": false,
+          "top_values": {
+            "JC544470": 316,
+            "JC3045801": 258,
+            "JC3031869": 251,
+            "JC3190994": 231,
+            "JC1174299": 229,
+            "JC844379": 225,
+            "JC1235629": 222,
+            "JC2447295": 220,
+            "JC1762695": 208,
+            "JC6284940": 199,
+            "JC2954997": 198,
+            "JC3106684": 192,
+            "JC1889641": 191,
+            "JC2112137": 183,
+            "JC1458274": 182
+          },
+          "dominant_value_share": 0.0002
+        },
+        {
+          "column": "pat_enc_csn_id_coded",
+          "n_rows": 1408677,
+          "n_missing": 0,
+          "pct_missing": 0.0,
+          "n_unique": ">20000",
+          "unique_exact": false,
+          "sample_values": [
+            "131362484007",
+            "131283209225",
+            "131279968565",
+            "131018095632",
+            "131358162167"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 4468214.0,
+            "max": 131368745186.0,
+            "mean": 122463556216.0924,
+            "std": 32731454067.3743
+          },
+          "top_values": {
+            "131074538384": 316,
+            "131299206725": 251,
+            "131310991407": 224,
+            "131031761318": 221,
+            "131309079650": 220,
+            "131308048543": 208,
+            "131324298395": 201,
+            "131323183663": 201,
+            "131333658994": 199,
+            "131288511591": 196,
+            "131252466191": 183,
+            "131025187610": 182,
+            "131350538976": 181,
+            "131115616969": 181,
+            "131344534795": 176
+          },
+          "dominant_value_share": 0.0002
+        },
+        {
+          "column": "order_proc_id_coded",
+          "n_rows": 1408677,
+          "n_missing": 0,
+          "pct_missing": 0.0,
+          "n_unique": ">20000",
+          "unique_exact": false,
+          "sample_values": [
+            "906727631",
+            "654338304",
+            "645785381",
+            "398734817",
+            "902622534"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 300630080.0,
+            "max": 929108800.0,
+            "mean": 590002181.7877,
+            "std": 179454990.6481
+          },
+          "top_values": {
+            "762199269": 44,
+            "790072651": 44,
+            "759493453": 42,
+            "771830222": 37,
+            "803458547": 36,
+            "790072653": 36,
+            "685378123": 35,
+            "798160997": 34,
+            "766445824": 34,
+            "878164407": 34,
+            "665027860": 33,
+            "798160995": 33,
+            "699192857": 33,
+            "771830221": 32,
+            "833526594": 32
+          },
+          "dominant_value_share": 0.0
+        },
+        {
+          "column": "Period_Day",
+          "n_rows": 1408677,
+          "n_missing": 0,
+          "pct_missing": 0.0,
+          "n_unique": 1,
+          "unique_exact": true,
+          "sample_values": [
+            "14",
+            "14",
+            "14",
+            "14",
+            "14"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 14.0,
+            "max": 14.0,
+            "mean": 14.0,
+            "std": 0.0
+          },
+          "value_counts": {
+            "14": 1408677
+          },
+          "dominant_value_share": 1.0
+        },
+        {
+          "column": "Q75_wbc",
+          "n_rows": 1408677,
+          "n_missing": 26267,
+          "pct_missing": 1.8647,
+          "n_unique": 1470,
+          "unique_exact": true,
+          "sample_values": [
+            "0.1",
+            "1.9",
+            "5.3",
+            "315.2",
+            "7.2"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 0.0,
+            "max": 985.0,
+            "mean": 11.2657,
+            "std": 13.5638
+          },
+          "top_values": {
+            "7.4": 13020,
+            "6.9": 12747,
+            "8.1": 12620,
+            "7.2": 12612,
+            "7.3": 12586,
+            "7.6": 12504,
+            "7.5": 12459,
+            "8.4": 12432,
+            "7.9": 12422,
+            "7.8": 12415,
+            "7.7": 12369,
+            "8.0": 12266,
+            "8.3": 12240,
+            "8.6": 12171,
+            "8.2": 12149
+          },
+          "dominant_value_share": 0.0094
+        },
+        {
+          "column": "Q25_wbc",
+          "n_rows": 1408677,
+          "n_missing": 26267,
+          "pct_missing": 1.8647,
+          "n_unique": 1259,
+          "unique_exact": true,
+          "sample_values": [
+            "0.1",
+            "1.9",
+            "5.3",
+            "315.2",
+            "7.2"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 0.0,
+            "max": 834.4,
+            "mean": 8.6669,
+            "std": 9.7342
+          },
+          "top_values": {
+            "6.9": 16235,
+            "7.3": 15897,
+            "6.7": 15872,
+            "7.4": 15836,
+            "7.1": 15740,
+            "7.2": 15717,
+            "6.2": 15474,
+            "6.3": 15466,
+            "7.0": 15437,
+            "6.4": 15363,
+            "7.5": 15292,
+            "0.1": 15245,
+            "7.6": 15227,
+            "5.8": 15029,
+            "6.6": 14994
+          },
+          "dominant_value_share": 0.0117
+        },
+        {
+          "column": "median_wbc",
+          "n_rows": 1408677,
+          "n_missing": 26267,
+          "pct_missing": 1.8647,
+          "n_unique": 1344,
+          "unique_exact": true,
+          "sample_values": [
+            "0.1",
+            "1.9",
+            "5.3",
+            "315.2",
+            "7.2"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 0.0,
+            "max": 834.4,
+            "mean": 9.4845,
+            "std": 10.7818
+          },
+          "top_values": {
+            "6.9": 15535,
+            "7.4": 15043,
+            "6.4": 14688,
+            "7.0": 14682,
+            "6.8": 14508,
+            "7.1": 14425,
+            "7.2": 14381,
+            "7.3": 14325,
+            "7.7": 14286,
+            "7.6": 14155,
+            "6.1": 14119,
+            "6.7": 14107,
+            "7.8": 14096,
+            "6.6": 14085,
+            "6.2": 14059
+          },
+          "dominant_value_share": 0.0112
+        },
+        {
+          "column": "Q25_neutrophils",
+          "n_rows": 1408677,
+          "n_missing": 1045088,
+          "pct_missing": 74.1893,
+          "n_unique": 892,
+          "unique_exact": true,
+          "sample_values": [
+            "49.0",
+            "29.0",
+            "4.0",
+            "58.0",
+            "39.0"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 0.0,
+            "max": 100.0,
+            "mean": 17.1555,
+            "std": 21.4896
+          },
+          "top_values": {
+            "0.0": 22511,
+            "1.0": 19989,
+            "2.0": 16944,
+            "3.0": 13710,
+            "4.0": 12688,
+            "7.0": 12066,
+            "5.0": 11476,
+            "6.0": 10968,
+            "8.0": 9158,
+            "10.0": 8470,
+            "9.0": 7922,
+            "13.0": 7547,
+            "11.0": 6484,
+            "16.0": 6120,
+            "12.0": 5883
+          },
+          "dominant_value_share": 0.0619
+        },
+        {
+          "column": "Q75_neutrophils",
+          "n_rows": 1408677,
+          "n_missing": 1045088,
+          "pct_missing": 74.1893,
+          "n_unique": 924,
+          "unique_exact": true,
+          "sample_values": [
+            "49.0",
+            "29.0",
+            "4.0",
+            "58.0",
+            "39.0"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 0.0,
+            "max": 100.0,
+            "mean": 57.5355,
+            "std": 24.9009
+          },
+          "top_values": {
+            "73.0": 5442,
+            "75.0": 5175,
+            "67.0": 4956,
+            "64.0": 4609,
+            "66.0": 4549,
+            "80.0": 4545,
+            "76.0": 4486,
+            "70.0": 4483,
+            "65.0": 4450,
+            "68.0": 4396,
+            "71.0": 4394,
+            "62.0": 4313,
+            "69.0": 4272,
+            "57.0": 4162,
+            "58.0": 4151
+          },
+          "dominant_value_share": 0.015
+        },
+        {
+          "column": "median_neutrophils",
+          "n_rows": 1408677,
+          "n_missing": 1045088,
+          "pct_missing": 74.1893,
+          "n_unique": 913,
+          "unique_exact": true,
+          "sample_values": [
+            "49.0",
+            "29.0",
+            "4.0",
+            "58.0",
+            "39.0"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 0.0,
+            "max": 100.0,
+            "mean": 24.9415,
+            "std": 23.4141
+          },
+          "top_values": {
+            "0.0": 13914,
+            "1.0": 13470,
+            "2.0": 12221,
+            "3.0": 10192,
+            "4.0": 9093,
+            "7.0": 8182,
+            "6.0": 8097,
+            "5.0": 7381,
+            "9.0": 7122,
+            "8.0": 6770,
+            "10.0": 6295,
+            "13.0": 6195,
+            "11.0": 5862,
+            "14.0": 5315,
+            "15.0": 5171
+          },
+          "dominant_value_share": 0.0383
+        },
+        {
+          "column": "Q25_lymphocytes",
+          "n_rows": 1408677,
+          "n_missing": 1054708,
+          "pct_missing": 74.8722,
+          "n_unique": 701,
+          "unique_exact": true,
+          "sample_values": [
+            "1.0",
+            "26.0",
+            "4.0",
+            "24.0",
+            "7.0"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 0.0,
+            "max": 100.0,
+            "mean": 11.3519,
+            "std": 16.5099
+          },
+          "top_values": {
+            "1.0": 29951,
+            "2.0": 29394,
+            "3.0": 21535,
+            "4.0": 17841,
+            "5.0": 16172,
+            "7.0": 13531,
+            "0.0": 13113,
+            "0.9": 13074,
+            "6.0": 12758,
+            "8.0": 9021,
+            "2.6": 7554,
+            "1.7": 7403,
+            "9.0": 7137,
+            "10.0": 6999,
+            "12.0": 5535
+          },
+          "dominant_value_share": 0.0846
+        },
+        {
+          "column": "Q75_lymphocytes",
+          "n_rows": 1408677,
+          "n_missing": 1054708,
+          "pct_missing": 74.8722,
+          "n_unique": 818,
+          "unique_exact": true,
+          "sample_values": [
+            "1.0",
+            "26.0",
+            "4.0",
+            "24.0",
+            "7.0"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 0.0,
+            "max": 100.0,
+            "mean": 18.2247,
+            "std": 19.951
+          },
+          "top_values": {
+            "7.0": 14374,
+            "5.0": 14341,
+            "6.0": 13356,
+            "4.0": 12079,
+            "3.0": 11670,
+            "8.0": 10775,
+            "2.0": 10763,
+            "9.0": 10394,
+            "10.0": 9914,
+            "1.0": 9421,
+            "12.0": 8836,
+            "11.0": 8354,
+            "13.0": 7860,
+            "14.0": 7721,
+            "16.0": 5487
+          },
+          "dominant_value_share": 0.0406
+        },
+        {
+          "column": "median_lymphocytes",
+          "n_rows": 1408677,
+          "n_missing": 1054708,
+          "pct_missing": 74.8722,
+          "n_unique": 734,
+          "unique_exact": true,
+          "sample_values": [
+            "1.0",
+            "26.0",
+            "4.0",
+            "24.0",
+            "7.0"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 0.0,
+            "max": 100.0,
+            "mean": 13.2879,
+            "std": 17.2455
+          },
+          "top_values": {
+            "2.0": 20150,
+            "3.0": 19107,
+            "1.0": 18953,
+            "4.0": 17665,
+            "5.0": 16226,
+            "7.0": 15269,
+            "6.0": 15045,
+            "8.0": 11268,
+            "9.0": 8936,
+            "0.0": 8725,
+            "10.0": 8006,
+            "12.0": 6908,
+            "11.0": 6730,
+            "0.9": 6662,
+            "1.7": 5918
+          },
+          "dominant_value_share": 0.0569
+        },
+        {
+          "column": "Q25_hgb",
+          "n_rows": 1408677,
+          "n_missing": 25039,
+          "pct_missing": 1.7775,
+          "n_unique": 195,
+          "unique_exact": true,
+          "sample_values": [
+            "3200.0",
+            "6400.0",
+            "6400.0",
+            "6400.0",
+            "6400.0"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 1600.0,
+            "max": 24300.0,
+            "mean": 10686.9688,
+            "std": 2429.1288
+          },
+          "top_values": {
+            "7800.0": 25750,
+            "8200.0": 22742,
+            "7700.0": 22391,
+            "7900.0": 21871,
+            "8100.0": 21573,
+            "7600.0": 21092,
+            "7500.0": 20952,
+            "8000.0": 20060,
+            "12600.0": 19590,
+            "11900.0": 19531,
+            "8400.0": 19438,
+            "12400.0": 19158,
+            "7400.0": 19141,
+            "11600.0": 18963,
+            "12300.0": 18926
+          },
+          "dominant_value_share": 0.0186
+        },
+        {
+          "column": "Q75_hgb",
+          "n_rows": 1408677,
+          "n_missing": 25039,
+          "pct_missing": 1.7775,
+          "n_unique": 195,
+          "unique_exact": true,
+          "sample_values": [
+            "10900.0",
+            "7800.0",
+            "7600.0",
+            "7600.0",
+            "10500.0"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 2700.0,
+            "max": 1607000.0,
+            "mean": 11561.9765,
+            "std": 2938.6049
+          },
+          "top_values": {
+            "12600.0": 23257,
+            "12900.0": 23081,
+            "11900.0": 22777,
+            "12200.0": 22099,
+            "12400.0": 21924,
+            "12700.0": 21776,
+            "13100.0": 21696,
+            "11600.0": 21551,
+            "13300.0": 21431,
+            "12300.0": 21403,
+            "12800.0": 21341,
+            "12500.0": 21231,
+            "9900.0": 21176,
+            "12100.0": 21142,
+            "13000.0": 20928
+          },
+          "dominant_value_share": 0.0168
+        },
+        {
+          "column": "median_hgb",
+          "n_rows": 1408677,
+          "n_missing": 25039,
+          "pct_missing": 1.7775,
+          "n_unique": 192,
+          "unique_exact": true,
+          "sample_values": [
+            "10600.0",
+            "6800.0",
+            "7500.0",
+            "6700.0",
+            "9700.0"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 1700.0,
+            "max": 24300.0,
+            "mean": 10967.6006,
+            "std": 2287.6459
+          },
+          "top_values": {
+            "8500.0": 24387,
+            "8400.0": 22556,
+            "8200.0": 21316,
+            "8600.0": 21283,
+            "8900.0": 21265,
+            "8700.0": 21236,
+            "8800.0": 21205,
+            "11900.0": 21132,
+            "12600.0": 21103,
+            "8300.0": 21029,
+            "8100.0": 20496,
+            "9100.0": 20194,
+            "12400.0": 20032,
+            "11600.0": 19975,
+            "12100.0": 19930
+          },
+          "dominant_value_share": 0.0176
+        },
+        {
+          "column": "Q25_plt",
+          "n_rows": 1408677,
+          "n_missing": 26377,
+          "pct_missing": 1.8725,
+          "n_unique": 1045,
+          "unique_exact": true,
+          "sample_values": [
+            "169.0",
+            "157.0",
+            "213.0",
+            "22.0",
+            "214.0"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 1.0,
+            "max": 2533.0,
+            "mean": 199.4541,
+            "std": 113.8977
+          },
+          "top_values": {
+            "195.0": 6033,
+            "166.0": 5929,
+            "196.0": 5880,
+            "192.0": 5811,
+            "186.0": 5792,
+            "185.0": 5782,
+            "184.0": 5778,
+            "208.0": 5773,
+            "200.0": 5771,
+            "181.0": 5751,
+            "213.0": 5739,
+            "198.0": 5735,
+            "193.0": 5702,
+            "206.0": 5699,
+            "183.0": 5691
+          },
+          "dominant_value_share": 0.0044
+        },
+        {
+          "column": "Q75_plt",
+          "n_rows": 1408677,
+          "n_missing": 26377,
+          "pct_missing": 1.8725,
+          "n_unique": 1168,
+          "unique_exact": true,
+          "sample_values": [
+            "169.0",
+            "157.0",
+            "213.0",
+            "22.0",
+            "214.0"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 1.0,
+            "max": 3466.0,
+            "mean": 233.3524,
+            "std": 122.8871
+          },
+          "top_values": {
+            "199.0": 6378,
+            "220.0": 6257,
+            "209.0": 6181,
+            "194.0": 6175,
+            "216.0": 6135,
+            "211.0": 6096,
+            "221.0": 6050,
+            "181.0": 6025,
+            "208.0": 6001,
+            "227.0": 5916,
+            "222.0": 5911,
+            "239.0": 5897,
+            "231.0": 5868,
+            "212.0": 5867,
+            "195.0": 5860
+          },
+          "dominant_value_share": 0.0046
+        },
+        {
+          "column": "median_plt",
+          "n_rows": 1408677,
+          "n_missing": 26377,
+          "pct_missing": 1.8725,
+          "n_unique": 1077,
+          "unique_exact": true,
+          "sample_values": [
+            "169.0",
+            "157.0",
+            "213.0",
+            "22.0",
+            "214.0"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 1.0,
+            "max": 2561.0,
+            "mean": 210.6106,
+            "std": 114.0641
+          },
+          "top_values": {
+            "192.0": 6209,
+            "204.0": 6209,
+            "209.0": 6009,
+            "206.0": 5981,
+            "197.0": 5974,
+            "195.0": 5931,
+            "191.0": 5920,
+            "181.0": 5898,
+            "185.0": 5885,
+            "214.0": 5862,
+            "224.0": 5851,
+            "208.0": 5844,
+            "196.0": 5839,
+            "188.0": 5805,
+            "213.0": 5804
+          },
+          "dominant_value_share": 0.0045
+        },
+        {
+          "column": "Q75_na",
+          "n_rows": 1408677,
+          "n_missing": 88295,
+          "pct_missing": 6.2679,
+          "n_unique": 77,
+          "unique_exact": true,
+          "sample_values": [
+            "136.0",
+            "136.0",
+            "138.0",
+            "136.0",
+            "138.0"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 10.0,
+            "max": 188.0,
+            "mean": 138.2293,
+            "std": 4.5785
+          },
+          "top_values": {
+            "139.0": 150550,
+            "138.0": 147406,
+            "140.0": 137019,
+            "137.0": 132199,
+            "136.0": 109030,
+            "141.0": 105696,
+            "135.0": 83778,
+            "142.0": 74534,
+            "134.0": 61584,
+            "143.0": 50004,
+            "133.0": 44572,
+            "132.0": 32123,
+            "144.0": 31187,
+            "131.0": 22889,
+            "145.0": 20952
+          },
+          "dominant_value_share": 0.114
+        },
+        {
+          "column": "Q25_na",
+          "n_rows": 1408677,
+          "n_missing": 88295,
+          "pct_missing": 6.2679,
+          "n_unique": 78,
+          "unique_exact": true,
+          "sample_values": [
+            "136.0",
+            "136.0",
+            "138.0",
+            "136.0",
+            "138.0"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 10.0,
+            "max": 188.0,
+            "mean": 135.661,
+            "std": 4.4866
+          },
+          "top_values": {
+            "137.0": 139581,
+            "136.0": 138923,
+            "138.0": 127370,
+            "135.0": 125584,
+            "134.0": 111223,
+            "139.0": 105609,
+            "133.0": 88368,
+            "140.0": 81202,
+            "132.0": 67621,
+            "141.0": 54726,
+            "131.0": 50408,
+            "130.0": 39186,
+            "142.0": 34090,
+            "129.0": 28177,
+            "128.0": 21733
+          },
+          "dominant_value_share": 0.1057
+        },
+        {
+          "column": "median_na",
+          "n_rows": 1408677,
+          "n_missing": 88295,
+          "pct_missing": 6.2679,
+          "n_unique": 78,
+          "unique_exact": true,
+          "sample_values": [
+            "136.0",
+            "136.0",
+            "138.0",
+            "136.0",
+            "138.0"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 10.0,
+            "max": 188.0,
+            "mean": 136.6824,
+            "std": 4.4625
+          },
+          "top_values": {
+            "138.0": 146751,
+            "137.0": 145856,
+            "136.0": 134189,
+            "139.0": 129859,
+            "135.0": 112219,
+            "140.0": 101287,
+            "134.0": 90481,
+            "141.0": 71953,
+            "133.0": 69567,
+            "132.0": 50810,
+            "142.0": 44884,
+            "131.0": 38172,
+            "143.0": 28503,
+            "130.0": 27893,
+            "129.0": 20525
+          },
+          "dominant_value_share": 0.1111
+        },
+        {
+          "column": "Q75_hco3",
+          "n_rows": 1408677,
+          "n_missing": 85466,
+          "pct_missing": 6.0671,
+          "n_unique": 272,
+          "unique_exact": true,
+          "sample_values": [
+            "22.7",
+            "30.0",
+            "24.0",
+            "33.0",
+            "25.0"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 3.0,
+            "max": 50.0,
+            "mean": 26.049,
+            "std": 3.8024
+          },
+          "top_values": {
+            "26.0": 160881,
+            "27.0": 155037,
+            "25.0": 153895,
+            "28.0": 129540,
+            "24.0": 127876,
+            "29.0": 101814,
+            "23.0": 96997,
+            "30.0": 69279,
+            "22.0": 68217,
+            "21.0": 45325,
+            "31.0": 44153,
+            "20.0": 29482,
+            "32.0": 27339,
+            "19.0": 19241,
+            "33.0": 17039
+          },
+          "dominant_value_share": 0.1216
+        },
+        {
+          "column": "Q25_hco3",
+          "n_rows": 1408677,
+          "n_missing": 85466,
+          "pct_missing": 6.0671,
+          "n_unique": 257,
+          "unique_exact": true,
+          "sample_values": [
+            "22.7",
+            "30.0",
+            "24.0",
+            "33.0",
+            "25.0"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 2.0,
+            "max": 50.0,
+            "mean": 23.9561,
+            "std": 3.929
+          },
+          "top_values": {
+            "24.0": 152693,
+            "23.0": 147142,
+            "25.0": 143933,
+            "26.0": 125589,
+            "22.0": 125401,
+            "21.0": 98782,
+            "27.0": 98419,
+            "28.0": 74959,
+            "20.0": 68442,
+            "29.0": 52592,
+            "19.0": 46099,
+            "30.0": 34648,
+            "18.0": 29131,
+            "31.0": 20551,
+            "17.0": 19759
+          },
+          "dominant_value_share": 0.1154
+        },
+        {
+          "column": "median_hco3",
+          "n_rows": 1408677,
+          "n_missing": 85466,
+          "pct_missing": 6.0671,
+          "n_unique": 254,
+          "unique_exact": true,
+          "sample_values": [
+            "22.7",
+            "30.0",
+            "24.0",
+            "33.0",
+            "25.0"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 2.0,
+            "max": 50.0,
+            "mean": 24.7754,
+            "std": 3.7756
+          },
+          "top_values": {
+            "25.0": 162334,
+            "24.0": 154968,
+            "26.0": 147226,
+            "23.0": 135913,
+            "27.0": 123924,
+            "22.0": 102392,
+            "28.0": 94804,
+            "21.0": 71580,
+            "29.0": 66376,
+            "20.0": 49203,
+            "30.0": 42795,
+            "19.0": 32281,
+            "31.0": 26138,
+            "18.0": 20793,
+            "32.0": 15237
+          },
+          "dominant_value_share": 0.1227
+        },
+        {
+          "column": "Q75_bun",
+          "n_rows": 1408677,
+          "n_missing": 86894,
+          "pct_missing": 6.1685,
+          "n_unique": 206,
+          "unique_exact": true,
+          "sample_values": [
+            "63.0",
+            "5.0",
+            "6.0",
+            "33.0",
+            "21.0"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 1.0,
+            "max": 274.0,
+            "mean": 25.6957,
+            "std": 20.1801
+          },
+          "top_values": {
+            "13.0": 62554,
+            "14.0": 60548,
+            "12.0": 60265,
+            "15.0": 60140,
+            "11.0": 58392,
+            "16.0": 56142,
+            "17.0": 53083,
+            "10.0": 51389,
+            "18.0": 48555,
+            "19.0": 44403,
+            "9.0": 43793,
+            "20.0": 39852,
+            "21.0": 36697,
+            "8.0": 35521,
+            "22.0": 34898
+          },
+          "dominant_value_share": 0.0473
+        },
+        {
+          "column": "Q25_bun",
+          "n_rows": 1408677,
+          "n_missing": 86894,
+          "pct_missing": 6.1685,
+          "n_unique": 190,
+          "unique_exact": true,
+          "sample_values": [
+            "63.0",
+            "5.0",
+            "6.0",
+            "33.0",
+            "21.0"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 1.0,
+            "max": 268.0,
+            "mean": 20.2225,
+            "std": 15.4999
+          },
+          "top_values": {
+            "11.0": 71075,
+            "13.0": 69538,
+            "12.0": 68852,
+            "10.0": 68379,
+            "9.0": 65021,
+            "14.0": 63564,
+            "15.0": 60658,
+            "8.0": 56702,
+            "16.0": 55310,
+            "17.0": 50337,
+            "7.0": 48182,
+            "18.0": 45239,
+            "19.0": 42013,
+            "6.0": 37969,
+            "20.0": 37928
+          },
+          "dominant_value_share": 0.0538
+        },
+        {
+          "column": "median_bun",
+          "n_rows": 1408677,
+          "n_missing": 86894,
+          "pct_missing": 6.1685,
+          "n_unique": 195,
+          "unique_exact": true,
+          "sample_values": [
+            "63.0",
+            "5.0",
+            "6.0",
+            "33.0",
+            "21.0"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 1.0,
+            "max": 268.0,
+            "mean": 22.3057,
+            "std": 17.3276
+          },
+          "top_values": {
+            "12.0": 67279,
+            "11.0": 66998,
+            "13.0": 66876,
+            "10.0": 64496,
+            "14.0": 63502,
+            "15.0": 59865,
+            "9.0": 57473,
+            "16.0": 55474,
+            "17.0": 50386,
+            "8.0": 49371,
+            "18.0": 45928,
+            "19.0": 42136,
+            "7.0": 39621,
+            "20.0": 37516,
+            "21.0": 35121
+          },
+          "dominant_value_share": 0.0509
+        },
+        {
+          "column": "Q75_cr",
+          "n_rows": 1408677,
+          "n_missing": 73242,
+          "pct_missing": 5.1993,
+          "n_unique": 1547,
+          "unique_exact": true,
+          "sample_values": [
+            "3.0",
+            "0.5",
+            "0.5",
+            "0.5",
+            "1.0"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 0.06,
+            "max": 281.0,
+            "mean": 1.3958,
+            "std": 1.5525
+          },
+          "top_values": {
+            "0.9": 66561,
+            "0.8": 63974,
+            "1.0": 58839,
+            "0.7": 50519,
+            "1.1": 49706,
+            "1.2": 38238,
+            "1.3": 31165,
+            "0.6": 29337,
+            "1.4": 23216,
+            "1.5": 18766,
+            "1.6": 15532,
+            "0.5": 12228,
+            "1.7": 11891,
+            "0.76": 11002,
+            "0.71": 10562
+          },
+          "dominant_value_share": 0.0498
+        },
+        {
+          "column": "Q25_cr",
+          "n_rows": 1408677,
+          "n_missing": 73242,
+          "pct_missing": 5.1993,
+          "n_unique": 1384,
+          "unique_exact": true,
+          "sample_values": [
+            "3.0",
+            "0.5",
+            "0.5",
+            "0.5",
+            "1.0"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 0.06,
+            "max": 145.0,
+            "mean": 1.172,
+            "std": 1.2002
+          },
+          "top_values": {
+            "0.8": 74353,
+            "0.9": 67638,
+            "0.7": 66838,
+            "1.0": 56917,
+            "0.6": 47775,
+            "1.1": 44626,
+            "1.2": 33806,
+            "0.5": 25223,
+            "1.3": 24509,
+            "1.4": 17776,
+            "1.5": 13955,
+            "0.68": 11893,
+            "0.66": 11782,
+            "0.64": 11502,
+            "0.73": 11477
+          },
+          "dominant_value_share": 0.0557
+        },
+        {
+          "column": "median_cr",
+          "n_rows": 1408677,
+          "n_missing": 73242,
+          "pct_missing": 5.1993,
+          "n_unique": 1451,
+          "unique_exact": true,
+          "sample_values": [
+            "3.0",
+            "0.5",
+            "0.5",
+            "0.5",
+            "1.0"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 0.06,
+            "max": 145.0,
+            "mean": 1.2547,
+            "std": 1.3037
+          },
+          "top_values": {
+            "0.8": 73153,
+            "0.9": 68037,
+            "0.7": 60397,
+            "1.0": 57896,
+            "1.1": 45843,
+            "0.6": 41125,
+            "1.2": 34897,
+            "1.3": 26829,
+            "1.4": 20899,
+            "0.5": 19143,
+            "1.5": 15937,
+            "1.6": 12452,
+            "0.71": 11445,
+            "0.67": 11322,
+            "0.72": 11232
+          },
+          "dominant_value_share": 0.0548
+        },
+        {
+          "column": "Q75_lactate",
+          "n_rows": 1408677,
+          "n_missing": 832265,
+          "pct_missing": 59.0813,
+          "n_unique": 1482,
+          "unique_exact": true,
+          "sample_values": [
+            "0.86",
+            "2.14",
+            "0.9",
+            "1.8",
+            "0.46"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 0.3,
+            "max": 33.9,
+            "mean": 2.25,
+            "std": 2.2038
+          },
+          "top_values": {
+            "1.5": 11971,
+            "1.3": 11515,
+            "1.4": 10974,
+            "1.2": 10617,
+            "1.6": 9941,
+            "1.7": 9844,
+            "1.1": 9605,
+            "1.8": 9446,
+            "2.0": 8493,
+            "1.9": 8429,
+            "2.2": 8199,
+            "2.1": 8092,
+            "0.9": 7598,
+            "1.0": 7344,
+            "2.5": 5771
+          },
+          "dominant_value_share": 0.0208
+        },
+        {
+          "column": "Q25_lactate",
+          "n_rows": 1408677,
+          "n_missing": 832265,
+          "pct_missing": 59.0813,
+          "n_unique": 1145,
+          "unique_exact": true,
+          "sample_values": [
+            "0.86",
+            "2.14",
+            "0.9",
+            "1.8",
+            "0.46"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 0.2,
+            "max": 30.2,
+            "mean": 1.6928,
+            "std": 1.4712
+          },
+          "top_values": {
+            "1.3": 16999,
+            "1.1": 15667,
+            "1.2": 15241,
+            "1.4": 15178,
+            "1.5": 14727,
+            "1.6": 12568,
+            "1.0": 12437,
+            "1.7": 12106,
+            "1.8": 11033,
+            "0.9": 10702,
+            "1.9": 10653,
+            "2.0": 8605,
+            "0.8": 7855,
+            "2.1": 7032,
+            "2.2": 5863
+          },
+          "dominant_value_share": 0.0295
+        },
+        {
+          "column": "median_lactate",
+          "n_rows": 1408677,
+          "n_missing": 832265,
+          "pct_missing": 59.0813,
+          "n_unique": 1239,
+          "unique_exact": true,
+          "sample_values": [
+            "0.86",
+            "2.14",
+            "0.9",
+            "1.8",
+            "0.46"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 0.2,
+            "max": 31.4,
+            "mean": 1.8355,
+            "std": 1.6712
+          },
+          "top_values": {
+            "1.3": 14797,
+            "1.4": 14422,
+            "1.5": 13492,
+            "1.2": 13486,
+            "1.1": 12749,
+            "1.7": 12159,
+            "1.6": 11916,
+            "1.8": 10866,
+            "1.9": 10766,
+            "1.0": 10337,
+            "2.0": 8930,
+            "0.9": 8564,
+            "2.1": 7628,
+            "2.2": 6768,
+            "0.8": 6741
+          },
+          "dominant_value_share": 0.0257
+        },
+        {
+          "column": "Q75_procalcitonin",
+          "n_rows": 1408677,
+          "n_missing": 1216557,
+          "pct_missing": 86.3617,
+          "n_unique": 1559,
+          "unique_exact": true,
+          "sample_values": [
+            "0.08",
+            "0.02",
+            "0.05",
+            "0.75",
+            "0.26"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 0.02,
+            "max": 1440.1,
+            "mean": 4.5912,
+            "std": 19.1098
+          },
+          "top_values": {
+            "0.1": 7557,
+            "0.2": 6462,
+            "0.3": 4432,
+            "0.06": 3740,
+            "0.07": 3534,
+            "0.05": 3532,
+            "0.4": 3485,
+            "0.08": 3060,
+            "0.11": 2930,
+            "0.12": 2914,
+            "0.04": 2855,
+            "0.09": 2755,
+            "0.5": 2564,
+            "0.13": 2355,
+            "0.18": 2161
+          },
+          "dominant_value_share": 0.0393
+        },
+        {
+          "column": "Q25_procalcitonin",
+          "n_rows": 1408677,
+          "n_missing": 1216557,
+          "pct_missing": 86.3617,
+          "n_unique": 1437,
+          "unique_exact": true,
+          "sample_values": [
+            "0.08",
+            "0.02",
+            "0.05",
+            "0.64",
+            "0.26"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 0.02,
+            "max": 671.75,
+            "mean": 2.9377,
+            "std": 14.4928
+          },
+          "top_values": {
+            "0.1": 9719,
+            "0.2": 7766,
+            "0.3": 5566,
+            "0.07": 4582,
+            "0.4": 4281,
+            "0.06": 4259,
+            "0.05": 4197,
+            "0.08": 3983,
+            "0.12": 3532,
+            "0.09": 3503,
+            "0.11": 3437,
+            "0.5": 3225,
+            "0.04": 3127,
+            "0.7": 3077,
+            "0.13": 3040
+          },
+          "dominant_value_share": 0.0506
+        },
+        {
+          "column": "median_procalcitonin",
+          "n_rows": 1408677,
+          "n_missing": 1216557,
+          "pct_missing": 86.3617,
+          "n_unique": 1456,
+          "unique_exact": true,
+          "sample_values": [
+            "0.08",
+            "0.02",
+            "0.05",
+            "0.64",
+            "0.26"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 0.02,
+            "max": 713.0,
+            "mean": 3.2529,
+            "std": 15.1438
+          },
+          "top_values": {
+            "0.1": 8792,
+            "0.2": 7604,
+            "0.3": 4803,
+            "0.06": 4044,
+            "0.4": 3953,
+            "0.08": 3927,
+            "0.05": 3792,
+            "0.07": 3691,
+            "0.12": 3669,
+            "0.11": 3125,
+            "0.04": 3093,
+            "0.09": 2981,
+            "0.5": 2909,
+            "0.14": 2868,
+            "0.13": 2509
+          },
+          "dominant_value_share": 0.0458
+        },
+        {
+          "column": "first_procalcitonin",
+          "n_rows": 1408677,
+          "n_missing": 1406140,
+          "pct_missing": 99.8199,
+          "n_unique": 181,
+          "unique_exact": true,
+          "sample_values": [
+            "0.08",
+            "0.02",
+            "0.3",
+            "0.11",
+            "0.09"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 0.02,
+            "max": 374.4,
+            "mean": 3.2031,
+            "std": 17.7517
+          },
+          "top_values": {
+            "0.05": 217,
+            "0.03": 211,
+            "0.1": 116,
+            "0.07": 108,
+            "0.04": 101,
+            "0.11": 95,
+            "0.06": 93,
+            "0.13": 88,
+            "0.09": 85,
+            "0.3": 70,
+            "0.12": 65,
+            "0.2": 52,
+            "0.08": 50,
+            "2.43": 39,
+            "0.19": 37
+          },
+          "dominant_value_share": 0.0855
+        },
+        {
+          "column": "last_procalcitonin",
+          "n_rows": 1408677,
+          "n_missing": 1395054,
+          "pct_missing": 99.0329,
+          "n_unique": 490,
+          "unique_exact": true,
+          "sample_values": [
+            "0.08",
+            "0.02",
+            "0.05",
+            "0.43",
+            "1.5"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 0.02,
+            "max": 417.6,
+            "mean": 3.1647,
+            "std": 15.5457
+          },
+          "top_values": {
+            "0.1": 799,
+            "0.2": 737,
+            "0.04": 332,
+            "0.4": 316,
+            "0.3": 303,
+            "0.05": 297,
+            "1.0": 294,
+            "0.06": 281,
+            "0.13": 267,
+            "0.5": 263,
+            "0.07": 250,
+            "0.16": 249,
+            "0.11": 248,
+            "3.1": 247,
+            "0.08": 239
+          },
+          "dominant_value_share": 0.0587
+        },
+        {
+          "column": "last_lactate",
+          "n_rows": 1408677,
+          "n_missing": 1332902,
+          "pct_missing": 94.6208,
+          "n_unique": 657,
+          "unique_exact": true,
+          "sample_values": [
+            "0.86",
+            "2.14",
+            "0.9",
+            "1.8",
+            "0.46"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 0.3,
+            "max": 30.2,
+            "mean": 1.5785,
+            "std": 1.649
+          },
+          "top_values": {
+            "1.3": 1860,
+            "1.5": 1668,
+            "1.0": 1605,
+            "1.4": 1580,
+            "1.1": 1553,
+            "1.2": 1519,
+            "1.8": 1386,
+            "1.6": 1374,
+            "1.7": 1331,
+            "1.9": 1202,
+            "0.9": 1169,
+            "2.0": 1034,
+            "0.8": 954,
+            "2.1": 768,
+            "2.2": 757
+          },
+          "dominant_value_share": 0.0245
+        },
+        {
+          "column": "first_lactate",
+          "n_rows": 1408677,
+          "n_missing": 1386632,
+          "pct_missing": 98.4351,
+          "n_unique": 659,
+          "unique_exact": true,
+          "sample_values": [
+            "0.86",
+            "0.9",
+            "0.46",
+            "1.4",
+            "1.0"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 0.2,
+            "max": 18.7,
+            "mean": 2.1424,
+            "std": 1.837
+          },
+          "top_values": {
+            "1.4": 635,
+            "1.5": 581,
+            "1.3": 556,
+            "1.7": 551,
+            "1.2": 529,
+            "1.6": 527,
+            "1.8": 490,
+            "1.1": 454,
+            "2.1": 389,
+            "1.0": 388,
+            "1.9": 388,
+            "0.9": 366,
+            "2.0": 360,
+            "2.4": 342,
+            "2.2": 288
+          },
+          "dominant_value_share": 0.0288
+        },
+        {
+          "column": "last_cr",
+          "n_rows": 1408677,
+          "n_missing": 1290626,
+          "pct_missing": 91.6197,
+          "n_unique": 893,
+          "unique_exact": true,
+          "sample_values": [
+            "0.5",
+            "1.0",
+            "1.0",
+            "1.0",
+            "1.0"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 0.06,
+            "max": 145.0,
+            "mean": 1.3035,
+            "std": 1.5999
+          },
+          "top_values": {
+            "0.8": 7674,
+            "0.9": 7406,
+            "0.7": 6550,
+            "1.0": 5988,
+            "1.1": 4659,
+            "0.6": 3999,
+            "1.2": 3858,
+            "1.3": 2766,
+            "1.4": 2189,
+            "0.5": 2078,
+            "1.5": 1616,
+            "1.6": 1213,
+            "1.7": 977,
+            "1.8": 932,
+            "0.69": 908
+          },
+          "dominant_value_share": 0.065
+        },
+        {
+          "column": "first_cr",
+          "n_rows": 1408677,
+          "n_missing": 1138324,
+          "pct_missing": 80.808,
+          "n_unique": 1289,
+          "unique_exact": true,
+          "sample_values": [
+            "1.0",
+            "1.25",
+            "1.5",
+            "0.72",
+            "0.47"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 0.07,
+            "max": 145.0,
+            "mean": 1.3674,
+            "std": 1.6434
+          },
+          "top_values": {
+            "0.8": 12250,
+            "0.9": 12154,
+            "1.0": 11044,
+            "0.7": 9877,
+            "1.1": 9403,
+            "1.2": 6841,
+            "0.6": 5940,
+            "1.3": 5160,
+            "1.4": 3986,
+            "1.6": 3025,
+            "1.5": 2872,
+            "0.5": 2670,
+            "0.74": 2661,
+            "0.71": 2520,
+            "0.77": 2465
+          },
+          "dominant_value_share": 0.0453
+        },
+        {
+          "column": "last_bun",
+          "n_rows": 1408677,
+          "n_missing": 1297609,
+          "pct_missing": 92.1154,
+          "n_unique": 157,
+          "unique_exact": true,
+          "sample_values": [
+            "63.0",
+            "25.0",
+            "34.0",
+            "46.0",
+            "9.0"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 1.0,
+            "max": 209.0,
+            "mean": 24.1571,
+            "std": 19.3079
+          },
+          "top_values": {
+            "13.0": 5241,
+            "11.0": 5043,
+            "12.0": 4973,
+            "14.0": 4732,
+            "10.0": 4718,
+            "15.0": 4619,
+            "16.0": 4533,
+            "9.0": 4162,
+            "17.0": 4024,
+            "18.0": 3901,
+            "8.0": 3867,
+            "19.0": 3193,
+            "7.0": 3190,
+            "20.0": 3145,
+            "21.0": 2805
+          },
+          "dominant_value_share": 0.0472
+        },
+        {
+          "column": "first_bun",
+          "n_rows": 1408677,
+          "n_missing": 1154685,
+          "pct_missing": 81.9695,
+          "n_unique": 185,
+          "unique_exact": true,
+          "sample_values": [
+            "6.0",
+            "33.0",
+            "15.0",
+            "18.0",
+            "15.0"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 1.0,
+            "max": 318.0,
+            "mean": 23.0224,
+            "std": 18.5055
+          },
+          "top_values": {
+            "13.0": 13684,
+            "12.0": 12794,
+            "14.0": 12782,
+            "15.0": 12633,
+            "11.0": 12491,
+            "10.0": 11616,
+            "16.0": 11514,
+            "17.0": 10959,
+            "18.0": 9448,
+            "9.0": 9284,
+            "19.0": 9234,
+            "8.0": 8149,
+            "20.0": 7959,
+            "21.0": 7078,
+            "22.0": 6315
+          },
+          "dominant_value_share": 0.0539
+        },
+        {
+          "column": "last_hco3",
+          "n_rows": 1408677,
+          "n_missing": 1299462,
+          "pct_missing": 92.247,
+          "n_unique": 219,
+          "unique_exact": true,
+          "sample_values": [
+            "33.0",
+            "30.0",
+            "27.0",
+            "30.0",
+            "28.0"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 2.0,
+            "max": 49.0,
+            "mean": 25.2561,
+            "std": 4.1177
+          },
+          "top_values": {
+            "25.0": 11921,
+            "26.0": 11338,
+            "24.0": 10650,
+            "27.0": 10181,
+            "23.0": 9657,
+            "28.0": 8550,
+            "22.0": 7172,
+            "29.0": 6921,
+            "21.0": 5512,
+            "30.0": 5023,
+            "20.0": 3599,
+            "31.0": 3055,
+            "19.0": 2658,
+            "32.0": 2086,
+            "18.0": 1909
+          },
+          "dominant_value_share": 0.1092
+        },
+        {
+          "column": "first_hco3",
+          "n_rows": 1408677,
+          "n_missing": 1147569,
+          "pct_missing": 81.4643,
+          "n_unique": 149,
+          "unique_exact": true,
+          "sample_values": [
+            "22.7",
+            "30.0",
+            "24.0",
+            "33.0",
+            "27.0"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 2.0,
+            "max": 49.0,
+            "mean": 24.8985,
+            "std": 4.1849
+          },
+          "top_values": {
+            "25.0": 29641,
+            "26.0": 28428,
+            "24.0": 27119,
+            "27.0": 24791,
+            "23.0": 23513,
+            "28.0": 19932,
+            "22.0": 19044,
+            "29.0": 14330,
+            "21.0": 13739,
+            "30.0": 10318,
+            "20.0": 9777,
+            "19.0": 6733,
+            "31.0": 6560,
+            "18.0": 4437,
+            "32.0": 4122
+          },
+          "dominant_value_share": 0.1135
+        },
+        {
+          "column": "last_na",
+          "n_rows": 1408677,
+          "n_missing": 1263653,
+          "pct_missing": 89.705,
+          "n_unique": 71,
+          "unique_exact": true,
+          "sample_values": [
+            "136.0",
+            "136.0",
+            "138.0",
+            "136.0",
+            "138.0"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 10.0,
+            "max": 197.0,
+            "mean": 137.3491,
+            "std": 6.0084
+          },
+          "top_values": {
+            "137.0": 13358,
+            "138.0": 12842,
+            "136.0": 12314,
+            "139.0": 12183,
+            "135.0": 10849,
+            "140.0": 10306,
+            "134.0": 8562,
+            "141.0": 7904,
+            "133.0": 6515,
+            "142.0": 6450,
+            "132.0": 5912,
+            "131.0": 4324,
+            "143.0": 4028,
+            "144.0": 3026,
+            "130.0": 3002
+          },
+          "dominant_value_share": 0.0921
+        },
+        {
+          "column": "first_na",
+          "n_rows": 1408677,
+          "n_missing": 1117054,
+          "pct_missing": 79.2981,
+          "n_unique": 77,
+          "unique_exact": true,
+          "sample_values": [
+            "136.0",
+            "136.0",
+            "136.0",
+            "139.0",
+            "137.0"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 99.0,
+            "max": 188.0,
+            "mean": 136.65,
+            "std": 4.8863
+          },
+          "top_values": {
+            "138.0": 30901,
+            "137.0": 28646,
+            "139.0": 28351,
+            "136.0": 25553,
+            "140.0": 25369,
+            "135.0": 21370,
+            "141.0": 19476,
+            "134.0": 17441,
+            "133.0": 14089,
+            "142.0": 12563,
+            "132.0": 11586,
+            "143.0": 8157,
+            "131.0": 8027,
+            "130.0": 6731,
+            "129.0": 4879
+          },
+          "dominant_value_share": 0.106
+        },
+        {
+          "column": "last_plt",
+          "n_rows": 1408677,
+          "n_missing": 1359842,
+          "pct_missing": 96.5333,
+          "n_unique": 851,
+          "unique_exact": true,
+          "sample_values": [
+            "29.0",
+            "58.0",
+            "39.0",
+            "48.0",
+            "8.0"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 0.0,
+            "max": 100.0,
+            "mean": 36.4645,
+            "std": 29.8924
+          },
+          "top_values": {
+            "0.0": 2266,
+            "1.0": 1627,
+            "2.0": 1315,
+            "3.0": 1037,
+            "5.0": 889,
+            "4.0": 843,
+            "7.0": 782,
+            "6.0": 665,
+            "20.0": 611,
+            "8.0": 574,
+            "9.0": 552,
+            "13.0": 521,
+            "12.0": 473,
+            "11.0": 468,
+            "10.0": 446
+          },
+          "dominant_value_share": 0.0464
+        },
+        {
+          "column": "first_plt",
+          "n_rows": 1408677,
+          "n_missing": 1396498,
+          "pct_missing": 99.1354,
+          "n_unique": 528,
+          "unique_exact": true,
+          "sample_values": [
+            "49.0",
+            "4.0",
+            "90.0",
+            "6.0",
+            "51.0"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 0.0,
+            "max": 100.0,
+            "mean": 37.6779,
+            "std": 30.2036
+          },
+          "top_values": {
+            "1.0": 731,
+            "2.0": 531,
+            "4.0": 404,
+            "3.0": 388,
+            "0.0": 283,
+            "5.0": 264,
+            "6.0": 257,
+            "7.0": 239,
+            "12.0": 228,
+            "8.0": 221,
+            "9.0": 201,
+            "17.0": 171,
+            "54.0": 165,
+            "16.0": 158,
+            "11.0": 157
+          },
+          "dominant_value_share": 0.06
+        },
+        {
+          "column": "last_hgb",
+          "n_rows": 1408677,
+          "n_missing": 1359842,
+          "pct_missing": 96.5333,
+          "n_unique": 851,
+          "unique_exact": true,
+          "sample_values": [
+            "29.0",
+            "58.0",
+            "39.0",
+            "48.0",
+            "8.0"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 0.0,
+            "max": 100.0,
+            "mean": 36.4645,
+            "std": 29.8924
+          },
+          "top_values": {
+            "0.0": 2266,
+            "1.0": 1627,
+            "2.0": 1315,
+            "3.0": 1037,
+            "5.0": 889,
+            "4.0": 843,
+            "7.0": 782,
+            "6.0": 665,
+            "20.0": 611,
+            "8.0": 574,
+            "9.0": 552,
+            "13.0": 521,
+            "12.0": 473,
+            "11.0": 468,
+            "10.0": 446
+          },
+          "dominant_value_share": 0.0464
+        },
+        {
+          "column": "first_hgb",
+          "n_rows": 1408677,
+          "n_missing": 1396498,
+          "pct_missing": 99.1354,
+          "n_unique": 528,
+          "unique_exact": true,
+          "sample_values": [
+            "49.0",
+            "4.0",
+            "90.0",
+            "6.0",
+            "51.0"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 0.0,
+            "max": 100.0,
+            "mean": 37.6779,
+            "std": 30.2036
+          },
+          "top_values": {
+            "1.0": 731,
+            "2.0": 531,
+            "4.0": 404,
+            "3.0": 388,
+            "0.0": 283,
+            "5.0": 264,
+            "6.0": 257,
+            "7.0": 239,
+            "12.0": 228,
+            "8.0": 221,
+            "9.0": 201,
+            "17.0": 171,
+            "54.0": 165,
+            "16.0": 158,
+            "11.0": 157
+          },
+          "dominant_value_share": 0.06
+        },
+        {
+          "column": "last_lymphocytes",
+          "n_rows": 1408677,
+          "n_missing": 1359842,
+          "pct_missing": 96.5333,
+          "n_unique": 851,
+          "unique_exact": true,
+          "sample_values": [
+            "29.0",
+            "58.0",
+            "39.0",
+            "48.0",
+            "8.0"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 0.0,
+            "max": 100.0,
+            "mean": 36.4645,
+            "std": 29.8924
+          },
+          "top_values": {
+            "0.0": 2266,
+            "1.0": 1627,
+            "2.0": 1315,
+            "3.0": 1037,
+            "5.0": 889,
+            "4.0": 843,
+            "7.0": 782,
+            "6.0": 665,
+            "20.0": 611,
+            "8.0": 574,
+            "9.0": 552,
+            "13.0": 521,
+            "12.0": 473,
+            "11.0": 468,
+            "10.0": 446
+          },
+          "dominant_value_share": 0.0464
+        },
+        {
+          "column": "first_lymphocytes",
+          "n_rows": 1408677,
+          "n_missing": 1396498,
+          "pct_missing": 99.1354,
+          "n_unique": 528,
+          "unique_exact": true,
+          "sample_values": [
+            "49.0",
+            "4.0",
+            "90.0",
+            "6.0",
+            "51.0"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 0.0,
+            "max": 100.0,
+            "mean": 37.6779,
+            "std": 30.2036
+          },
+          "top_values": {
+            "1.0": 731,
+            "2.0": 531,
+            "4.0": 404,
+            "3.0": 388,
+            "0.0": 283,
+            "5.0": 264,
+            "6.0": 257,
+            "7.0": 239,
+            "12.0": 228,
+            "8.0": 221,
+            "9.0": 201,
+            "17.0": 171,
+            "54.0": 165,
+            "16.0": 158,
+            "11.0": 157
+          },
+          "dominant_value_share": 0.06
+        },
+        {
+          "column": "last_neutrophils",
+          "n_rows": 1408677,
+          "n_missing": 1359842,
+          "pct_missing": 96.5333,
+          "n_unique": 851,
+          "unique_exact": true,
+          "sample_values": [
+            "29.0",
+            "58.0",
+            "39.0",
+            "48.0",
+            "8.0"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 0.0,
+            "max": 100.0,
+            "mean": 36.4645,
+            "std": 29.8924
+          },
+          "top_values": {
+            "0.0": 2266,
+            "1.0": 1627,
+            "2.0": 1315,
+            "3.0": 1037,
+            "5.0": 889,
+            "4.0": 843,
+            "7.0": 782,
+            "6.0": 665,
+            "20.0": 611,
+            "8.0": 574,
+            "9.0": 552,
+            "13.0": 521,
+            "12.0": 473,
+            "11.0": 468,
+            "10.0": 446
+          },
+          "dominant_value_share": 0.0464
+        },
+        {
+          "column": "first_neutrophils",
+          "n_rows": 1408677,
+          "n_missing": 1396498,
+          "pct_missing": 99.1354,
+          "n_unique": 528,
+          "unique_exact": true,
+          "sample_values": [
+            "49.0",
+            "4.0",
+            "90.0",
+            "6.0",
+            "51.0"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 0.0,
+            "max": 100.0,
+            "mean": 37.6779,
+            "std": 30.2036
+          },
+          "top_values": {
+            "1.0": 731,
+            "2.0": 531,
+            "4.0": 404,
+            "3.0": 388,
+            "0.0": 283,
+            "5.0": 264,
+            "6.0": 257,
+            "7.0": 239,
+            "12.0": 228,
+            "8.0": 221,
+            "9.0": 201,
+            "17.0": 171,
+            "54.0": 165,
+            "16.0": 158,
+            "11.0": 157
+          },
+          "dominant_value_share": 0.06
+        },
+        {
+          "column": "last_wbc",
+          "n_rows": 1408677,
+          "n_missing": 937160,
+          "pct_missing": 66.5277,
+          "n_unique": 1486,
+          "unique_exact": true,
+          "sample_values": [
+            "0.1",
+            "1.9",
+            "5.3",
+            "315.2",
+            "8.4"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 0.0,
+            "max": 1009.5,
+            "mean": 10.6336,
+            "std": 14.8264
+          },
+          "top_values": {
+            "7.4": 4386,
+            "7.6": 4242,
+            "8.1": 4202,
+            "7.9": 4192,
+            "6.9": 4180,
+            "8.4": 4176,
+            "7.3": 4153,
+            "7.0": 4142,
+            "8.6": 4128,
+            "6.8": 4123,
+            "7.2": 4119,
+            "6.4": 4105,
+            "8.2": 4094,
+            "7.8": 4093,
+            "7.5": 4080
+          },
+          "dominant_value_share": 0.0093
+        },
+        {
+          "column": "first_wbc",
+          "n_rows": 1408677,
+          "n_missing": 1311408,
+          "pct_missing": 93.095,
+          "n_unique": 583,
+          "unique_exact": true,
+          "sample_values": [
+            "0.1",
+            "1.9",
+            "5.3",
+            "6.6",
+            "2.6"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 0.0,
+            "max": 564.6,
+            "mean": 9.6489,
+            "std": 11.6998
+          },
+          "top_values": {
+            "5.9": 1407,
+            "6.8": 1324,
+            "8.1": 1314,
+            "7.8": 1280,
+            "8.0": 1276,
+            "8.5": 1171,
+            "6.4": 1165,
+            "7.4": 1158,
+            "8.4": 1150,
+            "7.9": 1147,
+            "6.7": 1142,
+            "7.7": 1142,
+            "7.6": 1124,
+            "8.6": 1119,
+            "6.0": 1117
+          },
+          "dominant_value_share": 0.0145
+        }
+      ],
+      "identifier_triple": {
+        "columns": [
+          "anon_id",
+          "pat_enc_csn_id_coded",
+          "order_proc_id_coded"
+        ],
+        "n_unique_combinations": 492659,
+        "rows_per_combination_mean": 2.8593,
+        "is_primary_key": false,
+        "max_rows_for_one_combination": 106
+      }
+    },
+    {
+      "key": "resistance",
+      "file_name": "microbiology_cultures_microbial_resistance.csv",
+      "file_path": "C:\\Users\\alanf\\OneDrive\\Desktop\\Antibiotic Resistance Prediction and Clinical Decision Support\\microbiology_cultures_microbial_resistance.csv",
+      "file_size_bytes": 210857439,
+      "file_size_mb": 201.09,
+      "md5": "2a87ca40b7afeb598825e1bfe40ef9b3",
+      "n_rows": 2161648,
+      "n_columns": 7,
+      "columns": [
+        "anon_id",
+        "pat_enc_csn_id_coded",
+        "order_proc_id_coded",
+        "order_time_jittered_utc",
+        "organism",
+        "antibiotic",
+        "resistant_time_to_culturetime"
+      ],
+      "n_exact_duplicate_rows": 0,
+      "pct_exact_duplicate_rows": 0.0,
+      "column_profiles": [
+        {
+          "column": "anon_id",
+          "n_rows": 2161648,
+          "n_missing": 0,
+          "pct_missing": 0.0,
+          "n_unique": ">20000",
+          "unique_exact": false,
+          "sample_values": [
+            "JC1255618",
+            "JC533377",
+            "JC669033",
+            "JC1017583",
+            "JC2465442"
+          ],
+          "is_numeric": false,
+          "top_values": {
+            "JC533377": 6696,
+            "JC1093600": 5781,
+            "JC542882": 5654,
+            "JC597158": 4113,
+            "JC829698": 3941,
+            "JC631948": 3665,
+            "JC654450": 3663,
+            "JC1107638": 3516,
+            "JC992726": 3323,
+            "JC577908": 2845,
+            "JC570310": 2793,
+            "JC2208045": 2626,
+            "JC615024": 2595,
+            "JC2459177": 2583,
+            "JC689001": 2446
+          },
+          "dominant_value_share": 0.0031
+        },
+        {
+          "column": "pat_enc_csn_id_coded",
+          "n_rows": 2161648,
+          "n_missing": 0,
+          "pct_missing": 0.0,
+          "n_unique": ">20000",
+          "unique_exact": false,
+          "sample_values": [
+            "131301644146",
+            "131311775703",
+            "131207605914",
+            "131254647220",
+            "131016167664"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 6867117.0,
+            "max": 131368830179.0,
+            "mean": 130087846991.2553,
+            "std": 12192514431.0767
+          },
+          "top_values": {
+            "131323183663": 338,
+            "131327945832": 225,
+            "131338295435": 224,
+            "131351874580": 222,
+            "131333606263": 221,
+            "131346318797": 218,
+            "131325874031": 216,
+            "131314706613": 214,
+            "131278662839": 214,
+            "131007647029": 214,
+            "131327252478": 212,
+            "131311775703": 209,
+            "131308252914": 208,
+            "131302931609": 208,
+            "131291017563": 203
+          },
+          "dominant_value_share": 0.0002
+        },
+        {
+          "column": "order_proc_id_coded",
+          "n_rows": 2161648,
+          "n_missing": 0,
+          "pct_missing": 0.0,
+          "n_unique": ">20000",
+          "unique_exact": false,
+          "sample_values": [
+            "701878721",
+            "737610687",
+            "517925931",
+            "570493265",
+            "392129591"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 304907970.0,
+            "max": 929089616.0,
+            "mean": 620568341.4731,
+            "std": 160158791.6338
+          },
+          "top_values": {
+            "909789878": 121,
+            "899661757": 120,
+            "889513044": 117,
+            "785043702": 114,
+            "813741307": 113,
+            "866638996": 113,
+            "827128864": 113,
+            "893667602": 112,
+            "842579912": 112,
+            "807443591": 112,
+            "785043708": 111,
+            "827128721": 111,
+            "637859658": 111,
+            "796818045": 110,
+            "776817896": 110
+          },
+          "dominant_value_share": 0.0001
+        },
+        {
+          "column": "order_time_jittered_utc",
+          "n_rows": 2161648,
+          "n_missing": 0,
+          "pct_missing": 0.0,
+          "n_unique": ">20000",
+          "unique_exact": false,
+          "sample_values": [
+            "2020-12-18 01:18:00+00:00",
+            "2021-07-24 18:06:00+00:00",
+            "2017-01-30 23:31:00+00:00",
+            "2018-08-03 02:00:00+00:00",
+            "2011-12-18 16:21:00+00:00"
+          ],
+          "is_numeric": false,
+          "top_values": {
+            "2022-04-02 15:16:00+00:00": 225,
+            "2022-11-05 23:23:00+00:00": 224,
+            "2023-04-05 14:14:00+00:00": 222,
+            "2022-07-30 17:45:00+00:00": 221,
+            "2023-01-03 15:31:00+00:00": 218,
+            "2022-01-27 13:46:00+00:00": 216,
+            "2021-09-28 14:42:00+00:00": 214,
+            "2019-10-18 19:24:00+00:00": 214,
+            "2022-02-19 04:06:00+00:00": 212,
+            "2021-07-24 18:06:00+00:00": 209,
+            "2021-05-22 00:11:00+00:00": 208,
+            "2021-03-17 00:41:00+00:00": 208,
+            "2020-08-07 21:12:00+00:00": 203,
+            "2021-01-12 23:20:00+00:00": 203,
+            "2020-06-27 18:23:00+00:00": 196
+          },
+          "dominant_value_share": 0.0001
+        },
+        {
+          "column": "organism",
+          "n_rows": 2161648,
+          "n_missing": 0,
+          "pct_missing": 0.0,
+          "n_unique": 292,
+          "unique_exact": true,
+          "sample_values": [
+            "MYCOBACTERIUM ABSCESSUS",
+            "KLEBSIELLA PNEUMONIAE",
+            "BURKHOLDERIA CEPACIA",
+            "MYCOBACTERIUM IMMUNOGENUM",
+            "PSEUDOMONAS AERUGINOSA"
+          ],
+          "is_numeric": false,
+          "top_values": {
+            "ESCHERICHIA COLI": 563976,
+            "STAPHYLOCOCCUS AUREUS": 386920,
+            "KLEBSIELLA PNEUMONIAE": 146632,
+            "STAPH AUREUS {MRSA}": 133732,
+            "PSEUDOMONAS AERUGINOSA": 122509,
+            "MUCOID PSEUDOMONAS AERUGINOSA": 111453,
+            "ACHROMOBACTER XYLOSOXIDANS": 87358,
+            "PSEUDOMONAS AERUGINOSA (NON-MUCOID CF)": 74389,
+            "ENTEROCOCCUS SPECIES": 73787,
+            "COAG NEGATIVE STAPHYLOCOCCUS": 66654,
+            "PROTEUS MIRABILIS": 53315,
+            "ENTEROBACTER CLOACAE COMPLEX": 35889,
+            "SERRATIA MARCESCENS": 28589,
+            "ENTEROCOCCUS FAECIUM": 26573,
+            "STAPH AUREUS(COLONY VARIANT - SMALL COLONY OR OTHER MORPHOTYPE)": 23717
+          },
+          "dominant_value_share": 0.2609
+        },
+        {
+          "column": "antibiotic",
+          "n_rows": 2161648,
+          "n_missing": 0,
+          "pct_missing": 0.0,
+          "n_unique": 26,
+          "unique_exact": true,
+          "sample_values": [
+            "Minocycline",
+            "Ertapenem",
+            "Minocycline",
+            "Linezolid",
+            "Colistin"
+          ],
+          "is_numeric": false,
+          "value_counts": {
+            "Ampicillin": 296079,
+            "Levofloxacin": 272318,
+            "Ciprofloxacin": 271794,
+            "Penicillin": 216220,
+            "Erythromycin": 174856,
+            "Cefazolin": 126078,
+            "Moxifloxacin": 117759,
+            "Amikacin": 116039,
+            "Gentamicin": 104725,
+            "Ceftazidime": 90002,
+            "Cefepime": 79155,
+            "Nitrofurantoin": 73241,
+            "Cefoxitin": 58858,
+            "Ceftriaxone": 55888,
+            "Meropenem": 55546,
+            "Vancomycin": 16209,
+            "Rifampin": 13084,
+            "Linezolid": 7539,
+            "Minocycline": 4439,
+            "Ertapenem": 4138,
+            "Clarithromycin": 3955,
+            "Colistin": 1879,
+            "Aztreonam": 1696,
+            "Metronidazole": 139,
+            "Cefpodoxime": 10,
+            "Ethambutol": 2
+          },
+          "dominant_value_share": 0.137
+        },
+        {
+          "column": "resistant_time_to_culturetime",
+          "n_rows": 2161648,
+          "n_missing": 0,
+          "pct_missing": 0.0,
+          "n_unique": 5615,
+          "unique_exact": true,
+          "sample_values": [
+            "1266",
+            "845",
+            "2231",
+            "812",
+            "210"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 1.0,
+            "max": 5773.0,
+            "mean": 1086.949,
+            "std": 1042.2001
+          },
+          "top_values": {
+            "27": 4273,
+            "28": 4234,
+            "35": 3983,
+            "21": 3954,
+            "41": 3861,
+            "20": 3811,
+            "34": 3754,
+            "14": 3737,
+            "63": 3683,
+            "26": 3593,
+            "55": 3489,
+            "17": 3482,
+            "42": 3434,
+            "48": 3402,
+            "19": 3358
+          },
+          "dominant_value_share": 0.002
+        }
+      ],
+      "identifier_triple": {
+        "columns": [
+          "anon_id",
+          "pat_enc_csn_id_coded",
+          "order_proc_id_coded"
+        ],
+        "n_unique_combinations": 166537,
+        "rows_per_combination_mean": 12.98,
+        "is_primary_key": false,
+        "max_rows_for_one_combination": 483
+      }
+    },
+    {
+      "key": "prior_med",
+      "file_name": "microbiology_cultures_prior_med.csv",
+      "file_path": "C:\\Users\\alanf\\OneDrive\\Desktop\\Antibiotic Resistance Prediction and Clinical Decision Support\\microbiology_cultures_prior_med.csv",
+      "file_size_bytes": 840541368,
+      "file_size_mb": 801.6,
+      "md5": "201607a740417f5a9fa07c4b271b392a",
+      "n_rows": 9823458,
+      "n_columns": 7,
+      "columns": [
+        "anon_id",
+        "pat_enc_csn_id_coded",
+        "order_proc_id_coded",
+        "order_time_jittered_utc",
+        "medication_name",
+        "medication_time_to_culturetime",
+        "medication_category"
+      ],
+      "n_exact_duplicate_rows": 3961688,
+      "pct_exact_duplicate_rows": 40.3289,
+      "column_profiles": [
+        {
+          "column": "anon_id",
+          "n_rows": 9823458,
+          "n_missing": 0,
+          "pct_missing": 0.0,
+          "n_unique": ">20000",
+          "unique_exact": false,
+          "sample_values": [
+            "JC2106766",
+            "JC2106766",
+            "JC2106766",
+            "JC2106766",
+            "JC2106766"
+          ],
+          "is_numeric": false,
+          "top_values": {
+            "JC654450": 26234,
+            "JC2222321": 24479,
+            "JC1578833": 15511,
+            "JC649221": 10240,
+            "JC2225811": 9885,
+            "JC2250345": 9070,
+            "JC1545883": 8435,
+            "JC654399": 7308,
+            "JC1537052": 7075,
+            "JC2212399": 6173,
+            "JC2197736": 5921,
+            "JC2208045": 5497,
+            "JC2241796": 5495,
+            "JC2335839": 5348,
+            "JC1542014": 5060
+          },
+          "dominant_value_share": 0.0027
+        },
+        {
+          "column": "pat_enc_csn_id_coded",
+          "n_rows": 9823458,
+          "n_missing": 0,
+          "pct_missing": 0.0,
+          "n_unique": ">20000",
+          "unique_exact": false,
+          "sample_values": [
+            "131237821282",
+            "131237821282",
+            "131237821282",
+            "131237821282",
+            "131237821282"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 6848692.0,
+            "max": 131368830179.0,
+            "mean": 130033715591.764,
+            "std": 12523006332.8637
+          },
+          "top_values": {
+            "131337760238": 1774,
+            "131334854178": 1564,
+            "131322016619": 1286,
+            "131281412118": 892,
+            "131281044470": 880,
+            "131278898771": 866,
+            "131274982451": 842,
+            "131273729217": 838,
+            "131267366336": 808,
+            "131345102621": 772,
+            "131301552027": 756,
+            "131263828579": 750,
+            "131260679392": 716,
+            "131225410565": 714,
+            "131261423729": 704
+          },
+          "dominant_value_share": 0.0002
+        },
+        {
+          "column": "order_proc_id_coded",
+          "n_rows": 9823458,
+          "n_missing": 0,
+          "pct_missing": 0.0,
+          "n_unique": ">20000",
+          "unique_exact": false,
+          "sample_values": [
+            "534700983",
+            "534700983",
+            "534700983",
+            "534700983",
+            "534700983"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 305023171.0,
+            "max": 929296110.0,
+            "mean": 636851251.8152,
+            "std": 165905115.3683
+          },
+          "top_values": {
+            "815257867": 461,
+            "815257868": 461,
+            "647727854": 446,
+            "647727855": 446,
+            "655694284": 446,
+            "644787168": 440,
+            "644787169": 440,
+            "638056588": 433,
+            "638056589": 433,
+            "810699976": 426,
+            "810699977": 426,
+            "627145939": 421,
+            "627145940": 421,
+            "623768164": 419,
+            "623768165": 419
+          },
+          "dominant_value_share": 0.0
+        },
+        {
+          "column": "order_time_jittered_utc",
+          "n_rows": 9823458,
+          "n_missing": 0,
+          "pct_missing": 0.0,
+          "n_unique": ">20000",
+          "unique_exact": false,
+          "sample_values": [
+            "2017-08-14 22:40:00 UTC",
+            "2017-08-14 22:40:00 UTC",
+            "2017-08-14 22:40:00 UTC",
+            "2017-08-14 22:40:00 UTC",
+            "2017-08-14 22:40:00 UTC"
+          ],
+          "is_numeric": false,
+          "top_values": {
+            "2022-10-03 17:43:00 UTC": 922,
+            "2019-12-21 22:12:00 UTC": 892,
+            "2019-11-30 22:54:00 UTC": 880,
+            "2019-10-17 02:58:00 UTC": 866,
+            "2022-09-10 22:24:00 UTC": 852,
+            "2019-08-07 03:45:00 UTC": 842,
+            "2019-07-14 23:09:00 UTC": 838,
+            "2019-04-09 00:47:00 UTC": 808,
+            "2022-07-23 08:56:00 UTC": 782,
+            "2022-08-08 20:26:00 UTC": 782,
+            "2022-12-04 02:41:00 UTC": 772,
+            "2019-01-26 22:05:00 UTC": 750,
+            "2018-12-16 00:50:00 UTC": 716,
+            "2017-05-13 21:27:00 UTC": 714,
+            "2018-11-28 22:25:00 UTC": 704
+          },
+          "dominant_value_share": 0.0001
+        },
+        {
+          "column": "medication_name",
+          "n_rows": 9823458,
+          "n_missing": 0,
+          "pct_missing": 0.0,
+          "n_unique": 89,
+          "unique_exact": true,
+          "sample_values": [
+            "Sulfamethoxazole-Trimethoprim",
+            "Sulfamethoxazole-Trimethoprim",
+            "Levofloxacin In",
+            "Vancomycin In Dextrose",
+            "Vancomycin In Dextrose"
+          ],
+          "is_numeric": false,
+          "top_values": {
+            "Piperacillin-Tazobactam-Dextrs": 1619193,
+            "Sulfamethoxazole-Trimethoprim": 1244778,
+            "Cefazolin In Dextrose": 667284,
+            "Amoxicillin-Pot Clavulanate": 596066,
+            "Azithromycin": 427708,
+            "Cephalexin": 427202,
+            "Levofloxacin": 424279,
+            "Ciprofloxacin Hcl": 371107,
+            "Metronidazole In Nacl": 285314,
+            "Vancomycin In Dextrose": 267475,
+            "Cefazolin": 243196,
+            "Nitrofurantoin": 237346,
+            "Levofloxacin In": 183311,
+            "Metronidazole": 182521,
+            "Doxycycline Hyclate": 172833
+          },
+          "dominant_value_share": 0.1648
+        },
+        {
+          "column": "medication_time_to_culturetime",
+          "n_rows": 9823458,
+          "n_missing": 0,
+          "pct_missing": 0.0,
+          "n_unique": 5673,
+          "unique_exact": true,
+          "sample_values": [
+            "90",
+            "90",
+            "91",
+            "92",
+            "92"
+          ],
+          "is_numeric": true,
+          "numeric_summary": {
+            "min": 0.0,
+            "max": 5748.0,
+            "mean": 834.7117,
+            "std": 992.0128
+          },
+          "top_values": {
+            "0": 1034527,
+            "1": 63760,
+            "2": 41257,
+            "3": 29011,
+            "15": 24562,
+            "21": 23065,
+            "14": 22935,
+            "4": 22491,
+            "17": 22372,
+            "16": 22133,
+            "20": 22017,
+            "18": 21641,
+            "19": 21048,
+            "28": 21029,
+            "22": 20731
+          },
+          "dominant_value_share": 0.1053
+        },
+        {
+          "column": "medication_category",
+          "n_rows": 9823458,
+          "n_missing": 0,
+          "pct_missing": 0.0,
+          "n_unique": 89,
+          "unique_exact": true,
+          "sample_values": [
+            "SUL",
+            "SUL",
+            "LEV1",
+            "VAN1",
+            "VAN1"
+          ],
+          "is_numeric": false,
+          "top_values": {
+            "PIP": 1619193,
+            "SUL": 1244778,
+            "CEF1": 667284,
+            "AMO": 596066,
+            "AZI": 427708,
+            "CEP": 427202,
+            "LEV": 424279,
+            "CIP": 371107,
+            "MET": 285314,
+            "VAN1": 267475,
+            "CEF": 243196,
+            "NIT": 237346,
+            "LEV1": 183311,
+            "MET1": 182521,
+            "DOX": 172833
+          },
+          "dominant_value_share": 0.1648
+        }
+      ],
+      "identifier_triple": {
+        "columns": [
+          "anon_id",
+          "pat_enc_csn_id_coded",
+          "order_proc_id_coded"
+        ],
+        "n_unique_combinations": 575344,
+        "rows_per_combination_mean": 17.0741,
+        "is_primary_key": false,
+        "max_rows_for_one_combination": 748
+      }
+    }
+  ]
+}

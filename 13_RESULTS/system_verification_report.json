@@ -1,0 +1,657 @@
+{
+  "generated_at_utc": "2026-08-24T05:35:22+00:00",
+  "phase6_explainability": {
+    "global_top10": {
+      "antibiotic_is_oral": 0.517528,
+      "organism_clean": 0.336602,
+      "prior_same_abx_nonsusc_rate": 0.301858,
+      "antibiotic": 0.301256,
+      "antibiotic_subclass": 0.257526,
+      "antibiotic_class": 0.243102,
+      "order_year": 0.202464,
+      "prior_res_same_org_abx_days_since": 0.177466,
+      "antibiotic_aware": 0.136501,
+      "prior_same_org_nonsusc_rate": 0.121599
+    },
+    "shap_additivity_max_error": 4.207745263329343e-14,
+    "n_xai_figures": 13,
+    "direction_contradictions": [
+      "prior_res_same_abx_n"
+    ]
+  },
+  "phase7_recommendation": {
+    "A. complete real held-out case": {
+      "n_options": 54,
+      "n_flagged": 23,
+      "seconds": 0.96,
+      "top_unflagged": [
+        {
+          "antibiotic": "Tigecycline",
+          "p_susceptible": 0.9439,
+          "confidence": "high",
+          "evidence": "none \u2014 extrapolated from class and organism group"
+        },
+        {
+          "antibiotic": "Meropenem",
+          "p_susceptible": 0.9132,
+          "confidence": "high",
+          "evidence": "thin"
+        },
+        {
+          "antibiotic": "Minocycline",
+          "p_susceptible": 0.913,
+          "confidence": "high",
+          "evidence": "very thin"
+        }
+      ],
+      "example_flags": [
+        {
+          "antibiotic": "Linezolid",
+          "flag": "ACHROMOBACTER XYLOSOXIDANS is expected to be intrinsically resistant to Linezolid."
+        },
+        {
+          "antibiotic": "Vancomycin",
+          "flag": "ACHROMOBACTER XYLOSOXIDANS is expected to be intrinsically resistant to Vancomycin."
+        },
+        {
+          "antibiotic": "Metronidazole",
+          "flag": "ACHROMOBACTER XYLOSOXIDANS is expected to be intrinsically resistant to Metronidazole."
+        }
+      ],
+      "framing": "These are potentially suitable options for clinician review, ordered by the model's estima\u2026"
+    },
+    "B. no patient history (first-ever culture)": {
+      "n_options": 54,
+      "n_flagged": 11,
+      "seconds": 0.88,
+      "top_unflagged": [
+        {
+          "antibiotic": "Ertapenem",
+          "p_susceptible": 0.9833,
+          "confidence": "high",
+          "evidence": "strong"
+        },
+        {
+          "antibiotic": "Meropenem",
+          "p_susceptible": 0.9833,
+          "confidence": "high",
+          "evidence": "strong"
+        },
+        {
+          "antibiotic": "Doripenem",
+          "p_susceptible": 0.9787,
+          "confidence": "high",
+          "evidence": "very thin"
+        }
+      ],
+      "example_flags": [
+        {
+          "antibiotic": "Daptomycin",
+          "flag": "ESCHERICHIA COLI is expected to be intrinsically resistant to Daptomycin."
+        },
+        {
+          "antibiotic": "Tigecycline",
+          "flag": "Tigecycline is not appropriate for a urine isolate."
+        },
+        {
+          "antibiotic": "Vancomycin",
+          "flag": "ESCHERICHIA COLI is expected to be intrinsically resistant to Vancomycin."
+        }
+      ],
+      "framing": "These are potentially suitable options for clinician review, ordered by the model's estima\u2026"
+    },
+    "C. rare organism (ELIZABETHKINGIA SPECIES)": {
+      "n_options": 54,
+      "n_flagged": 21,
+      "seconds": 0.95,
+      "top_unflagged": [
+        {
+          "antibiotic": "Colistin",
+          "p_susceptible": 0.8132,
+          "confidence": "moderate",
+          "evidence": "none \u2014 extrapolated from class and organism group"
+        },
+        {
+          "antibiotic": "Tigecycline",
+          "p_susceptible": 0.8105,
+          "confidence": "moderate",
+          "evidence": "none \u2014 extrapolated from class and organism group"
+        },
+        {
+          "antibiotic": "Ceftolozane/Tazobactam",
+          "p_susceptible": 0.7229,
+          "confidence": "moderate",
+          "evidence": "none \u2014 extrapolated from class and organism group"
+        }
+      ],
+      "example_flags": [
+        {
+          "antibiotic": "Vancomycin",
+          "flag": "ELIZABETHKINGIA SPECIES is expected to be intrinsically resistant to Vancomycin."
+        },
+        {
+          "antibiotic": "Daptomycin",
+          "flag": "ELIZABETHKINGIA SPECIES is expected to be intrinsically resistant to Daptomycin."
+        },
+        {
+          "antibiotic": "Quinupristin/Dalfopristin",
+          "flag": "ELIZABETHKINGIA SPECIES is expected to be intrinsically resistant to Quinupristin/Dalfopristin."
+        }
+      ],
+      "framing": "These are potentially suitable options for clinician review, ordered by the model's estima\u2026"
+    },
+    "D. rare antibiotics only": {
+      "n_options": 4,
+      "n_flagged": 0,
+      "seconds": 0.8,
+      "top_unflagged": [
+        {
+          "antibiotic": "Cefiderocol",
+          "p_susceptible": 0.9491,
+          "confidence": "high",
+          "evidence": "very thin"
+        },
+        {
+          "antibiotic": "Meropenem/Vaborbactam",
+          "p_susceptible": 0.8132,
+          "confidence": "moderate",
+          "evidence": "very thin"
+        },
+        {
+          "antibiotic": "Chloramphenicol",
+          "p_susceptible": 0.7696,
+          "confidence": "moderate",
+          "evidence": "none \u2014 extrapolated from class and organism group"
+        }
+      ],
+      "example_flags": [],
+      "framing": "These are potentially suitable options for clinician review, ordered by the model's estima\u2026"
+    },
+    "E. documented penicillin allergy": {
+      "n_options": 54,
+      "n_flagged": 27,
+      "seconds": 0.95,
+      "top_unflagged": [
+        {
+          "antibiotic": "Tigecycline",
+          "p_susceptible": 0.9439,
+          "confidence": "high",
+          "evidence": "none \u2014 extrapolated from class and organism group"
+        },
+        {
+          "antibiotic": "Meropenem",
+          "p_susceptible": 0.9132,
+          "confidence": "high",
+          "evidence": "thin"
+        },
+        {
+          "antibiotic": "Minocycline",
+          "p_susceptible": 0.913,
+          "confidence": "high",
+          "evidence": "very thin"
+        }
+      ],
+      "example_flags": [
+        {
+          "antibiotic": "Linezolid",
+          "flag": "ACHROMOBACTER XYLOSOXIDANS is expected to be intrinsically resistant to Linezolid."
+        },
+        {
+          "antibiotic": "Vancomycin",
+          "flag": "ACHROMOBACTER XYLOSOXIDANS is expected to be intrinsically resistant to Vancomycin."
+        },
+        {
+          "antibiotic": "Metronidazole",
+          "flag": "ACHROMOBACTER XYLOSOXIDANS is expected to be intrinsically resistant to Metronidazole."
+        }
+      ],
+      "framing": "These are potentially suitable options for clinician review, ordered by the model's estima\u2026"
+    },
+    "F. inspecting low-confidence predictions": {
+      "n_options": 54,
+      "n_flagged": 23,
+      "seconds": 0.91,
+      "top_unflagged": [
+        {
+          "antibiotic": "Tigecycline",
+          "p_susceptible": 0.9439,
+          "confidence": "high",
+          "evidence": "none \u2014 extrapolated from class and organism group"
+        },
+        {
+          "antibiotic": "Meropenem",
+          "p_susceptible": 0.9132,
+          "confidence": "high",
+          "evidence": "thin"
+        },
+        {
+          "antibiotic": "Minocycline",
+          "p_susceptible": 0.913,
+          "confidence": "high",
+          "evidence": "very thin"
+        }
+      ],
+      "example_flags": [
+        {
+          "antibiotic": "Linezolid",
+          "flag": "ACHROMOBACTER XYLOSOXIDANS is expected to be intrinsically resistant to Linezolid."
+        },
+        {
+          "antibiotic": "Vancomycin",
+          "flag": "ACHROMOBACTER XYLOSOXIDANS is expected to be intrinsically resistant to Vancomycin."
+        },
+        {
+          "antibiotic": "Metronidazole",
+          "flag": "ACHROMOBACTER XYLOSOXIDANS is expected to be intrinsically resistant to Metronidazole."
+        }
+      ],
+      "framing": "These are potentially suitable options for clinician review, ordered by the model's estima\u2026",
+      "n_low_confidence": 19
+    }
+  },
+  "phase8_apis": {
+    "openfda": {
+      "ok": true,
+      "seconds": 0.01,
+      "source": "openFDA drug label",
+      "reason": ""
+    },
+    "rxnav": {
+      "ok": true,
+      "rxcui": "2551"
+    },
+    "nadac": {
+      "ok": true,
+      "seconds": 0.0
+    },
+    "cache": {
+      "first_seconds": 0.009,
+      "second_seconds": 0.007,
+      "from_cache": true
+    }
+  },
+  "phase9_genomic": {
+    "available": false,
+    "expected_path": "C:\\Users\\alanf\\Antibiotic-Resistance-AI\\01_DATA\\raw\\genotypes.csv",
+    "reason": "No genomic data is present in this project's datasets. The five source files (cohort, demographics, labs, microbial_resistance, prior_med) were audited column by column and contain no sequence, gene, mutation or AMR-marker field. The resistance model is therefore phenotype-based only and makes no genomic claims.",
+    "how_to_enable": "Provide a CSV at the path above with columns `order_proc_id_coded, marker` (one row per detected marker, e.g. AMRFinderPlus / ResFinder / CARD-RGI output), or set the GENOTYPE_TABLE_PATH environment variable to point at one. This module and the application will activate automatically; no other code changes are needed.",
+    "reference_map_size": 21,
+    "reference_note": "Curated from the NCBI Reference Gene Catalog, CARD and ResFinder. Demonstration subset for a research prototype \u2014 not a validated AMR detection pipeline. Genotype does not equal phenotype; confirm with antimicrobial susceptibility testing."
+  },
+  "phase10_application": {
+    "Case 1 \u2014 default load (normal patient/culture)": {
+      "ran_without_exception": true,
+      "seconds": 2.9,
+      "n_markdown_blocks": 111,
+      "exception": null
+    },
+    "Case 6 \u2014 API unavailable / offline mode": {
+      "ran_without_exception": true,
+      "seconds": 0.3,
+      "n_markdown_blocks": 111,
+      "exception": null
+    },
+    "assumed_fields_on_empty_manual_case": 8
+  },
+  "checks": [
+    {
+      "phase": "6",
+      "check": "Prepared matrix columns match the declared feature list",
+      "result": "PASS",
+      "detail": "30 columns, order preserved"
+    },
+    {
+      "phase": "6",
+      "check": "Bundle features match config/final_features.json",
+      "result": "PASS",
+      "detail": "30 features"
+    },
+    {
+      "phase": "6",
+      "check": "Global SHAP importance computes",
+      "result": "PASS",
+      "detail": "30 features ranked in 4.0s; top 3: antibiotic_is_oral, organism_clean, prior_same_abx_nonsusc_rate"
+    },
+    {
+      "phase": "6",
+      "check": "SHAP values are additive (base + contributions = model output)",
+      "result": "PASS",
+      "detail": "max |reconstruction error| = 4.21e-14 across 2000 rows (log-odds scale)"
+    },
+    {
+      "phase": "6",
+      "check": "Individual prediction explanation returns signed contributions",
+      "result": "PASS",
+      "detail": "base -2.2974 + -3.0373 = -5.3347"
+    },
+    {
+      "phase": "6",
+      "check": "Bundle prediction == model + calibrator, exactly",
+      "result": "PASS",
+      "detail": "max difference 0.00e+00"
+    },
+    {
+      "phase": "6",
+      "check": "Predictions are deterministic across repeated calls",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "phase": "6",
+      "check": "Application ranking reports the deployed model and metrics",
+      "result": "PASS",
+      "detail": "algorithm LightGBM, test PR-AUC 0.76166"
+    },
+    {
+      "phase": "6",
+      "check": "Per-option SHAP factors reach the application",
+      "result": "PASS",
+      "detail": "54/54 options carry attributions"
+    },
+    {
+      "phase": "6",
+      "check": "XAI figures are present",
+      "result": "PASS",
+      "detail": "13 figures in 07_EXPLAINABLE_AI/figures/"
+    },
+    {
+      "phase": "6",
+      "check": "Every contradicting SHAP direction is diagnosed, not ignored",
+      "result": "PASS",
+      "detail": "1 contradiction(s), all with a recorded raw association and correlated-partner list"
+    },
+    {
+      "phase": "7",
+      "check": "A prediction is produced for every candidate agent",
+      "result": "PASS",
+      "detail": "54 of 54 agents scored; history-only agents (Rifampin, Ethambutol) never enter the cohort and so are not candidates"
+    },
+    {
+      "phase": "7",
+      "check": "Options are ordered by predicted susceptibility within groups",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "phase": "7",
+      "check": "Runs with no history: every history field falls back to a training default",
+      "result": "PASS",
+      "detail": "54 options still scored"
+    },
+    {
+      "phase": "7",
+      "check": "Probabilities remain valid with defaults only",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "phase": "7",
+      "check": "Thin/absent training coverage is surfaced, not hidden",
+      "result": "PASS",
+      "detail": "54/54 options carry a thin- or no-evidence label"
+    },
+    {
+      "phase": "7",
+      "check": "Gram-negative intrinsic resistance is flagged for a rare non-fermenter",
+      "result": "PASS",
+      "detail": "Vancomycin flagged for a gram-negative organism"
+    },
+    {
+      "phase": "7",
+      "check": "Rare agents are still scoreable via class/group structure",
+      "result": "PASS",
+      "detail": "4 rare agents scored"
+    },
+    {
+      "phase": "7",
+      "check": "Rare agents are labelled as having little or no direct evidence",
+      "result": "PASS",
+      "detail": "Cefiderocol=2; Meropenem/Vaborbactam=2; Chloramphenicol=0; Cefpodoxime=5"
+    },
+    {
+      "phase": "7",
+      "check": "Allergy raises flags on the relevant classes",
+      "result": "PASS",
+      "detail": "29 agents flagged for a documented allergy"
+    },
+    {
+      "phase": "7",
+      "check": "Allergy severity is graded, not blanket",
+      "result": "PASS",
+      "detail": "9 critical (penicillins), 20 caution (cephalosporins/carbapenems \u2014 low cross-reactivity)"
+    },
+    {
+      "phase": "7",
+      "check": "Low-confidence predictions are labelled as such",
+      "result": "PASS",
+      "detail": "19/54 options near the decision boundary are explicitly banded low or very low"
+    },
+    {
+      "phase": "7",
+      "check": "Flagged options are RANKED BELOW, never removed",
+      "result": "PASS",
+      "detail": "all 54 agents present; every flagged option sits below every unflagged one"
+    },
+    {
+      "phase": "7",
+      "check": "Output is framed as options for clinician review",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "phase": "7",
+      "check": "A safety notice accompanies every result",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "phase": "7",
+      "check": "No option is presented as an instruction",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "phase": "7",
+      "check": "Every option carries its training-data coverage",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "phase": "8",
+      "check": "openFDA drug label retrieval works",
+      "result": "PASS",
+      "detail": "generic=CIPROFLOXACIN routes=['ORAL'] (0.01s)"
+    },
+    {
+      "phase": "8",
+      "check": "openFDA returns a SYSTEMIC label, not a topical one",
+      "result": "PASS",
+      "detail": "routes: ['ORAL']"
+    },
+    {
+      "phase": "8",
+      "check": "Dosage text is non-empty and provenance is recorded",
+      "result": "PASS",
+      "detail": "4001 chars, retrieved 2026-08-23T16:49:07+00:00"
+    },
+    {
+      "phase": "8",
+      "check": "RxNorm/RxNav name normalisation works",
+      "result": "PASS",
+      "detail": "Ciprofloxacin \u2192 RxCUI 2551"
+    },
+    {
+      "phase": "8",
+      "check": "CMS NADAC cost retrieval works",
+      "result": "PASS",
+      "detail": "60 products, cheapest $0.15897 per EA"
+    },
+    {
+      "phase": "8",
+      "check": "Every price carries NDC, effective date and retrieval time",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "phase": "8",
+      "check": "A no-result query fails gracefully rather than raising",
+      "result": "PASS",
+      "detail": "reason: openFDA returned no record for this query."
+    },
+    {
+      "phase": "8",
+      "check": "An unknown drug returns 'insufficient information', not a guess",
+      "result": "PASS",
+      "detail": "reason: openFDA drug label returned no record for this query."
+    },
+    {
+      "phase": "8",
+      "check": "A timeout is contained and reported, never raised",
+      "result": "PASS",
+      "detail": "0.03s \u2192 Network error contacting openFDA: ConnectTimeout"
+    },
+    {
+      "phase": "8",
+      "check": "Responses are cached on disk",
+      "result": "PASS",
+      "detail": "first 0.01s (live) \u2192 second 0.007s (from_cache=True)"
+    },
+    {
+      "phase": "8",
+      "check": "ENABLE_LIVE_API=0 disables all network access",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "phase": "8",
+      "check": "Offline mode degrades gracefully with an explicit reason",
+      "result": "PASS",
+      "detail": "Live API access is disabled (ENABLE_LIVE_API=0)."
+    },
+    {
+      "phase": "8",
+      "check": "Offline dosage shows the specified fallback message",
+      "result": "PASS",
+      "detail": "served from cache"
+    },
+    {
+      "phase": "8",
+      "check": "Offline cost shows the specified fallback message",
+      "result": "PASS",
+      "detail": "served from cache"
+    },
+    {
+      "phase": "8",
+      "check": "No API key is hard-coded anywhere in the service layer",
+      "result": "PASS",
+      "detail": "scanned 3 modules"
+    },
+    {
+      "phase": "9",
+      "check": "Module reports itself INACTIVE for this dataset",
+      "result": "PASS",
+      "detail": "No genomic data is present in this project's datasets. The five source files (cohort, demographics, labs, microbial_resi\u2026"
+    },
+    {
+      "phase": "9",
+      "check": "The reason names the actual absence of genomic data",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "phase": "9",
+      "check": "The plug-in format is documented",
+      "result": "PASS",
+      "detail": "expected at C:\\Users\\alanf\\Antibiotic-Resistance-AI\\01_DATA\\raw\\genotypes.csv"
+    },
+    {
+      "phase": "9",
+      "check": "A reference map is implemented and ready",
+      "result": "PASS",
+      "detail": "21 markers curated from NCBI/CARD/ResFinder"
+    },
+    {
+      "phase": "9",
+      "check": "Annotation never asserts avoidance of a drug",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "phase": "9",
+      "check": "Unknown markers are reported as unrecognised, not guessed",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "phase": "9",
+      "check": "No genomic prediction is produced for the current dataset",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "phase": "9",
+      "check": "A future genotype table activates the module with no code change",
+      "result": "PASS",
+      "detail": "2 markers annotated from a dropped-in CSV"
+    },
+    {
+      "phase": "9",
+      "check": "Module returns to INACTIVE when the table is removed",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "phase": "10",
+      "check": "Case 1 \u2014 default load (normal patient/culture)",
+      "result": "PASS",
+      "detail": "rendered in 3s"
+    },
+    {
+      "phase": "10",
+      "check": "Case 1: safety disclaimer rendered",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "phase": "10",
+      "check": "Case 6 \u2014 API unavailable / offline mode",
+      "result": "PASS",
+      "detail": "rendered in 0s"
+    },
+    {
+      "phase": "10",
+      "check": "Case 6: safety disclaimer rendered",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "phase": "10",
+      "check": "Case 2/3 \u2014 held-out cases with prior exposure and prior resistance are loadable",
+      "result": "PASS",
+      "detail": "40 real held-out culture orders offered in the sidebar"
+    },
+    {
+      "phase": "10",
+      "check": "Polymicrobial cultures let the user pick which isolate",
+      "result": "PASS",
+      "detail": "7 of 25 sampled orders grew more than one organism; the sidebar exposes an isolate selector for those"
+    },
+    {
+      "phase": "10",
+      "check": "Ground truth is filtered to the selected isolate",
+      "result": "PASS",
+      "detail": "12 agents, one row each"
+    },
+    {
+      "phase": "10",
+      "check": "Case 4 \u2014 missing history is filled from defaults AND listed as assumed",
+      "result": "PASS",
+      "detail": "8 clinician-enterable fields defaulted and surfaced to the user"
+    }
+  ],
+  "summary": {
+    "total": 59,
+    "passed": 59,
+    "failed": 0
+  }
+}

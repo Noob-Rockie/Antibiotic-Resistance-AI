@@ -1,0 +1,7 @@
+feature,description,n_with,n_without,nonsusc_rate_with,nonsusc_rate_without,relative_risk
+prior_res_same_org_abx_n,Prior resistance to this exact organism-antibiotic pair,65894,1045909,0.68835,0.16397,4.198
+prior_res_same_abx_n,Prior resistance to this antibiotic,104300,1007503,0.51615,0.16181,3.1898
+prior_same_abx_n_nonsusc,Prior non-susceptible results for this antibiotic,154992,956811,0.50321,0.14513,3.4672
+prior_med_same_class_exposed_365d,Received this antibiotic class in the last year,159094,952709,0.27453,0.18178,1.5103
+prior_med_n_drugdays_90d,Antibiotic drug-days in the last 90 days,405735,706068,0.24305,0.16747,1.4513
+prior_n_positive_cultures,Previous positive cultures,514447,597356,0.2218,0.17201,1.2894

@@ -1,0 +1,560 @@
+[
+  {
+    "artefact": "diagrams\\dataset_relationships.png",
+    "source": "docs\\diagrams\\dataset_relationships.png",
+    "produced_by": "scripts/03_generate_data_docs.py",
+    "description": "Entity-relationship diagram with measured cardinalities"
+  },
+  {
+    "artefact": "figures\\DATASET\\01_missing_values.png",
+    "source": "02_DATA_ANALYSIS\\figures\\01_missing_values.png",
+    "produced_by": "scripts/04b_exploratory_analysis.py",
+    "description": "Missing-value analysis across all 194 columns"
+  },
+  {
+    "artefact": "tables\\DATASET\\01_dataset_overview.csv",
+    "source": "02_DATA_ANALYSIS\\tables\\01_dataset_overview.csv",
+    "produced_by": "scripts/04b_exploratory_analysis.py",
+    "description": "Dataset summary table"
+  },
+  {
+    "artefact": "tables\\DATASET\\02_missing_values.csv",
+    "source": "02_DATA_ANALYSIS\\tables\\02_missing_values.csv",
+    "produced_by": "scripts/04b_exploratory_analysis.py",
+    "description": "Missing count and percentage per column"
+  },
+  {
+    "artefact": "tables\\DATASET\\03_duplicate_analysis_raw_files.csv",
+    "source": "02_DATA_ANALYSIS\\tables\\03_duplicate_analysis_raw_files.csv",
+    "produced_by": "scripts/04b_exploratory_analysis.py",
+    "description": "Exact duplicate rows in each source file"
+  },
+  {
+    "artefact": "tables\\DATASET\\raw_data_manifest.md",
+    "source": "01_DATA\\raw\\RAW_DATA_MANIFEST.md",
+    "produced_by": "scripts/01_dataset_audit.py",
+    "description": "Source file sizes, row counts and MD5 hashes"
+  },
+  {
+    "artefact": "figures\\EDA\\01_missing_values.png",
+    "source": "02_DATA_ANALYSIS\\figures\\01_missing_values.png",
+    "produced_by": "scripts/04b_exploratory_analysis.py",
+    "description": "Missing-value analysis"
+  },
+  {
+    "artefact": "figures\\EDA\\02_target_distribution.png",
+    "source": "02_DATA_ANALYSIS\\figures\\02_target_distribution.png",
+    "produced_by": "scripts/04b_exploratory_analysis.py",
+    "description": "Target distribution and class imbalance"
+  },
+  {
+    "artefact": "figures\\EDA\\03_antibiotic_distribution.png",
+    "source": "02_DATA_ANALYSIS\\figures\\03_antibiotic_distribution.png",
+    "produced_by": "scripts/04b_exploratory_analysis.py",
+    "description": "Antibiotic distribution \u2014 the ragged panel"
+  },
+  {
+    "artefact": "figures\\EDA\\04_organism_distribution.png",
+    "source": "02_DATA_ANALYSIS\\figures\\04_organism_distribution.png",
+    "produced_by": "scripts/04b_exploratory_analysis.py",
+    "description": "Organism and organism-group distribution"
+  },
+  {
+    "artefact": "figures\\EDA\\05_specimen_distribution.png",
+    "source": "02_DATA_ANALYSIS\\figures\\05_specimen_distribution.png",
+    "produced_by": "scripts/04b_exploratory_analysis.py",
+    "description": "Specimen type distribution"
+  },
+  {
+    "artefact": "figures\\EDA\\06_prior_antibiotic_exposure.png",
+    "source": "02_DATA_ANALYSIS\\figures\\06_prior_antibiotic_exposure.png",
+    "produced_by": "scripts/04b_exploratory_analysis.py",
+    "description": "Previous antibiotic exposure"
+  },
+  {
+    "artefact": "figures\\EDA\\06b_demographics.png",
+    "source": "02_DATA_ANALYSIS\\figures\\06b_demographics.png",
+    "produced_by": "scripts/04b_exploratory_analysis.py",
+    "description": "Age band and de-identified sex code"
+  },
+  {
+    "artefact": "figures\\EDA\\07_prior_resistance_history.png",
+    "source": "02_DATA_ANALYSIS\\figures\\07_prior_resistance_history.png",
+    "produced_by": "scripts/04b_exploratory_analysis.py",
+    "description": "Previous resistance history"
+  },
+  {
+    "artefact": "figures\\EDA\\08_temporal_resistance_trend.png",
+    "source": "02_DATA_ANALYSIS\\figures\\08_temporal_resistance_trend.png",
+    "produced_by": "scripts/04b_exploratory_analysis.py",
+    "description": "Non-susceptibility over time"
+  },
+  {
+    "artefact": "figures\\EDA\\09_antibiotic_organism_heatmap.png",
+    "source": "02_DATA_ANALYSIS\\figures\\09_antibiotic_organism_heatmap.png",
+    "produced_by": "scripts/04b_exploratory_analysis.py",
+    "description": "Cohort antibiogram"
+  },
+  {
+    "artefact": "figures\\EDA\\10_correlation_heatmap.png",
+    "source": "02_DATA_ANALYSIS\\figures\\10_correlation_heatmap.png",
+    "produced_by": "scripts/04b_exploratory_analysis.py",
+    "description": "Correlation among continuous features"
+  },
+  {
+    "artefact": "figures\\EDA\\11_laboratory_distributions.png",
+    "source": "02_DATA_ANALYSIS\\figures\\11_laboratory_distributions.png",
+    "produced_by": "scripts/04b_exploratory_analysis.py",
+    "description": "Laboratory value distributions"
+  },
+  {
+    "artefact": "figures\\EDA\\12_history_feature_distributions.png",
+    "source": "02_DATA_ANALYSIS\\figures\\12_history_feature_distributions.png",
+    "produced_by": "scripts/04b_exploratory_analysis.py",
+    "description": "History count distributions"
+  },
+  {
+    "artefact": "figures\\EDA\\13_outlier_boxplots.png",
+    "source": "02_DATA_ANALYSIS\\figures\\13_outlier_boxplots.png",
+    "produced_by": "scripts/04b_exploratory_analysis.py",
+    "description": "Outlier structure of the laboratory values"
+  },
+  {
+    "artefact": "tables\\EDA\\01_dataset_overview.csv",
+    "source": "02_DATA_ANALYSIS\\tables\\01_dataset_overview.csv",
+    "produced_by": "scripts/04b_exploratory_analysis.py",
+    "description": "EDA table"
+  },
+  {
+    "artefact": "tables\\EDA\\02_missing_values.csv",
+    "source": "02_DATA_ANALYSIS\\tables\\02_missing_values.csv",
+    "produced_by": "scripts/04b_exploratory_analysis.py",
+    "description": "EDA table"
+  },
+  {
+    "artefact": "tables\\EDA\\03_duplicate_analysis_raw_files.csv",
+    "source": "02_DATA_ANALYSIS\\tables\\03_duplicate_analysis_raw_files.csv",
+    "produced_by": "scripts/04b_exploratory_analysis.py",
+    "description": "EDA table"
+  },
+  {
+    "artefact": "tables\\EDA\\04_target_distribution.csv",
+    "source": "02_DATA_ANALYSIS\\tables\\04_target_distribution.csv",
+    "produced_by": "scripts/04b_exploratory_analysis.py",
+    "description": "EDA table"
+  },
+  {
+    "artefact": "tables\\EDA\\05_antibiotic_distribution.csv",
+    "source": "02_DATA_ANALYSIS\\tables\\05_antibiotic_distribution.csv",
+    "produced_by": "scripts/04b_exploratory_analysis.py",
+    "description": "EDA table"
+  },
+  {
+    "artefact": "tables\\EDA\\06_organism_distribution.csv",
+    "source": "02_DATA_ANALYSIS\\tables\\06_organism_distribution.csv",
+    "produced_by": "scripts/04b_exploratory_analysis.py",
+    "description": "EDA table"
+  },
+  {
+    "artefact": "tables\\EDA\\06b_organism_group_distribution.csv",
+    "source": "02_DATA_ANALYSIS\\tables\\06b_organism_group_distribution.csv",
+    "produced_by": "scripts/04b_exploratory_analysis.py",
+    "description": "EDA table"
+  },
+  {
+    "artefact": "tables\\EDA\\07_specimen_distribution.csv",
+    "source": "02_DATA_ANALYSIS\\tables\\07_specimen_distribution.csv",
+    "produced_by": "scripts/04b_exploratory_analysis.py",
+    "description": "EDA table"
+  },
+  {
+    "artefact": "tables\\EDA\\08_age_distribution.csv",
+    "source": "02_DATA_ANALYSIS\\tables\\08_age_distribution.csv",
+    "produced_by": "scripts/04b_exploratory_analysis.py",
+    "description": "EDA table"
+  },
+  {
+    "artefact": "tables\\EDA\\08b_sex_code_distribution.csv",
+    "source": "02_DATA_ANALYSIS\\tables\\08b_sex_code_distribution.csv",
+    "produced_by": "scripts/04b_exploratory_analysis.py",
+    "description": "EDA table"
+  },
+  {
+    "artefact": "tables\\EDA\\09_prior_exposure_by_window.csv",
+    "source": "02_DATA_ANALYSIS\\tables\\09_prior_exposure_by_window.csv",
+    "produced_by": "scripts/04b_exploratory_analysis.py",
+    "description": "EDA table"
+  },
+  {
+    "artefact": "tables\\EDA\\09b_prior_exposure_by_class.csv",
+    "source": "02_DATA_ANALYSIS\\tables\\09b_prior_exposure_by_class.csv",
+    "produced_by": "scripts/04b_exploratory_analysis.py",
+    "description": "EDA table"
+  },
+  {
+    "artefact": "tables\\EDA\\10_prior_resistance_history.csv",
+    "source": "02_DATA_ANALYSIS\\tables\\10_prior_resistance_history.csv",
+    "produced_by": "scripts/04b_exploratory_analysis.py",
+    "description": "EDA table"
+  },
+  {
+    "artefact": "tables\\EDA\\11_temporal_trend.csv",
+    "source": "02_DATA_ANALYSIS\\tables\\11_temporal_trend.csv",
+    "produced_by": "scripts/04b_exploratory_analysis.py",
+    "description": "EDA table"
+  },
+  {
+    "artefact": "tables\\EDA\\12_antibiogram_rates.csv",
+    "source": "02_DATA_ANALYSIS\\tables\\12_antibiogram_rates.csv",
+    "produced_by": "scripts/04b_exploratory_analysis.py",
+    "description": "EDA table"
+  },
+  {
+    "artefact": "tables\\EDA\\12b_antibiogram_test_counts.csv",
+    "source": "02_DATA_ANALYSIS\\tables\\12b_antibiogram_test_counts.csv",
+    "produced_by": "scripts/04b_exploratory_analysis.py",
+    "description": "EDA table"
+  },
+  {
+    "artefact": "tables\\EDA\\13_numeric_feature_summary.csv",
+    "source": "02_DATA_ANALYSIS\\tables\\13_numeric_feature_summary.csv",
+    "produced_by": "scripts/04b_exploratory_analysis.py",
+    "description": "EDA table"
+  },
+  {
+    "artefact": "tables\\EDA\\13b_history_feature_summary.csv",
+    "source": "02_DATA_ANALYSIS\\tables\\13b_history_feature_summary.csv",
+    "produced_by": "scripts/04b_exploratory_analysis.py",
+    "description": "EDA table"
+  },
+  {
+    "artefact": "tables\\EDA\\14_correlation_matrix.csv",
+    "source": "02_DATA_ANALYSIS\\tables\\14_correlation_matrix.csv",
+    "produced_by": "scripts/04b_exploratory_analysis.py",
+    "description": "EDA table"
+  },
+  {
+    "artefact": "tables\\EDA\\14b_strongly_correlated_pairs.csv",
+    "source": "02_DATA_ANALYSIS\\tables\\14b_strongly_correlated_pairs.csv",
+    "produced_by": "scripts/04b_exploratory_analysis.py",
+    "description": "EDA table"
+  },
+  {
+    "artefact": "tables\\EDA\\15_outlier_analysis.csv",
+    "source": "02_DATA_ANALYSIS\\tables\\15_outlier_analysis.csv",
+    "produced_by": "scripts/04b_exploratory_analysis.py",
+    "description": "EDA table"
+  },
+  {
+    "artefact": "diagrams\\feature_engineering_workflow.png",
+    "source": "14_REPORT_MATERIAL\\diagrams\\feature_engineering_workflow.png",
+    "produced_by": "scripts/16_generate_diagrams.py",
+    "description": "Raw tables to analytic matrix"
+  },
+  {
+    "artefact": "diagrams\\feature_selection_methodology.png",
+    "source": "14_REPORT_MATERIAL\\diagrams\\feature_selection_methodology.png",
+    "produced_by": "scripts/16_generate_diagrams.py",
+    "description": "Seven methods, 185 candidates to 30 features"
+  },
+  {
+    "artefact": "figures\\FEATURE_SELECTION\\01_missing_values.png",
+    "source": "04_FEATURE_SELECTION\\figures\\01_missing_values.png",
+    "produced_by": "scripts/06_feature_selection.py",
+    "description": "Method 1 \u2014 missing-value filter"
+  },
+  {
+    "artefact": "figures\\FEATURE_SELECTION\\02_correlation_heatmap.png",
+    "source": "04_FEATURE_SELECTION\\figures\\02_correlation_heatmap.png",
+    "produced_by": "scripts/06_feature_selection.py",
+    "description": "Method 3 \u2014 correlation filter"
+  },
+  {
+    "artefact": "figures\\FEATURE_SELECTION\\03_mutual_information.png",
+    "source": "04_FEATURE_SELECTION\\figures\\03_mutual_information.png",
+    "produced_by": "scripts/06_feature_selection.py",
+    "description": "Method 4 \u2014 mutual information ranking"
+  },
+  {
+    "artefact": "figures\\FEATURE_SELECTION\\04_random_forest_importance.png",
+    "source": "04_FEATURE_SELECTION\\figures\\04_random_forest_importance.png",
+    "produced_by": "scripts/06_feature_selection.py",
+    "description": "Method 5 \u2014 Random Forest importance"
+  },
+  {
+    "artefact": "figures\\FEATURE_SELECTION\\05_xgboost_importance.png",
+    "source": "04_FEATURE_SELECTION\\figures\\05_xgboost_importance.png",
+    "produced_by": "scripts/06_feature_selection.py",
+    "description": "Method 5 \u2014 XGBoost gain"
+  },
+  {
+    "artefact": "figures\\FEATURE_SELECTION\\06_rfe_ranking.png",
+    "source": "04_FEATURE_SELECTION\\figures\\06_rfe_ranking.png",
+    "produced_by": "scripts/06_feature_selection.py",
+    "description": "Method 7 \u2014 recursive feature elimination"
+  },
+  {
+    "artefact": "figures\\FEATURE_SELECTION\\07_shap_feature_importance.png",
+    "source": "04_FEATURE_SELECTION\\figures\\07_shap_feature_importance.png",
+    "produced_by": "scripts/06_feature_selection.py",
+    "description": "Method 6 \u2014 SHAP importance"
+  },
+  {
+    "artefact": "figures\\FEATURE_SELECTION\\07b_shap_summary_beeswarm.png",
+    "source": "04_FEATURE_SELECTION\\figures\\07b_shap_summary_beeswarm.png",
+    "produced_by": "scripts/06_feature_selection.py",
+    "description": "Method 6 \u2014 SHAP beeswarm"
+  },
+  {
+    "artefact": "figures\\FEATURE_SELECTION\\08_feature_count_vs_f1.png",
+    "source": "04_FEATURE_SELECTION\\figures\\08_feature_count_vs_f1.png",
+    "produced_by": "scripts/06_feature_selection.py",
+    "description": "Performance vs number of features"
+  },
+  {
+    "artefact": "figures\\FEATURE_SELECTION\\09_selected_vs_rejected.png",
+    "source": "04_FEATURE_SELECTION\\figures\\09_selected_vs_rejected.png",
+    "produced_by": "scripts/06_feature_selection.py",
+    "description": "Selected vs rejected features"
+  },
+  {
+    "artefact": "tables\\FEATURE_SELECTION\\feature_selection_comparison.csv",
+    "source": "13_RESULTS\\tables\\feature_selection_comparison.csv",
+    "produced_by": "scripts/06_feature_selection.py",
+    "description": "Candidate feature sets compared on held-out validation patients"
+  },
+  {
+    "artefact": "tables\\FEATURE_SELECTION\\feature_count_sweep.csv",
+    "source": "13_RESULTS\\tables\\feature_count_sweep.csv",
+    "produced_by": "scripts/06_feature_selection.py",
+    "description": "Performance as features are added in SHAP order"
+  },
+  {
+    "artefact": "tables\\FEATURE_SELECTION\\final_feature_list.json",
+    "source": "config\\final_features.json",
+    "produced_by": "scripts/06_feature_selection.py",
+    "description": "The 30 selected features, machine-readable"
+  },
+  {
+    "artefact": "figures\\MODEL\\01_roc_pr_calibration.png",
+    "source": "06_MODEL_EVALUATION\\figures\\01_roc_pr_calibration.png",
+    "produced_by": "scripts/08_evaluate_models.py",
+    "description": "ROC curve, precision-recall curve and calibration curve"
+  },
+  {
+    "artefact": "figures\\MODEL\\02_confusion_matrix.png",
+    "source": "06_MODEL_EVALUATION\\figures\\02_confusion_matrix.png",
+    "produced_by": "scripts/08_evaluate_models.py",
+    "description": "Confusion matrix, counts and row-normalised"
+  },
+  {
+    "artefact": "figures\\MODEL\\03_threshold_analysis.png",
+    "source": "06_MODEL_EVALUATION\\figures\\03_threshold_analysis.png",
+    "produced_by": "scripts/08_evaluate_models.py",
+    "description": "Operating characteristics vs threshold"
+  },
+  {
+    "artefact": "figures\\MODEL\\04_per_antibiotic_pr_auc.png",
+    "source": "06_MODEL_EVALUATION\\figures\\04_per_antibiotic_pr_auc.png",
+    "produced_by": "scripts/08_evaluate_models.py",
+    "description": "Per-antibiotic discrimination"
+  },
+  {
+    "artefact": "figures\\MODEL\\05_three_class_confusion.png",
+    "source": "06_MODEL_EVALUATION\\figures\\05_three_class_confusion.png",
+    "produced_by": "scripts/08_evaluate_models.py",
+    "description": "Secondary 3-class model"
+  },
+  {
+    "artefact": "figures\\MODEL\\06_architecture_comparison.png",
+    "source": "06_MODEL_EVALUATION\\figures\\06_architecture_comparison.png",
+    "produced_by": "scripts/08_evaluate_models.py",
+    "description": "Unified vs per-antibiotic models"
+  },
+  {
+    "artefact": "tables\\MODEL\\model_comparison.csv",
+    "source": "13_RESULTS\\tables\\model_comparison.csv",
+    "produced_by": "scripts/07_train_models.py / 08_evaluate_models.py",
+    "description": "Six model families compared"
+  },
+  {
+    "artefact": "tables\\MODEL\\imbalance_comparison.csv",
+    "source": "13_RESULTS\\tables\\imbalance_comparison.csv",
+    "produced_by": "scripts/07_train_models.py / 08_evaluate_models.py",
+    "description": "Four class-imbalance strategies"
+  },
+  {
+    "artefact": "tables\\MODEL\\final_model_test_metrics.csv",
+    "source": "13_RESULTS\\tables\\final_model_test_metrics.csv",
+    "produced_by": "scripts/07_train_models.py / 08_evaluate_models.py",
+    "description": "Headline held-out test metrics"
+  },
+  {
+    "artefact": "tables\\MODEL\\architecture_comparison.csv",
+    "source": "13_RESULTS\\tables\\architecture_comparison.csv",
+    "produced_by": "scripts/07_train_models.py / 08_evaluate_models.py",
+    "description": "Unified vs per-agent PR-AUC"
+  },
+  {
+    "artefact": "tables\\MODEL\\per_antibiotic_performance.csv",
+    "source": "13_RESULTS\\tables\\per_antibiotic_performance.csv",
+    "produced_by": "scripts/07_train_models.py / 08_evaluate_models.py",
+    "description": "Test performance per agent"
+  },
+  {
+    "artefact": "tables\\MODEL\\per_organism_performance.csv",
+    "source": "06_MODEL_EVALUATION\\tables\\per_organism_performance.csv",
+    "produced_by": "scripts/07_train_models.py / 08_evaluate_models.py",
+    "description": "Test performance per organism"
+  },
+  {
+    "artefact": "tables\\MODEL\\threshold_analysis.csv",
+    "source": "06_MODEL_EVALUATION\\tables\\threshold_analysis.csv",
+    "produced_by": "scripts/07_train_models.py / 08_evaluate_models.py",
+    "description": "Metrics at every decision threshold"
+  },
+  {
+    "artefact": "tables\\MODEL\\experiment_log.csv",
+    "source": "05_MODEL_TRAINING\\experiments\\experiment_log.csv",
+    "produced_by": "scripts/07_train_models.py / 08_evaluate_models.py",
+    "description": "Every training experiment, for reproducibility"
+  },
+  {
+    "artefact": "tables\\MODEL\\subgroup_age.csv",
+    "source": "06_MODEL_EVALUATION\\tables\\subgroup_age.csv",
+    "produced_by": "scripts/08_evaluate_models.py",
+    "description": "Subgroup performance"
+  },
+  {
+    "artefact": "tables\\MODEL\\subgroup_culture_description.csv",
+    "source": "06_MODEL_EVALUATION\\tables\\subgroup_culture_description.csv",
+    "produced_by": "scripts/08_evaluate_models.py",
+    "description": "Subgroup performance"
+  },
+  {
+    "artefact": "tables\\MODEL\\subgroup_gender_code.csv",
+    "source": "06_MODEL_EVALUATION\\tables\\subgroup_gender_code.csv",
+    "produced_by": "scripts/08_evaluate_models.py",
+    "description": "Subgroup performance"
+  },
+  {
+    "artefact": "tables\\MODEL\\subgroup_ordering_mode.csv",
+    "source": "06_MODEL_EVALUATION\\tables\\subgroup_ordering_mode.csv",
+    "produced_by": "scripts/08_evaluate_models.py",
+    "description": "Subgroup performance"
+  },
+  {
+    "artefact": "tables\\MODEL\\subgroup_organism_group.csv",
+    "source": "06_MODEL_EVALUATION\\tables\\subgroup_organism_group.csv",
+    "produced_by": "scripts/08_evaluate_models.py",
+    "description": "Subgroup performance"
+  },
+  {
+    "artefact": "figures\\XAI\\01_shap_global_bar.png",
+    "source": "07_EXPLAINABLE_AI\\figures\\01_shap_global_bar.png",
+    "produced_by": "scripts/09_explainability.py",
+    "description": "Global SHAP importance"
+  },
+  {
+    "artefact": "figures\\XAI\\02_shap_summary_beeswarm.png",
+    "source": "07_EXPLAINABLE_AI\\figures\\02_shap_summary_beeswarm.png",
+    "produced_by": "scripts/09_explainability.py",
+    "description": "SHAP beeswarm summary"
+  },
+  {
+    "artefact": "figures\\XAI\\03_1_dependence_antibiotic_is_oral.png",
+    "source": "07_EXPLAINABLE_AI\\figures\\03_1_dependence_antibiotic_is_oral.png",
+    "produced_by": "scripts/09_explainability.py",
+    "description": "SHAP dependence plot"
+  },
+  {
+    "artefact": "figures\\XAI\\03_2_dependence_antibiotic.png",
+    "source": "07_EXPLAINABLE_AI\\figures\\03_2_dependence_antibiotic.png",
+    "produced_by": "scripts/09_explainability.py",
+    "description": "SHAP dependence plot"
+  },
+  {
+    "artefact": "figures\\XAI\\03_3_dependence_antibiotic_subclass.png",
+    "source": "07_EXPLAINABLE_AI\\figures\\03_3_dependence_antibiotic_subclass.png",
+    "produced_by": "scripts/09_explainability.py",
+    "description": "SHAP dependence plot"
+  },
+  {
+    "artefact": "figures\\XAI\\03_4_dependence_prior_same_abx_nonsusc_rate.png",
+    "source": "07_EXPLAINABLE_AI\\figures\\03_4_dependence_prior_same_abx_nonsusc_rate.png",
+    "produced_by": "scripts/09_explainability.py",
+    "description": "SHAP dependence plot"
+  },
+  {
+    "artefact": "figures\\XAI\\03_5_dependence_organism_clean.png",
+    "source": "07_EXPLAINABLE_AI\\figures\\03_5_dependence_organism_clean.png",
+    "produced_by": "scripts/09_explainability.py",
+    "description": "SHAP dependence plot"
+  },
+  {
+    "artefact": "figures\\XAI\\03_6_dependence_order_year.png",
+    "source": "07_EXPLAINABLE_AI\\figures\\03_6_dependence_order_year.png",
+    "produced_by": "scripts/09_explainability.py",
+    "description": "SHAP dependence plot"
+  },
+  {
+    "artefact": "figures\\XAI\\04_local_borderline.png",
+    "source": "07_EXPLAINABLE_AI\\figures\\04_local_borderline.png",
+    "produced_by": "scripts/09_explainability.py",
+    "description": "Individual prediction explanation (waterfall)"
+  },
+  {
+    "artefact": "figures\\XAI\\04_local_confident_resistant_correct.png",
+    "source": "07_EXPLAINABLE_AI\\figures\\04_local_confident_resistant_correct.png",
+    "produced_by": "scripts/09_explainability.py",
+    "description": "Individual prediction explanation (waterfall)"
+  },
+  {
+    "artefact": "figures\\XAI\\04_local_confident_susceptible_correct.png",
+    "source": "07_EXPLAINABLE_AI\\figures\\04_local_confident_susceptible_correct.png",
+    "produced_by": "scripts/09_explainability.py",
+    "description": "Individual prediction explanation (waterfall)"
+  },
+  {
+    "artefact": "figures\\XAI\\04_local_false_negative_missed_resistance.png",
+    "source": "07_EXPLAINABLE_AI\\figures\\04_local_false_negative_missed_resistance.png",
+    "produced_by": "scripts/09_explainability.py",
+    "description": "Individual prediction explanation (waterfall)"
+  },
+  {
+    "artefact": "figures\\XAI\\04_local_false_positive.png",
+    "source": "07_EXPLAINABLE_AI\\figures\\04_local_false_positive.png",
+    "produced_by": "scripts/09_explainability.py",
+    "description": "Individual prediction explanation (waterfall)"
+  },
+  {
+    "artefact": "diagrams\\system_architecture.png",
+    "source": "14_REPORT_MATERIAL\\diagrams\\system_architecture.png",
+    "produced_by": "scripts/16_generate_diagrams.py",
+    "description": "Layered system architecture"
+  },
+  {
+    "artefact": "diagrams\\application_workflow.png",
+    "source": "14_REPORT_MATERIAL\\diagrams\\application_workflow.png",
+    "produced_by": "scripts/16_generate_diagrams.py",
+    "description": "What a user does in the application"
+  },
+  {
+    "artefact": "diagrams\\recommendation_workflow.png",
+    "source": "14_REPORT_MATERIAL\\diagrams\\recommendation_workflow.png",
+    "produced_by": "scripts/16_generate_diagrams.py",
+    "description": "How one ranked option is produced"
+  },
+  {
+    "artefact": "diagrams\\human_in_the_loop_workflow.png",
+    "source": "14_REPORT_MATERIAL\\diagrams\\human_in_the_loop_workflow.png",
+    "produced_by": "scripts/16_generate_diagrams.py",
+    "description": "Where the clinician decides"
+  },
+  {
+    "artefact": "diagrams\\methodology_workflow.png",
+    "source": "14_REPORT_MATERIAL\\diagrams\\methodology_workflow.png",
+    "produced_by": "scripts/16_generate_diagrams.py",
+    "description": "End-to-end research methodology"
+  }
+]

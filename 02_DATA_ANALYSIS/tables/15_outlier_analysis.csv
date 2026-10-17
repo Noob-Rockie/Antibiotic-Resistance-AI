@@ -1,0 +1,9 @@
+feature,description,unit,n_present,iqr_lower_fence,iqr_upper_fence,n_iqr_outliers,pct_iqr_outliers,max_observed,plausible_range,n_physiologically_implausible,pct_physiologically_implausible
+median_wbc,White cell count,x10^9/L,705433,-1.4,18.6,30155,4.2747,485.20001220703125,0 - 500,0,0.0
+median_cr,Creatinine,mg/dL,713594,-0.12,2.04,63088,8.8409,24.0,0 - 30,0,0.0
+median_bun,Urea nitrogen,mg/dL,707455,-9.0,47.0,51000,7.2089,216.0,0 - 300,0,0.0
+median_hgb,Haemoglobin,g/dL,706738,5000.0,17800.0,587,0.0831,21300.0,1000 - 30000,0,0.0
+median_plt,Platelets,x10^9/L,705717,-23.5,460.5,16212,2.2972,2561.0,0 - 3000,0,0.0
+median_na,Sodium,mmol/L,709828,127.5,147.5,25214,3.5521,188.0,90 - 200,0,0.0
+median_lactate,Lactate,mmol/L,219993,-0.68,3.72,15791,7.178,29.299999237060547,0 - 40,0,0.0
+median_procalcitonin,Procalcitonin,ng/mL,40821,-5.955,10.485,6394,15.6635,713.0,0 - 1000,0,0.0

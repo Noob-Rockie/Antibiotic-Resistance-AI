@@ -1,0 +1,5 @@
+window,column,pct_rows_with_exposure,mean_drugdays_when_exposed,median_drugdays_when_exposed,max_drugdays
+30 days,prior_med_n_drugdays_30d,20.083,2.01,1.0,27.0
+90 days,prior_med_n_drugdays_90d,36.371,3.003,2.0,78.0
+180 days,prior_med_n_drugdays_180d,46.99,3.982,2.0,134.0
+365 days,prior_med_n_drugdays_365d,56.874,5.417,3.0,192.0

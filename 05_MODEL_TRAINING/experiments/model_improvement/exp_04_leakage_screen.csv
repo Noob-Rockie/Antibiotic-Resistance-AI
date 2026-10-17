@@ -1,0 +1,15 @@
+feature,single_feature_auc,pct_missing
+prior_nonsusc_rate,0.68342,53.85
+prior_res_n_events_365d,0.59131,0.0
+prior_res_n_events_total,0.5904,0.0
+prior_res_same_org_n,0.58337,0.0
+prior_res_same_abx_n_365d,0.58298,0.0
+prior_n_cultures,0.56926,0.0
+prior_med_n_drugdays_90d,0.56552,0.0
+prior_med_n_distinct_ingredients_90d,0.56464,0.0
+prior_n_positive_cultures,0.55224,0.0
+prior_same_abx_n_tests,0.55052,0.0
+prior_med_same_class_days_since,0.43751,74.29
+prior_med_days_since_last,0.42792,27.36
+prior_res_days_since_last,0.40881,59.23
+prior_res_same_abx_days_since,0.29508,90.62

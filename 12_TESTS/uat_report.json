@@ -1,0 +1,92 @@
+{
+  "generated_at_utc": "2026-08-24",
+  "scope": "User acceptance test of the deployed application. No model was retrained and no measured performance number was altered.",
+  "report": "12_TESTS/USER_ACCEPTANCE_TEST_REPORT.md",
+  "summary": "14_REPORT_MATERIAL/USER_TESTING_SUMMARY.md",
+  "table": "14_REPORT_MATERIAL/tables/user_testing_summary.csv",
+  "result": "PASS",
+  "tests_total": 59,
+  "tests_passed": 57,
+  "tests_failed": 2,
+  "tests_outstanding": 0,
+  "pass_rate_first_run": 0.966,
+  "pass_rate_after_fixes": 1.0,
+  "observations": 5,
+  "bugs_found": 4,
+  "bugs_fixed": 2,
+  "bugs_deferred": 2,
+  "invalid_input_tests": 32,
+  "invalid_input_crashes": 0,
+  "regression_suite": "111 passed, 0 failed (identical before and after the fixes)",
+  "cases_scanned": 60,
+  "agent_level_comparisons": 1003,
+  "agent_level_agreement": 783,
+  "demo_menu_agreement_rate": 0.7807,
+  "demo_menu_caveat": "The case menu is deliberately enriched for difficulty and this figure is NOT the model's accuracy, which remains 0.88583 on the held-out test partition.",
+  "performance_seconds": {
+    "startup_cold_first_render": 32.7,
+    "server_ready": 22.7,
+    "model_load": 0.49,
+    "test_partition_first_load": 15.97,
+    "case_load": 0.016,
+    "prediction_54_agents": 0.066,
+    "shap_54_agents_median": 3.61,
+    "full_ranking_median": 3.67,
+    "shap_share_of_ranking_time": 0.983
+  },
+  "service_coverage": {
+    "candidate_agents": 54,
+    "dosage_correct_before": 39,
+    "dosage_correct_after": 47,
+    "dosage_wrong_drug_before": 6,
+    "dosage_wrong_drug_after": 0,
+    "cost_before": 27,
+    "cost_after": 33
+  },
+  "bugs": [
+    {
+      "id": "BUG-01",
+      "severity": "high",
+      "status": "fixed",
+      "title": "Wrong drug's FDA label displayed as the dosage reference",
+      "detail": "An unfielded openFDA full-text fallback accepted any returned label without checking it was the requested drug. Doripenem displayed LETERMOVIR (an antiviral), Ticarcillin displayed Ertapenem, and four combination agents displayed SILICEA, a homeopathic pellet. Six of 54 agents affected.",
+      "fix": "FIX-01 - drug identity guard in 10_API_SERVICES/drug_api.py discards any label not naming the requested ingredient; mismatches 6 -> 0."
+    },
+    {
+      "id": "BUG-02",
+      "severity": "medium",
+      "status": "fixed",
+      "title": "Combination antibiotics had neither dosage nor cost data",
+      "detail": "The drug-name override table used hyphenated keys while the model vocabulary uses slashes, so ten combination agents missed the lookup. price_api reuses the same function, so NADAC cost failed identically.",
+      "fix": "FIX-02 - separator-agnostic lookup plus four verified mappings in 10_API_SERVICES/drug_api.py."
+    },
+    {
+      "id": "BUG-03",
+      "severity": "low",
+      "status": "deferred",
+      "title": "Confidence band ignores evidence strength",
+      "detail": "The band is computed from distance from 0.50 only, so an agent with zero training examples can read 'confidence: high' beside an evidence band of 'none - extrapolated'.",
+      "fix": "Deferred - changes clinical presentation on every option card and should be a deliberate design decision."
+    },
+    {
+      "id": "BUG-04",
+      "severity": "low",
+      "status": "deferred",
+      "title": "Deprecated Streamlit use_container_width parameter",
+      "detail": "Used in 20 places; scheduled for removal but still functional in the pinned version. Warning is never visible to users.",
+      "fix": "Deferred - should be a standalone change before any Streamlit upgrade."
+    }
+  ],
+  "key_findings": [
+    "The application explains its failures as readily as its successes: in the incorrect-prediction case the model was wrong on 6 of 8 agents and every disagreement was displayed with a working SHAP explanation.",
+    "Guardrails flag but never remove: agents with critical flags were demoted below unflagged options and remained visible with their reasons in all seven test cases.",
+    "Offline mode with the cache also neutralised produced 0 exceptions, all 9 tabs, and an intact prediction, with no traceback reaching the user.",
+    "The clinician review form refuses to record a decision without an explicit confirmation and a reviewer identifier.",
+    "SHAP accounts for 98.3% of ranking time while model inference for all 54 agents takes 66 ms - the documented slow first load is expected, not a defect."
+  ],
+  "manual_tests_required": [
+    "Visual rendering: open the app in a browser and click through all 9 tabs plus the two pages, confirming the safety banner, charts, pills and layout render correctly.",
+    "Browser interactivity: switch to manual case entry, change the organism, and confirm every tab updates; tick 'history unknown' and confirm the assumed-fields notice.",
+    "Multi-organism cultures: load an order that grew more than one organism (e.g. 486309118) and confirm switching isolate changes the ground truth and ranking."
+  ]
+}

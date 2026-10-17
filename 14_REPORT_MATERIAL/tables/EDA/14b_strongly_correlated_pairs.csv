@@ -1,0 +1,14 @@
+feature_a,feature_b,spearman_rho
+prior_same_abx_n_tests,prior_n_positive_cultures,0.9056
+prior_med_n_broadspectrum_drugdays_90d,prior_med_n_drugdays_90d,0.8439
+prior_n_positive_cultures,prior_n_cultures,0.8018
+prior_res_same_org_abx_n,prior_res_same_abx_n,0.7848
+prior_n_positive_cultures,prior_res_n_events_1095d,0.745
+prior_med_n_drugdays_365d,prior_med_n_drugdays_90d,0.726
+prior_same_abx_n_tests,prior_n_cultures,0.7178
+prior_same_abx_n_tests,prior_res_n_events_1095d,0.7088
+median_bun,median_cr,0.7048
+prior_n_cultures,prior_res_n_events_1095d,0.6802
+prior_same_abx_nonsusc_rate,prior_res_same_abx_n,0.6363
+prior_med_n_broadspectrum_drugdays_90d,prior_med_n_drugdays_365d,0.6115
+prior_same_org_nonsusc_rate,prior_res_n_events_1095d,0.6077

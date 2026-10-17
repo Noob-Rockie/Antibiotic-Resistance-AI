@@ -1,0 +1,60 @@
+Test ID,Category,Expected,Actual,Status,Notes
+UAT-01,Startup,Application starts without errors,"Server ready 22.7 s; first full render 32.7 s cold; 0 exceptions",PASS,Deprecation warnings only (BUG-04)
+UAT-02,Startup,All dependencies and imports resolve,No missing package; no broken import,PASS,Streamlit 1.62.0 / LightGBM 4.7.0 / SHAP 0.51.0
+UAT-03,Startup,Server reachable,HTTP 200 in 0.06 s; /_stcore/health returns ok,PASS,Headless on port 8599
+UAT-04,Tab,Dashboard loads with meaningful content,8 metrics + susceptibility chart + ground-truth table,PASS,Ground truth captioned as never used as input
+UAT-05,Tab,Prediction tab loads,54-row table with both probabilities and confidence,PASS,Threshold and target definition displayed
+UAT-06,Tab,Explanation tab loads,SHAP table + chart + narration + global importance,PASS,Values on log-odds scale and stated as such
+UAT-07,Tab,Options for review loads,Ranked cards with evidence pills and guardrails,PASS,Expandable per-agent reasoning
+UAT-08,Tab,Dosage reference loads,Verbatim FDA label text with provenance,PASS,Renal individualisation explicitly declined
+UAT-09,Tab,Cost tab loads,NDC-level NADAC price table with effective date,PASS,Example Ciprofloxacin NDC 00143992701 $0.08886/EA
+UAT-10,Tab,Patient history loads,17-item history table + 11-analyte lab panel,PASS,Unknown values render as not recorded
+UAT-11,Tab,Genomic tab loads,States module inactive; no fabricated genotype,PASS,Intentional st.error banner
+UAT-12,Tab,Clinician review loads,Decision form with confirmation gate,PASS,Nothing actioned by the application
+UAT-13,Page,Model Card page loads,0 exceptions; 9 headers 6 tables 15 metrics,PASS,Includes fairness and limitations sections
+UAT-14,Page,Data and Methodology page loads,0 exceptions; 9 sections 3 tables,PASS,Includes leakage analysis
+UAT-15,Test case A,Correct prediction with explanation,"Order 758664704 C. koseri urine; 12/12 agreement",PASS,All probabilities below 0.10 non-susceptible
+UAT-16,Test case B,Incorrect prediction must not be hidden,"Order 486309118 Enterococcus urine; 2/8 agreement; all 6 errors displayed",PASS,SHAP available for every misclassified agent
+UAT-17,Test case C,Prior resistance history used and explained,"Order 567063460 E. coli; 394 prior resistant results; 17/17 history items",PASS,Agreement only 5/20 - reflects sensitivity 0.545
+UAT-18,Test case D,Prior antibiotic exposure displayed,"Order 668087393 K. pneumoniae; 41 drug-days/90 d; 20/25 agreement",PASS,SHAP cites exposure features
+UAT-19,Test case E,Missing history not fabricated,"Order 924237064; unknown items show not recorded; 16/16 agreement",PASS,Zero distinguished from unknown
+UAT-20,Test case F,Low-coverage warning appears,"Order 325204949 Elizabethkingia; all agents 1-5 training rows; very thin",PASS,41 no_evidence + 13 thin_evidence flags
+UAT-21,Test case G,Guardrails flag but never remove,"Order 648954466 P. aeruginosa; 28 critical flags; demoted to ranks 27-54",PASS,Correctly flags ceftriaxone/cefotaxime vs Pseudomonas
+UAT-22,Prediction,Organism/specimen/setting selection constrained,Selectboxes bound to model vocabulary,PASS,Free-text organism entry impossible
+UAT-23,Prediction,Probability + classification + confidence shown,All present with training-example count,PASS,Isotonic-calibrated probabilities
+UAT-24,Prediction,AI prediction distinguished from lab result,Separate explicitly labelled columns,PASS,No language implying certainty
+UAT-25,SHAP,Explanation for a correct prediction,5 ranked factors with direction and magnitude,PASS,Feature names humanised
+UAT-26,SHAP,Explanation for an incorrect prediction,Explanations render for all misclassified agents,PASS,Failures explained as readily as successes
+UAT-27,SHAP,Global feature importance available,07_shap_feature_importance.png rendered,PASS,From Phase 6 feature selection
+UAT-28,Ranking,Scores candidates using model predictions,54 agents scored from the fitted model,PASS,No invented probabilities
+UAT-29,Ranking,Guardrails flag never filter,Flagged agents demoted not removed,PASS,Verified in all seven test cases
+UAT-30,Ranking,Evidence strength displayed,Training-row count + banded description per option,PASS,Bands none/very thin/thin/moderate/strong
+UAT-31,Ranking,No automatic prescribing,"Framing is potential options for clinician review",PASS,0 prohibited phrases found in source scan
+UAT-32,Dosage,Dosage never calculated or invented,No dose arithmetic in codebase; verbatim relay only,PASS,Design rule upheld
+UAT-33,Dosage,Insufficient-information message shown,"Insufficient information for dosage reference. displayed",PASS,Exact required wording
+UAT-34,Dosage,Source displayed appropriately,openFDA source + URL + retrieval timestamp + cache status,PASS,FDA disclaimer shown
+UAT-35,Dosage,Label must belong to the requested drug,"6 of 54 agents showed another drug's label (Doripenem -> LETERMOVIR)",FAIL - FIXED,BUG-01 HIGH; FIX-01 identity guard; now 0 mismatches
+UAT-36,Cost,Drug/NDC/cost/date/source present,All fields present per NDC,PASS,Price per pricing unit not per course
+UAT-37,Cost,Unavailable message shown,"Price unavailable, verify locally. displayed",PASS,Exact required wording
+UAT-38,Cost,Cost not a reason to select an agent,Explicit warning; cost never enters ranking,PASS,No course cost computed
+UAT-39,Genomic,Honestly states data unavailable,Prominent inactive banner with reason,PASS,Verified column by column
+UAT-40,Genomic,No fabricated genes or predictions,Demo markers labelled NOT from this patient,PASS,21-marker reference map is reference only
+UAT-41,Genomic,Future genotype format documented,order_proc_id_coded/marker CSV schema + path shown,PASS,Plug-in point requires no code change
+UAT-42,Clinician review,Final decision can be recorded,Appended to 13_RESULTS/clinician_reviews.csv with audit fields,PASS,Test entry removed after testing
+UAT-43,Clinician review,Explicit human decision required,Refused without confirmation checkbox and without reviewer id,PASS,Human-in-the-loop enforced not decorative
+UAT-44,Clinician review,Accept/Modify/Reject plus notes,3-way radio + agent multiselect + free-text notes,PASS,Records model output alongside clinician choice
+UAT-45,Validation,Invalid/extreme inputs must not crash,18 edge cases incl. negative NaN inf absurd out-of-range,PASS,"0 crashes; probabilities stayed within [0,1]"
+UAT-46,Validation,Empty or missing record handled,"Empty dict, null organism, partial record all handled",PASS,Below-UI defence in depth
+UAT-47,Validation,Allergy input robust,Case/whitespace tolerant; unknown and injection strings inert,PASS,Allergies never change a model prediction
+UAT-48,Validation,Invalid order id fails gracefully,KeyError with readable message,PASS,No traceback shown to user
+UAT-49,Offline,App works with ENABLE_LIVE_API=0,0 exceptions; 9/9 tabs rendered,PASS,Tested with disk cache also neutralised
+UAT-50,Offline,No traceback leaks to the user,0 traceback fragments in rendered output,PASS,Scanned entire element tree
+UAT-51,Offline,Prediction survives API loss,54-row prediction table intact; SHAP intact,PASS,Model output independent of all APIs
+UAT-52,API failure,Errors handled with friendly messages,"404/429/500, non-JSON and network errors all contained",PASS,Real openFDA HTTP 500 observed and handled
+UAT-53,API failure,No fake API data substituted,Unavailable is stated never filled,PASS,ApiResult envelope never raises
+UAT-54,Safety,No prohibited prescriptive wording,0 matches for prescriptive phrase patterns,PASS,"Advisory framing used throughout"
+UAT-55,Safety,Medical disclaimer present,Banner at top of every page plus footer on all tabs,PASS,Single source in components/ui.py
+UAT-56,Services,Combination antibiotics resolve,10 agents had neither dosage nor cost data,FAIL - FIXED,BUG-02 MEDIUM; FIX-02 separator-agnostic lookup
+UAT-57,Usability,Confidence must not contradict evidence,"high confidence shown on agents with 0 training examples",PASS*,BUG-03 LOW - deferred as a design decision
+UAT-58,Performance,Application responsive,Prediction 0.066 s; SHAP 3.61 s median; full ranking 3.67 s,PASS,SHAP is 98.3 % of ranking time - expected not a bug
+UAT-59,Regression,Existing test suite still passes,111 passed 0 failed before and after fixes,PASS,No model retrained; no metric changed

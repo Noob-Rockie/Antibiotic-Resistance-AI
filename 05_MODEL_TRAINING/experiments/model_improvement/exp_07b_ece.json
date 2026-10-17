@@ -1,0 +1,26 @@
+{
+ "uncalibrated": {
+  "ece": 0.006403,
+  "mce": 0.02628,
+  "brier": 0.085431,
+  "pr_auc": 0.76701,
+  "roc_auc": 0.90198,
+  "n_distinct_probabilities": 142215
+ },
+ "isotonic (production)": {
+  "ece": 0.002875,
+  "mce": 0.010856,
+  "brier": 0.085373,
+  "pr_auc": 0.76166,
+  "roc_auc": 0.90189,
+  "n_distinct_probabilities": 301
+ },
+ "platt / sigmoid": {
+  "ece": 0.032936,
+  "mce": 0.076984,
+  "brier": 0.086993,
+  "pr_auc": 0.76701,
+  "roc_auc": 0.90198,
+  "n_distinct_probabilities": 108292
+ }
+}

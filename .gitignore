@@ -1,0 +1,24 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+.ipynb_checkpoints/
+01_DATA/interim/*
+01_DATA/processed/*
+!01_DATA/interim/.gitkeep
+!01_DATA/processed/.gitkeep
+05_MODEL_TRAINING/models/*.joblib
+05_MODEL_TRAINING/models/*.pkl
+*.parquet
+.pytest_cache/
+
+# Sensitive/large local datasets and generated artifacts
+01_DATA/
+05_MODEL_TRAINING/models/
+13_RESULTS/predictions/
+14_REPORT_MATERIAL/tables/uat_heldout_case_scan.csv
+*.pt
+*.pth
+*.joblib
+*.pkl
+*.ipynb

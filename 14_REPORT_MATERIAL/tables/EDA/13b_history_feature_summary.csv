@@ -1,0 +1,7 @@
+feature,description,pct_rows_zero,mean_when_positive,median_when_positive,p99_when_positive,max
+prior_med_n_drugdays_90d,"Antibiotic drug-days, 90d",63.629,3.0035,2.0,15.0,78.0
+prior_med_n_drugdays_365d,"Antibiotic drug-days, 365d",43.126,5.4168,3.0,30.0,192.0
+prior_res_n_events_1095d,"Resistant results, 3y",64.63,11.9371,5.0,94.0,396.0
+prior_n_cultures,Previous cultures,33.908,8.2075,4.0,68.0,157.0
+prior_n_positive_cultures,Previous positive cultures,54.088,4.6789,2.0,33.0,94.0
+prior_same_abx_n_tests,Previous tests of this agent,60.526,4.2027,2.0,30.0,117.0

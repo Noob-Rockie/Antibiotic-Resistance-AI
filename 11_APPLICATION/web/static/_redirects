@@ -1,0 +1,5 @@
+# Proxy API calls to the Railway backend so the frontend's relative
+# fetch("/api/...") calls keep working unchanged, same-origin, no CORS needed.
+# Replace the placeholder below with your actual Railway backend URL
+# (Railway dashboard -> service -> Settings -> Networking -> Public Domain).
+/api/*  https://REPLACE-WITH-YOUR-RAILWAY-URL.up.railway.app/api/:splat  200

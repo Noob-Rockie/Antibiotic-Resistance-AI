@@ -1,0 +1,6 @@
+file,rows,exact_duplicate_rows,pct
+microbiology_cultures_cohort.csv,2241050,0,0.0
+microbiology_cultures_demographics.csv,751075,0,0.0
+microbiology_cultures_labs.csv,1408677,0,0.0
+microbiology_cultures_microbial_resistance.csv,2161648,0,0.0
+microbiology_cultures_prior_med.csv,9823458,3961688,40.3289

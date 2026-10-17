@@ -1,0 +1,18 @@
+# What NOT to upload when running `railway up` from the repo root.
+# Unlike .gitignore, this deliberately KEEPS the trained model
+# (05_MODEL_TRAINING/models/*.joblib) and the analytic dataset
+# (01_DATA/processed/analytic_dataset.parquet) — the backend needs both to
+# serve predictions and the sample-order demo.
+
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.pytest_cache/
+.env
+
+# Not read by the backend at request time.
+01_DATA/interim/
+07_EXPLAINABLE_AI/
+13_RESULTS/
+14_REPORT_MATERIAL/

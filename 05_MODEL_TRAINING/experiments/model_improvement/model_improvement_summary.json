@@ -1,0 +1,30 @@
+{
+  "generated_at_utc": "2026-08-25",
+  "scope": "Experimental model-improvement phase. The production model was NOT retrained, NOT replaced and NOT modified.",
+  "report": "05_MODEL_TRAINING/experiments/model_improvement/MODEL_IMPROVEMENT_REPORT.md",
+  "experiment_log": "05_MODEL_TRAINING/experiments/model_improvement/experiment_log.csv",
+  "comparison_table": "14_REPORT_MATERIAL/tables/model_improvement_comparison.csv",
+  "figures_dir": "14_REPORT_MATERIAL/figures/model_improvement",
+  "production_model_changed": false,
+  "candidate_model": "05_MODEL_TRAINING/models/candidate_improved_model.joblib",
+  "candidate_promoted": false,
+  "final_decision": "A - genuine improvement, scoped to the operating point; C - no improvement for the model itself",
+  "harness_reproduced_baseline_exactly": true,
+  "experiments": [
+    {"id": "EXP-00", "name": "harness validation", "result": "reproduced published test and temporal PR-AUC with delta 0.00000"},
+    {"id": "EXP-01", "name": "threshold optimisation", "result": "ACCEPT as candidate - t=0.35 gives test recall +0.10883 and temporal recall +0.13284 with PR-AUC unchanged"},
+    {"id": "EXP-02", "name": "class weight", "result": "REJECT - PR-AUC flat across weights 0.75-3.0; validation winner was worse on test and temporal"},
+    {"id": "EXP-03", "name": "hyperparameter search", "result": "REJECT - CV gain +0.00137 is inside one CV std (0.00522); worse on validation, test and temporal"},
+    {"id": "EXP-04/05", "name": "feature engineering and selection", "result": "REJECT - the production 30 beat both a 44-feature and a 123-feature set on validation; leakage screen clean (max single-feature AUC 0.683)"},
+    {"id": "EXP-06", "name": "temporal validation", "result": "only the threshold change improved temporal performance; both rejected arms were neutral-to-worse"},
+    {"id": "EXP-07", "name": "calibration", "result": "KEEP isotonic - it halves ECE (0.006403 to 0.002875); its PR-AUC cost is a tie artefact from collapsing 142,215 probabilities to 301"}
+  ],
+  "candidate_deltas": {
+    "test_pr_auc": 0.0, "temporal_pr_auc": 0.0,
+    "test_recall": 0.10883, "temporal_recall": 0.13284,
+    "test_f1": 0.02554, "temporal_f1": 0.05093,
+    "test_specificity": -0.03634, "temporal_specificity": -0.03307,
+    "test_accuracy": -0.00796, "temporal_accuracy": -0.01526
+  },
+  "application_recommendation": "Break ranking ties in 08_RECOMMENDATION_ENGINE/antibiotic_ranking.py using the uncalibrated score as a secondary sort key. Isotonic calibration leaves only 301 distinct probabilities, so agents tie in the ranked list - observed in UAT Test Case C. Not implemented; application-level change."
+}

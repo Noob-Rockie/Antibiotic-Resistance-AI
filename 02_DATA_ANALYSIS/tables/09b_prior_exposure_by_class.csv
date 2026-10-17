@@ -1,0 +1,22 @@
+antibiotic_class,pct_rows_exposed_365d,n_rows_exposed,nonsusc_rate_exposed_train
+Cephalosporin,29.8943,471791,0.2206
+Fluoroquinolone,21.9809,346902,0.26576
+Beta-lactam inhibitor,15.4658,244080,0.26664
+Nitrofuran,14.1807,223800,0.19791
+Folate pathway inhibitor,13.4439,212171,0.27765
+Macrolide,10.6259,167697,0.27747
+Nitroimidazole,6.6936,105638,0.25965
+Glycopeptide,6.2473,98594,0.26994
+Penicillin,5.2481,82826,0.23315
+Tetracycline,4.8448,76460,0.23558
+Lincosamide,4.595,72518,0.21645
+Aminoglycoside,2.6355,41593,0.3065
+Rifamycin,1.9895,31398,0.29113
+Oxazolidinone,1.5582,24591,0.43119
+Carbapenem,1.5145,23902,0.39419
+Fosfomycin,1.224,19317,0.31521
+Urinary antiseptic,1.1513,18170,0.2601
+Polymyxin,0.901,14220,0.46363
+Antimycobacterial,0.377,5950,0.33681
+Macrocyclic,0.2886,4555,0.32079
+Monobactam,0.2356,3719,0.46804

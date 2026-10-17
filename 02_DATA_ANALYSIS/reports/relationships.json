@@ -1,0 +1,348 @@
+{
+  "grains": [
+    {
+      "table": "cohort",
+      "n_rows": 2241050,
+      "candidate_grains": [
+        {
+          "columns": [
+            "order_proc_id_coded"
+          ],
+          "n_unique": 751075,
+          "n_rows": 2241050,
+          "is_unique_key": false,
+          "avg_rows_per_key": 2.9838
+        },
+        {
+          "columns": [
+            "order_proc_id_coded",
+            "organism"
+          ],
+          "n_unique": 765554,
+          "n_rows": 2241050,
+          "is_unique_key": false,
+          "avg_rows_per_key": 2.9274
+        },
+        {
+          "columns": [
+            "order_proc_id_coded",
+            "organism",
+            "antibiotic"
+          ],
+          "n_unique": 2231673,
+          "n_rows": 2241050,
+          "is_unique_key": false,
+          "avg_rows_per_key": 1.0042
+        },
+        {
+          "columns": [
+            "anon_id",
+            "pat_enc_csn_id_coded",
+            "order_proc_id_coded"
+          ],
+          "n_unique": 751075,
+          "n_rows": 2241050,
+          "is_unique_key": false,
+          "avg_rows_per_key": 2.9838
+        }
+      ]
+    },
+    {
+      "table": "demographics",
+      "n_rows": 751075,
+      "candidate_grains": [
+        {
+          "columns": [
+            "anon_id"
+          ],
+          "n_unique": 283715,
+          "n_rows": 751075,
+          "is_unique_key": false,
+          "avg_rows_per_key": 2.6473
+        },
+        {
+          "columns": [
+            "order_proc_id_coded"
+          ],
+          "n_unique": 751075,
+          "n_rows": 751075,
+          "is_unique_key": true,
+          "avg_rows_per_key": 1.0
+        },
+        {
+          "columns": [
+            "anon_id",
+            "pat_enc_csn_id_coded",
+            "order_proc_id_coded"
+          ],
+          "n_unique": 751075,
+          "n_rows": 751075,
+          "is_unique_key": true,
+          "avg_rows_per_key": 1.0
+        }
+      ]
+    },
+    {
+      "table": "labs",
+      "n_rows": 1408677,
+      "candidate_grains": [
+        {
+          "columns": [
+            "order_proc_id_coded"
+          ],
+          "n_unique": 492659,
+          "n_rows": 1408677,
+          "is_unique_key": false,
+          "avg_rows_per_key": 2.8593
+        },
+        {
+          "columns": [
+            "order_proc_id_coded",
+            "Period_Day"
+          ],
+          "n_unique": 492659,
+          "n_rows": 1408677,
+          "is_unique_key": false,
+          "avg_rows_per_key": 2.8593
+        },
+        {
+          "columns": [
+            "anon_id",
+            "pat_enc_csn_id_coded",
+            "order_proc_id_coded"
+          ],
+          "n_unique": 492659,
+          "n_rows": 1408677,
+          "is_unique_key": false,
+          "avg_rows_per_key": 2.8593
+        }
+      ]
+    },
+    {
+      "table": "resistance",
+      "n_rows": 2161648,
+      "candidate_grains": [
+        {
+          "columns": [
+            "order_proc_id_coded"
+          ],
+          "n_unique": 166537,
+          "n_rows": 2161648,
+          "is_unique_key": false,
+          "avg_rows_per_key": 12.98
+        },
+        {
+          "columns": [
+            "order_proc_id_coded",
+            "organism",
+            "antibiotic"
+          ],
+          "n_unique": 867757,
+          "n_rows": 2161648,
+          "is_unique_key": false,
+          "avg_rows_per_key": 2.4911
+        },
+        {
+          "columns": [
+            "order_proc_id_coded",
+            "organism",
+            "antibiotic",
+            "resistant_time_to_culturetime"
+          ],
+          "n_unique": 2161648,
+          "n_rows": 2161648,
+          "is_unique_key": true,
+          "avg_rows_per_key": 1.0
+        }
+      ]
+    },
+    {
+      "table": "prior_med",
+      "n_rows": 9823458,
+      "candidate_grains": [
+        {
+          "columns": [
+            "order_proc_id_coded"
+          ],
+          "n_unique": 575344,
+          "n_rows": 9823458,
+          "is_unique_key": false,
+          "avg_rows_per_key": 17.0741,
+          "max_rows_per_key": 748
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "left": "cohort",
+      "right": "demographics",
+      "left_n_rows": 2241050,
+      "right_n_rows": 751075,
+      "left_n_unique_keys": 751075,
+      "right_n_unique_keys": 751075,
+      "left_max_rows_per_key": 75,
+      "right_max_rows_per_key": 1,
+      "n_keys_in_both": 751075,
+      "pct_left_keys_matched": 100.0,
+      "pct_right_keys_matched": 100.0,
+      "left_only_keys": 0,
+      "right_only_keys": 0,
+      "cardinality": "N:1"
+    },
+    {
+      "left": "cohort",
+      "right": "labs",
+      "left_n_rows": 2241050,
+      "right_n_rows": 1408677,
+      "left_n_unique_keys": 751075,
+      "right_n_unique_keys": 492659,
+      "left_max_rows_per_key": 75,
+      "right_max_rows_per_key": 106,
+      "n_keys_in_both": 492659,
+      "pct_left_keys_matched": 65.5938,
+      "pct_right_keys_matched": 100.0,
+      "left_only_keys": 258416,
+      "right_only_keys": 0,
+      "cardinality": "N:M"
+    },
+    {
+      "left": "cohort",
+      "right": "resistance",
+      "left_n_rows": 2241050,
+      "right_n_rows": 2161648,
+      "left_n_unique_keys": 751075,
+      "right_n_unique_keys": 166537,
+      "left_max_rows_per_key": 75,
+      "right_max_rows_per_key": 483,
+      "n_keys_in_both": 166537,
+      "pct_left_keys_matched": 22.1732,
+      "pct_right_keys_matched": 100.0,
+      "left_only_keys": 584538,
+      "right_only_keys": 0,
+      "cardinality": "N:M"
+    },
+    {
+      "left": "cohort",
+      "right": "prior_med",
+      "left_n_rows": 2241050,
+      "right_n_rows": 9823458,
+      "left_n_unique_keys": 751075,
+      "right_n_unique_keys": 575344,
+      "left_max_rows_per_key": 75,
+      "right_max_rows_per_key": 748,
+      "n_keys_in_both": 575344,
+      "pct_left_keys_matched": 76.6027,
+      "pct_right_keys_matched": 100.0,
+      "left_only_keys": 175731,
+      "right_only_keys": 0,
+      "cardinality": "N:M"
+    }
+  ],
+  "patient_structure": {
+    "n_patients": 283715,
+    "n_encounters": 574584,
+    "n_culture_orders": 751075,
+    "n_rows_cohort": 2241050,
+    "orders_per_patient_mean": 2.6473,
+    "orders_per_patient_max": 175,
+    "patients_with_multiple_orders": 152735,
+    "pct_patients_with_multiple_orders": 53.834,
+    "orders_per_encounter_mean": 1.3072
+  },
+  "prior_med_category_counts": {
+    "PIP": 1619193,
+    "SUL": 1244778,
+    "CEF1": 667284,
+    "AMO": 596066,
+    "AZI": 427708,
+    "CEP": 427202,
+    "LEV": 424279,
+    "CIP": 371107,
+    "MET": 285314,
+    "VAN1": 267475,
+    "CEF": 243196,
+    "NIT": 237346,
+    "LEV1": 183311,
+    "MET1": 182521,
+    "VAN": 156201,
+    "DOX": 172833,
+    "ZIT": 110589,
+    "CEF2": 117658,
+    "AMO1": 111594,
+    "GEN": 140419,
+    "PIP1": 98842,
+    "MOX": 102684,
+    "RIF": 101083,
+    "CIP1": 76291,
+    "CLI2": 80971,
+    "CLI": 78465,
+    "LIN": 57677,
+    "CLI1": 61109,
+    "ERT": 40825,
+    "BAC": 49328,
+    "RIF1": 47566,
+    "VAN2": 31117,
+    "ERY": 45673,
+    "GEN1": 34466,
+    "NIT1": 44557,
+    "CEF3": 37099,
+    "GAT": 32924,
+    "FOS": 29042,
+    "CIP2": 35106,
+    "ETH": 33252,
+    "CLA": 33461,
+    "PEN": 24416,
+    "KEF": 28540,
+    "COL": 27281,
+    "OFL": 32650,
+    "CEF5": 25240,
+    "AUG": 29898,
+    "MAC": 23052,
+    "LEV2": 21971,
+    "CEF10": 35899,
+    "VAN3": 31065,
+    "CIP4": 24822,
+    "CEF6": 20027,
+    "BAC1": 23358,
+    "CEF4": 21709,
+    "MIN": 18298,
+    "DOX1": 18733,
+    "AMP1": 9884,
+    "DAP": 18616,
+    "SIL": 15200,
+    "CEF7": 15869,
+    "MER": 13358,
+    "TOB1": 12514,
+    "FID": 10793,
+    "ISO": 19096,
+    "AZT": 22511,
+    "MET2": 10551,
+    "TOB": 10015,
+    "AMP": 9893,
+    "AMI": 7971,
+    "CIP3": 10055,
+    "RIF2": 7081,
+    "XIF": 11228,
+    "TED": 4008,
+    "DIC": 6492,
+    "ERY1": 4108,
+    "CEF11": 8305,
+    "CEF8": 6414,
+    "LIN1": 6358,
+    "FLA": 5580,
+    "MET3": 2126,
+    "TRI": 4995,
+    "GEN2": 5117,
+    "CEF9": 3947,
+    "MAC1": 3028,
+    "AZT1": 6127,
+    "MOX1": 3574,
+    "HIP": 2260,
+    "ZYV": 1813
+  },
+  "prior_med_time_to_culture_range": [
+    0.0,
+    5748.0
+  ]
+}
